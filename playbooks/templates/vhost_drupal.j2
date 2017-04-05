@@ -3,7 +3,7 @@ server {
 
     server_name {{ item.alias }} www.{{ item.alias }} {%- if item.custom_aliases is defined %} {{ item.custom_aliases }} {%- endif %};
 
-    root {{ sites_dir }}/{{ item.alias }};
+    root {{ sites_dir }}/{{ item.alias }}{{ item.index_file_folder | default("") }};
 
     index index.html index.htm index.php;
 
@@ -25,7 +25,7 @@ server {
 
     location ~ \.php$ {
         fastcgi_split_path_info ^(.+\.php)(/.+)$;
-        fastcgi_pass unix:/run/php/php7.0-fpm.sock;
+        fastcgi_pass unix:/run/php/php7.1-fpm.sock;
         fastcgi_index index.php;
         include fastcgi_params;
     }
