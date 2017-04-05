@@ -1,0 +1,27 @@
+---
+- name: Test | NPM is installed
+  shell: npm -v
+  register: npm_installed
+  ignore_errors: true
+
+- name: NodeJS | Prepare for installation
+  raw: "curl -sL https://deb.nodesource.com/setup | sudo bash -"
+  become: true
+  when: npm_installed|failed
+
+- name: NodeJS | Install NodeJS
+  apt: name=nodejs state=present
+  become: true
+
+- name: NodeJS | Install build-essentials package
+  apt: name=build-essential state=present
+  become: true
+
+- name: NodeJS | Install Grunt, Bower and Gulp
+  command: npm install -g {{ item }}
+  become: true
+  with_items:
+    - grunt
+    - grunt-cli
+    - bower
+    - gulp
