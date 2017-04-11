@@ -1,0 +1,22 @@
+name: 'Utilidades padrão'
+description: 'Utilidades gerais do sistema.'
+type: module
+core: 8.x
+dependencies:
+  - ckeditor
+  - dropzonejs_eb_widget
+  - editor
+  - embed
+  - entity_browser
+  - entity_embed
+  - features
+  - file
+  - file_browser
+  - filter
+  - image
+  - language
+  - responsive_image
+  - user
+  - views
+version: 8.x-1.0
+package: 'APL Mineral'
