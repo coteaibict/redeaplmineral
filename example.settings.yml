@@ -13,7 +13,7 @@ webserver_hostname_alias: 'www.{{ webserver_hostname }}'
 # Virtual hosts
 vhosts:
   - alias: aplmineral.local
-    path: /home/edmar/projetos/ibict/redeaplmineral
+    path: /caminho/completo/para/raiz/projeto/redeaplmineral # Altere aqui para o caminho do projeto
     # Set the type of the virtual host
     # This can be one of "none", "default", "drupal", "laravel"
     vhost_type: "drupal"
@@ -34,7 +34,7 @@ username: "vagrant"
 home_dir: "/home/vagrant"
 sites_dir: "/home/vagrant/sites"
 
-# Give VM 1/4 of system memory
+# Give VM 1/4 ~ 1/3 of system memory
 memory: 1024
 # Give VM access to all cpu cores on the host
 # To find out the number of cores, run the following commands:
@@ -54,10 +54,10 @@ php_date_timezone: America/Sao_Paulo
 
 # MySQL Settings
 mysql_port: 3306
-mysql_root_password: lkjri4873
+mysql_root_password: root
 server_hostname: localhost
-dbuser: apedb
-dbpass: lneriu38743
+dbuser: aplmineral
+dbpass: aplmineral
 
 # MySQL my.cnf settings
 mysql_max_allowed_packet: 256M

@@ -2,7 +2,7 @@
 
 Ansible faz a instalação do projeto APLMineral
 
-Ele foi inspirado em [https://github.com/hashbangcode/vlad](https://github.com/hashbangcode/vlad) and [Laravel Homestead](http://laravel.com/docs/4.2/homestead).
+Ele foi inspirado em [https://github.com/hashbangcode/vlad](https://github.com/hashbangcode/vlad) e [Laravel Homestead](http://laravel.com/docs/4.2/homestead).
 
 ## O que irá instalar ##
 
@@ -32,7 +32,7 @@ Ele foi inspirado em [https://github.com/hashbangcode/vlad](https://github.com/h
 
 ## Passos para instalação ##
 
-1. Copie `example.settings.yml` to `settings.yml`
+1. Copie `example.settings.yml` para `settings.yml`
 
     `cp example.settings.yml settings.yml`
 
@@ -40,6 +40,7 @@ Ele foi inspirado em [https://github.com/hashbangcode/vlad](https://github.com/h
 
   * Adicione os detalhes do seu git.
   * Mude o endereço de IP do box (se necessário).
+  * Na seção `Virtual hosts` altere o `path` com o caminho raiz do projeto.
   * Altere as outras configurações se desejar, as configurações padrões já serão suficientes.
 
 3. Rode `vagrant up`.
@@ -47,4 +48,4 @@ Ele foi inspirado em [https://github.com/hashbangcode/vlad](https://github.com/h
 
 ## Acessando a aplicação ##
 
-Abra seu navegador e vá em `aplmineral.local/`. Pronto!
+Abra seu navegador e vá em `http://aplmineral.local/`. Pronto!

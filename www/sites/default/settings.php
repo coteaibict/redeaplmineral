@@ -295,7 +295,7 @@ $config_directories = array();
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
  */
-$settings['hash_salt'] = '';
+$settings['hash_salt'] = '183gUTjlWObeM5GaLsRbMjz9B7kwkxRM51QSoL5i1QFA4xmF0F0BbK2CPclVTebQ-dON47FuGw';
 
 /**
  * Deployment identifier.
@@ -763,3 +763,19 @@ $settings['file_scan_ignore_directories'] = [
 # if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
 #   include $app_root . '/' . $site_path . '/settings.local.php';
 # }
+$databases['default']['default'] = array (
+  'database' => 'aplmineral',
+  'username' => 'aplmineral',
+  'password' => 'aplmineral',
+  'prefix' => '',
+  'host' => 'localhost',
+  'port' => '3306',
+  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
+  'driver' => 'mysql',
+);
+$settings['install_profile'] = 'standard';
+$settings['trusted_host_patterns'] = array(
+  '^redeaplmineral\.lh$',
+  '^.+\.redeaplmineral\.lh$',
+);
+$config_directories['sync'] = '../configuration';
