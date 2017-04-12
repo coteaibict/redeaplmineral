@@ -88,5 +88,6 @@ fabric.properties
 settings.yml
 .vagrant
 *.log
+host.ini
 configuration/
 databases/
