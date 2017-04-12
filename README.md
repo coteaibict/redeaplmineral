@@ -48,4 +48,13 @@ Ele foi inspirado em [https://github.com/hashbangcode/vlad](https://github.com/h
 
 ## Acessando a aplicação ##
 
-Abra seu navegador e vá em `http://aplmineral.local/`. Pronto!
+Abra seu navegador e vá em `http://aplmineral.local/`. 
+
+Usuários e senhas padrões:
+
+```
+Usuário: apl-admin
+Senha: aplapl
+```
+
+Pronto!

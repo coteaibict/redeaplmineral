@@ -11,6 +11,37 @@
     - mysql
     - front
 
+  tasks:
+    - name: Application | install dependencies with composer.
+      command: composer install -d {{ sites_dir }}/{{ item.alias }}{{ item.index_file_folder | default("") }}
+      with_items:
+        - "{{ vhosts }}"
+
+    - name: Check that the settings.php exists
+      stat:
+        path: "{{ sites_dir }}/{{ item.alias }}{{ item.index_file_folder | default('') }}/sites/default/settings.php"
+      register: settings_file
+      when: item.vhost_type == "drupal"
+      with_items:
+        - "{{ vhosts }}"
+
+    - name: Application | add "settings.php" in the sites/default
+      template: src=templates/settings.php.j2 dest={{ sites_dir }}/{{ item.item.alias }}{{ item.item.index_file_folder | default("") }}/sites/default/settings.php
+      when: item.item.vhost_type == "drupal" and item.stat.exists == false
+      with_items:
+        - "{{ settings_file.results }}"
+
+    - name: Application | copy init database in the first install
+      mysql_db:
+        name: "{{ item.item.db }}"
+        login_user: "{{ dbuser }}"
+        login_password: "{{ dbpass }}"
+        state: import
+        target: "{{ sites_dir }}/{{ item.item.alias }}/init_db.sql"
+      when: item.item.vhost_type == "drupal" and item.stat.exists == False
+      with_items:
+        - "{{ settings_file.results }}"
+
   post_tasks:
     - include: tests/main.yml
 
