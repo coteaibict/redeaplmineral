@@ -1,8 +1,0 @@
-langcode: pt-br
-status: true
-dependencies: {  }
-id: pt-br
-label: 'Portuguese, Brazil'
-direction: ltr
-weight: 0
-locked: false
