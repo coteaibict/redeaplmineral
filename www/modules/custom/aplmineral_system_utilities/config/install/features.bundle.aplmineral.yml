@@ -2,7 +2,7 @@ langcode: pt-br
 status: true
 dependencies: {  }
 name: 'APL Mineral'
-machine_name: apl_mineral
+machine_name: aplmineral
 description: 'APL Mineral Features'
 assignments:
   alter:

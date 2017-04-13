@@ -1,5 +1,5 @@
 name: 'Utilidades padrão'
-description: 'Utilidades gerais do sistema.'
+description: 'Funções padrões para o site.'
 type: module
 core: 8.x
 dependencies:
@@ -14,8 +14,6 @@ dependencies:
   - file_browser
   - filter
   - image
-  - language
-  - responsive_image
   - user
   - views
 version: 8.x-1.0
