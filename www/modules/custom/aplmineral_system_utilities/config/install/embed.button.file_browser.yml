@@ -7,14 +7,13 @@ dependencies:
     - entity_embed
     - file
     - image
-label: 'File Browser'
+label: 'Navegador de arquivos'
 id: file_browser
 type_id: entity
 type_settings:
   entity_type: file
   bundles: {  }
   display_plugins:
-    - 'file:file_default'
     - 'image:image'
   entity_browser: browse_files
   entity_browser_settings:

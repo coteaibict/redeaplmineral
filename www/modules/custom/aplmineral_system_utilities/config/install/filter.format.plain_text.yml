@@ -3,7 +3,7 @@ status: true
 dependencies: {  }
 name: 'Texto puro'
 format: plain_text
-weight: -7
+weight: -8
 filters:
   filter_html_escape:
     id: filter_html_escape
