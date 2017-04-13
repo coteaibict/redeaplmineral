@@ -3,6 +3,7 @@ description: 'Funções padrões para o site.'
 type: module
 core: 8.x
 dependencies:
+  - block
   - ckeditor
   - comment
   - crop
@@ -20,6 +21,7 @@ dependencies:
   - image
   - image_widget_crop
   - link
+  - node
   - path
   - rdf
   - responsive_image
@@ -28,5 +30,5 @@ dependencies:
   - text
   - user
   - views
-version: 8.x-1.1
+version: 8.x-1.2
 package: 'APL Mineral'

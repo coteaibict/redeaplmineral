@@ -1,2 +1,25 @@
 bundle: aplmineral
+excluded:
+  - field.field.node.article.field_tags
+  - field.field.node.article.field_image
+  - field.field.comment.comment.comment_body
+  - field.field.node.article.body
+  - field.field.node.article.comment
+  - core.entity_view_display.node.article.default
+  - core.entity_view_display.node.article.rss
+  - core.entity_view_display.node.article.teaser
+  - core.entity_view_display.comment.comment.default
+  - core.entity_view_display.user.user.compact
+  - core.entity_view_display.user.user.default
+  - core.entity_form_display.node.article.default
+  - core.entity_form_display.comment.comment.default
+  - core.entity_form_display.user.user.default
+  - block.block.bartik_main_menu
+  - field.storage.comment.comment_body
+  - field.storage.node.comment
+  - rdf.mapping.comment.comment
+  - rdf.mapping.node.article
+  - comment.type.comment
+  - node.type.article
+  - views.view.glossary
 required: true

@@ -3,8 +3,10 @@ description: 'Feature de notícias.'
 type: module
 core: 8.x
 dependencies:
+  - aplmineral_system_utilities
   - crop
   - datetime
+  - entity_browser
   - field
   - image
   - image_widget_crop
@@ -14,7 +16,9 @@ dependencies:
   - node
   - path
   - responsive_image
+  - taxonomy
   - text
   - user
-version: 8.x-1.0
+  - views
+version: 8.x-1.1
 package: 'APL Mineral'
