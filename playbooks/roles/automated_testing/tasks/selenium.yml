@@ -43,16 +43,16 @@
 
 - name: Selenium | Download chromedriver.
   get_url: url=https://chromedriver.storage.googleapis.com/2.9/chromedriver_linux64.zip
-           dest=/home/vagrant/chromedriver_linux64.zip
+           dest={{home_dir}}/chromedriver_linux64.zip
   when: chromedriver_installed.stdout.find('No such file or directory') != -1
 
 - name: Selenium | Unpack chromedriver.
-  raw: unzip -o -q /home/vagrant/chromedriver_linux64.zip -d /usr/local/bin
+  raw: unzip -o -q {{home_dir}}/chromedriver_linux64.zip -d /usr/local/bin
   when: chromedriver_installed.stdout.find('No such file or directory') != -1
   become: true
 
 - name: Selenium | Remove chromedriver archive.
-  file: path=/home/vagrant/chromedriver_linux64.zip state=absent
+  file: path={{home_dir}}/chromedriver_linux64.zip state=absent
   when: chromedriver_installed.stdout.find('No such file or directory') != -1
 
 - name: Selenium | Check if Selenium is installed (ignore if fails).
