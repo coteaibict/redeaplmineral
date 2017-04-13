@@ -7,6 +7,8 @@
 #files/
 #www/sites/*/files
 #www/sites/*/private
+#www/vendor/
+
 
 # Ignore default text files
 #robots.txt
