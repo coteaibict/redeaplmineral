@@ -6,15 +6,15 @@
 
 - name: Drush | install drush via composer
   command: composer global require drush/drush
-  when: drush_installed.stdout.find('command not found') != -1
+  when: drush_installed.stdout.find('command not found') != -1 or drush_installed.stdout.find('is currently not installed')
 
 - name: Drush | set drush to executable
   command: chmod u+x drush chdir=/home/{{ username }}/.config/composer/vendor/drush/drush
-  when: drush_installed.stdout.find('command not found') != -1
+  when: drush_installed.stdout.find('command not found') != -1 or drush_installed.stdout.find('is currently not installed')
 
 - name: Drush | link up the drush command so everyone can run it
   file: src=/home/{{ username }}/.config/composer/vendor/drush/drush/drush dest=/usr/bin/drush state=link
-  when: drush_installed.stdout.find('command not found') != -1
+  when: drush_installed.stdout.find('command not found') != -1 or drush_installed.stdout.find('is currently not installed')
   become: true
 
 - name: Drush | clear drush cache
