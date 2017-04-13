@@ -1,0 +1,20 @@
+name: Notícias
+description: 'Feature de notícias.'
+type: module
+core: 8.x
+dependencies:
+  - crop
+  - datetime
+  - field
+  - image
+  - image_widget_crop
+  - language
+  - link
+  - menu_ui
+  - node
+  - path
+  - responsive_image
+  - text
+  - user
+version: 8.x-1.0
+package: 'APL Mineral'

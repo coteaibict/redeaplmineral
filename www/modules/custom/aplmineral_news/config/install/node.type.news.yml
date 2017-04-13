@@ -1,0 +1,16 @@
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Notícias
+type: news
+description: 'Use essa opção para criar notícias da Rede APL Mineral.'
+help: 'O título/anúncio/manchete da notícia.'
+new_revision: true
+preview_mode: 1
+display_submitted: false
