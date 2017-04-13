@@ -91,3 +91,6 @@ settings.yml
 host.ini
 configuration/
 databases/
+
+# Others
+.DS_Store
