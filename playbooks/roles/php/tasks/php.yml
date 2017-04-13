@@ -57,11 +57,11 @@
   become: true
 
 - name: PHP | configure for nginx 1
-  lineinfile: dest=/etc/php/7.1/fpm/pool.d/www.conf regexp="^[#|;]?group = www" insertafter="^[#|;]?group = www" line="group = vagrant"
+  lineinfile: dest=/etc/php/7.1/fpm/pool.d/www.conf regexp="^[#|;]?group = www" insertafter="^[#|;]?group = www" line="group = {{username}}"
   become: true
 
 - name: PHP | configure for nginx 2
-  lineinfile: dest=/etc/php/7.1/fpm/pool.d/www.conf regexp="^[#|;]?listen\.group = www" insertafter="^[#|;]?listen\.group = www" line="listen.group = vagrant"
+  lineinfile: dest=/etc/php/7.1/fpm/pool.d/www.conf regexp="^[#|;]?listen\.group = www" insertafter="^[#|;]?listen\.group = www" line="listen.group = {{username}}"
   become: true
 
 - name: PHP | configure for nginx 3

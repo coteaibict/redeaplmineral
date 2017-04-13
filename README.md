@@ -39,6 +39,7 @@ Ele foi inspirado em [https://github.com/hashbangcode/vlad](https://github.com/h
 2. Abra `settings.yml` com seu editor de preferência.
 
   * Adicione os detalhes do seu git.
+  * Altere o path em vhosts para o caminho completo do projeto
   * Mude o endereço de IP do box (se necessário).
   * Na seção `Virtual hosts` altere o `path` com o caminho raiz do projeto.
   * Altere as outras configurações se desejar, as configurações padrões já serão suficientes.
