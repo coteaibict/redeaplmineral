@@ -1,0 +1,50 @@
+// partials/components/header
+
+%header-menu-items
+  li
+    display: inline-block
+    margin-right: 10px
+
+    &:last-child
+      margin-right: 0
+
+  a
+    text-decoration: none
+    color: #2C66CE
+
+
+.header
+  padding-top: 15px
+  padding-bottom: 15px
+  border-top: 1px solid #95989A
+  border-bottom: 1px solid #95989A
+  background: #EDEEF1
+
+  .logo
+    display: flex
+    justify-content: center
+
+    img
+      display: block
+
+
+.header__inner
+  @extend %container
+
+
+.header__topbar
+  display: flex
+  justify-content: space-between
+
+
+.a11y-menu
+  @extend %header-menu-items
+  text-transform: uppercase
+
+.i18n-menu
+  @extend %header-menu-items
+  text-transform: uppercase
+
+.menu-institutional
+  @extend %header-menu-items
+  text-align: right
