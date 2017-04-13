@@ -44,8 +44,36 @@
 #}
 <div class="layout-container">
 
-  <header role="banner">
-    {{ page.header }}
+  <header class="header" role="banner">
+    <div class="header__inner">
+      <div class="header__topbar">
+        <ul class="a11y-menu">
+          <li>
+            <a href="#">Acessibilidade</a>
+          </li>
+          <li>
+            <a href="#">Alto Contraste</a>
+          </li>
+          <li>
+            <a href="#">Mapa do Site</a>
+          </li>
+        </ul>
+      </div>
+
+      {{ page.header }}
+
+      <ul class="menu-institutional">
+        <li>
+          <a href="#">Instituições participantes</a>
+        </li>
+        <li>
+          <a href="#">Perguntas frequentes</a>
+        </li>
+        <li>
+          <a href="#">Fale conosco</a>
+        </li>
+      </ul>
+    </div>
   </header>
 
   {{ page.primary_menu }}
