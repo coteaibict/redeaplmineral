@@ -27,7 +27,7 @@ $menu-item-width: $width-full / $menu-item-length
     color: $color-link
     font-size: $font-size-icon
     text-decoration: none
-    background-color: $bg-color-light
+    background-color: $color-bg-light
 
     &::after
       font-family: $font-icon
@@ -55,7 +55,7 @@ $menu-item-width: $width-full / $menu-item-length
   top: -100%
   left: 0
   width: $width-full
-  height: 100%
+  height: $height-full
   padding-bottom: $toolbar-height
   overflow: scroll
   visibility: hidden
@@ -76,7 +76,7 @@ $menu-item-width: $width-full / $menu-item-length
 .mobile-search-form
   position: relative
   padding: $margin-default-double
-  background-color: $bg-color-main
+  background-color: $color-bg-main
 
   label
     display: none
@@ -88,7 +88,7 @@ $menu-item-width: $width-full / $menu-item-length
     height: 40px
     padding-left: $margin-default
     padding-right: 30px
-    background-color: $bg-color-lightest
+    background-color: $color-bg-lightest
     border: none
 
     &:active,
@@ -105,7 +105,7 @@ $menu-item-width: $width-full / $menu-item-length
     height: 40px
     width: 40px
     padding: 0 $margin-default
-    background-color: $bg-color-main
+    background-color: $color-bg-main
 
     &:active,
     &:focus,
@@ -126,7 +126,7 @@ $menu-item-width: $width-full / $menu-item-length
 // LAYER: Hamburger menu
 .mobile-toolbar-layer--menu
   text-transform: uppercase
-  background-color: $bg-color-light
+  background-color: $color-bg-light
 
 .mobile-hamburger-title
   @include font-size(12px)
@@ -134,14 +134,14 @@ $menu-item-width: $width-full / $menu-item-length
   margin: 0
   color: $color-link
   font-weight: 400
-  border-top: 4px solid $border-color-main
-  border-bottom: 1px solid darken($bg-color-light, 20%)
-  background-color: darken($bg-color-light, 1%)
+  border-top: 4px solid $color-border-main
+  border-bottom: 1px solid darken($color-bg-light, 20%)
+  background-color: darken($color-bg-light, 1%)
 
 .mobile-hamburger-menu
   a
     display: block
     padding: $margin-default
-    color: $color-text
+    color: $color-text-darkest
     text-decoration: none
-    border-bottom: 1px solid darken($bg-color-light, 20%)
+    border-bottom: 1px solid darken($color-bg-light, 20%)
