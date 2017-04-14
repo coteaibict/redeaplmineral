@@ -121,3 +121,26 @@ $menu-item-width: $width-full / $menu-item-length
 
     span
       display: none
+
+
+// LAYER: Hamburger menu
+.mobile-toolbar-layer--menu
+  text-transform: uppercase
+  background-color: $bg-color-light
+
+.mobile-hamburger-title
+  @include font-size(12px)
+  padding: $margin-default
+  margin: 0
+  color: $color-link
+  font-weight: 400
+  border-top: 4px solid $border-color-main
+  border-bottom: 1px solid darken($bg-color-light, 20%)
+
+.mobile-hamburger-menu
+  a
+    display: block
+    padding: $margin-default
+    color: $color-text
+    text-decoration: none
+    border-bottom: 1px solid darken($bg-color-light, 20%)
