@@ -4,6 +4,7 @@ base:
     assets/lib/jquery/dist/jquery.js: {}
     assets/lib/slick-carousel/slick/slick.js: {}
     assets/js/slideshow.js: {}
+    assets/js/mobile-toolbar.js: {}
   css:
     component:
       assets/css/main.css: {}
