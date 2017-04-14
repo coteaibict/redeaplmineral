@@ -76,23 +76,68 @@
     </div>
   </header>
 
-  <ul class="mobile-navigation">
-    <li class="mobile-navigation__item">
-      <a href="#" title="Menu"  class="mobile-navigation__menu">
-        <span>Menu</span>
-      </a>
-    </li>
-    <li class="mobile-navigation__item">
-      <a href="#" title="Página inicial"  class="mobile-navigation__home">
-        <span>Página inicial</span>
-      </a>
-    </li>
-    <li class="mobile-navigation__item">
-      <a href="#" title="Pesquisa"  class="mobile-navigation__search">
-        <span>Pesquisa</span>
-      </a>
-    </li>
-  </ul>
+  <div class="mobile-toolbar">
+    <ul class="mobile-toolbar-menu">
+      <li>
+        <a href="#" title="Menu" class="mobile-toolbar__hamburger">
+          <span>Menu</span>
+        </a>
+      </li>
+      <li>
+        <a href="http://aplmineral.local" title="Página inicial" class="mobile-toolbar__home">
+          <span>Página inicial</span>
+        </a>
+      </li>
+      <li>
+        <a href="#" title="Pesquisa" class="mobile-toolbar__search">
+          <span>Pesquisa</span>
+        </a>
+      </li>
+    </ul>
+    <div class="mobile-toolbar-layer mobile-toolbar-layer--search">
+      <form class="mobile-search-form" action="#" method="post">
+        <label for="mobile-search-input">Buscar</label>
+        <input
+          type="search"
+          id="mobile-search-input"
+          name="mobile-search-input"
+          placeholder="Digite o que você deseja buscar"
+        />
+        <button type="submit">
+          <span>Pesquisar</span>
+        </button>
+      </form>
+    </div>
+    <div class="mobile-toolbar-layer mobile-toolbar-layer--menu">
+      <div class="container">
+        <h3 class="mobile-hamburger-title">Menu Principal</h3>
+        <ul class="mobile-hamburger-menu">
+          <li><a href="#">Lorem ipsum dolor</a></li>
+          <li><a href="#">Lorem ipsum dolor</a></li>
+          <li><a href="#">Lorem ipsum dolor</a></li>
+          <li><a href="#">Lorem ipsum dolor</a></li>
+          <li><a href="#">Lorem ipsum dolor</a></li>
+          <li><a href="#">Lorem ipsum dolor</a></li>
+          <li><a href="#">Lorem ipsum dolor</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="banner-event">
+    <div class="banner-event__inner">
+      <div class="banner-event__teaser">
+        <h2>Evento</h2>
+        <p>Seminário Nacional de Arranjos Produtivos Locas de Base Mineral e X Encontro do Comitê Temático Rede APL Mineral</p>
+      </div>
+      <div class="banner-event__content">
+        <img src="http://placehold.it/750x650" alt="">
+      </div>
+      <button class="banner-event__toggle">
+        <span>Ver mais</span>
+      </button>
+    </div>
+  </div>
 
   <div class="slideshow">
     <div>
