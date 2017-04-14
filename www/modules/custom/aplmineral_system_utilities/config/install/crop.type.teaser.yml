@@ -1,0 +1,11 @@
+langcode: pt-br
+status: true
+dependencies: {  }
+label: Resumo
+id: teaser
+description: 'Corte para exibição nas listagens.'
+aspect_ratio: ''
+soft_limit_width: null
+soft_limit_height: null
+hard_limit_width: null
+hard_limit_height: null

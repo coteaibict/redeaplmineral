@@ -2,7 +2,7 @@ langcode: pt-br
 status: true
 dependencies:
   config:
-    - image.style.crop_slideshow
+    - image.style.slideshow
 id: slideshow
 label: Slideshow
 image_style_mappings:
@@ -10,6 +10,6 @@ image_style_mappings:
     breakpoint_id: responsive_image.viewport_sizing
     multiplier: 1x
     image_mapping_type: image_style
-    image_mapping: crop_slideshow
+    image_mapping: slideshow
 breakpoint_group: responsive_image
-fallback_image_style: crop_slideshow
+fallback_image_style: slideshow

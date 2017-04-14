@@ -1,16 +1,2 @@
 bundle: aplmineral
-excluded:
-  - image.style.crop_slideshow
-  - image.style.crop_thumbail
-  - field.storage.node.field_body
-  - field.storage.node.field_date
-  - field.storage.node.field_highlight
-  - field.storage.node.field_source
-  - field.storage.node.field_summary
-  - responsive_image.styles.slideshow
-  - responsive_image.styles.thumbnail
-  - core.entity_view_mode.node.teaser
-  - views.view.archive
-  - views.view.frontpage
-  - views.view.taxonomy_term
 required: true

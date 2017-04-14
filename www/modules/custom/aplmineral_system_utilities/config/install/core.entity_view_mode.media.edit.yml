@@ -1,0 +1,9 @@
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - media_entity
+id: media.edit
+label: Edição
+targetEntityType: media
+cache: true

@@ -1,0 +1,46 @@
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.edit
+    - field.field.media.image.field_image
+    - image.style.crop_thumbnail
+    - media_entity.bundle.image
+  module:
+    - image
+id: media.image.edit
+targetEntityType: media
+bundle: image
+mode: edit
+content:
+  created:
+    type: timestamp
+    weight: 2
+    region: content
+    label: inline
+    settings:
+      date_format: short
+      custom_date_format: ''
+      timezone: ''
+    third_party_settings: {  }
+  field_image:
+    weight: 1
+    label: hidden
+    settings:
+      image_style: crop_thumbnail
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  name:
+    type: string
+    weight: 0
+    region: content
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  thumbnail: true
+  uid: true

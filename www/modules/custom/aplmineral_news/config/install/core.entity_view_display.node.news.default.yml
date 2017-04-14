@@ -10,11 +10,9 @@ dependencies:
     - field.field.node.news.field_summary
     - field.field.node.news.field_tags
     - node.type.news
-    - responsive_image.styles.slideshow
   module:
     - datetime
     - link
-    - responsive_image
     - text
     - user
 id: node.news.default
@@ -23,7 +21,7 @@ bundle: news
 mode: default
 content:
   field_body:
-    weight: 2
+    weight: 3
     label: hidden
     settings: {  }
     third_party_settings: {  }
@@ -42,30 +40,29 @@ content:
     weight: 0
     label: hidden
     settings:
-      responsive_image_style: slideshow
-      image_link: ''
+      view_mode: full
+      link: false
     third_party_settings: {  }
-    type: responsive_image
+    type: entity_reference_entity_view
     region: content
   field_source:
-    weight: 3
-    label: hidden
+    weight: 4
+    label: inline
     settings:
-      trim_length: 180
+      trim_length: 80
       url_only: false
       url_plain: false
       rel: '0'
       target: '0'
     third_party_settings: {  }
-    type: link_separate
+    type: link
     region: content
-  field_tags:
-    weight: 4
+  field_summary:
+    weight: 2
     label: hidden
-    settings:
-      link: true
+    settings: {  }
     third_party_settings: {  }
-    type: entity_reference_label
+    type: basic_string
     region: content
   links:
     weight: 5
@@ -74,5 +71,5 @@ content:
     third_party_settings: {  }
 hidden:
   field_highlight: true
-  field_summary: true
+  field_tags: true
   langcode: true

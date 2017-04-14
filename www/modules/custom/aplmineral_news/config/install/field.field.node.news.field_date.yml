@@ -10,8 +10,8 @@ id: node.news.field_date
 field_name: field_date
 entity_type: node
 bundle: news
-label: 'Data da notícia'
-description: 'A data de publicação da notícia.'
+label: Data
+description: 'A data de publicação da notícia, para exibição nas listagens e junto ao corpo da notícia.'
 required: false
 translatable: false
 default_value:

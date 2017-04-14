@@ -16,6 +16,7 @@ settings:
           items:
             - Bold
             - Italic
+            - Underline
             - Strike
             - Superscript
             - Subscript
@@ -35,7 +36,7 @@ settings:
           name: Media
           items:
             - Blockquote
-            - file_browser
+            - image
             - Table
             - HorizontalRule
         -

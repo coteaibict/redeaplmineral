@@ -9,7 +9,7 @@ field_name: field_highlight
 entity_type: node
 bundle: news
 label: Destaque
-description: 'Marque essa opção para determinar esta notícia como "destaque".'
+description: 'Marque para determinar esta notícia como "destaque".'
 required: false
 translatable: false
 default_value:

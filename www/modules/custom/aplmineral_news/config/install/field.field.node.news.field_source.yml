@@ -11,7 +11,7 @@ field_name: field_source
 entity_type: node
 bundle: news
 label: Fonte
-description: 'Insira aqui a fonte da notícia.'
+description: 'Insira aqui a fonte de referência da notícia.'
 required: false
 translatable: false
 default_value: {  }

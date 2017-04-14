@@ -10,7 +10,7 @@ third_party_settings:
 name: Notícias
 type: news
 description: 'Use essa opção para criar notícias da Rede APL Mineral.'
-help: 'O título/anúncio/manchete da notícia.'
+help: ''
 new_revision: true
 preview_mode: 1
 display_submitted: false

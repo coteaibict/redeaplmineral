@@ -3,35 +3,26 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_image
+    - media_entity.bundle.image
     - node.type.news
-  module:
-    - image
 id: node.news.field_image
 field_name: field_image
 entity_type: node
 bundle: news
-label: 'Imagem de chamada'
-description: 'Este campo determina as imagem que será usada para a referência da notícia exibida em "slideshow" e também a "imagem miniatura" em listagens ou similares.'
+label: Imagem
+description: 'Para exibição nas listagens, no corpo da notícia e no slideshow, caso esta notícia esteja marcada como "destaque". Você pode usar a ferramenta de corte para determinar qual a área da imagem será exibida em cada local onde ela aparece. O tamanho final será ajustado automaticamente.'
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  file_directory: '[date:custom:Y]-[date:custom:m]'
-  file_extensions: 'png gif jpg jpeg'
-  max_filesize: ''
-  max_resolution: ''
-  min_resolution: ''
-  alt_field: true
-  alt_field_required: false
-  title_field: false
-  title_field_required: false
-  default_image:
-    uuid: ''
-    alt: ''
-    title: ''
-    width: null
-    height: null
-  handler: 'default:file'
-  handler_settings: {  }
-field_type: image
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: changed
+      direction: DESC
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

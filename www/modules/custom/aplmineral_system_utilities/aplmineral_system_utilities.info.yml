@@ -3,6 +3,7 @@ description: 'Funções padrões para o site.'
 type: module
 core: 8.x
 dependencies:
+  - aplmineral_news
   - block
   - ckeditor
   - comment
@@ -16,11 +17,12 @@ dependencies:
   - features
   - field
   - file
-  - file_browser
   - filter
   - image
   - image_widget_crop
   - link
+  - media_entity
+  - media_entity_image
   - node
   - path
   - rdf
@@ -30,5 +32,5 @@ dependencies:
   - text
   - user
   - views
-version: 8.x-1.2
+version: 8.x-1.0
 package: 'APL Mineral'

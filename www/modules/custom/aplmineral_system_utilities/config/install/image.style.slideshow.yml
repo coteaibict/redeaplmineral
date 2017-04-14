@@ -1,0 +1,14 @@
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - crop
+name: slideshow
+label: Slideshow
+effects:
+  b74f0c01-84df-423e-a474-bef3550843f7:
+    uuid: b74f0c01-84df-423e-a474-bef3550843f7
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: slideshow

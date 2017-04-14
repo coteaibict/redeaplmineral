@@ -1,0 +1,22 @@
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - crop
+name: full
+label: 'Conteúdo completo'
+effects:
+  5cbb153c-c5e8-498d-b629-583f351bb82d:
+    uuid: 5cbb153c-c5e8-498d-b629-583f351bb82d
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: full
+  b263c13f-72c8-4512-a111-62ee1d59e8fc:
+    uuid: b263c13f-72c8-4512-a111-62ee1d59e8fc
+    id: image_scale
+    weight: 2
+    data:
+      width: 310
+      height: null
+      upscale: true

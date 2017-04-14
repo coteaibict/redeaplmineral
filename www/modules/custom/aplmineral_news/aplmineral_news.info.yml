@@ -6,19 +6,22 @@ dependencies:
   - aplmineral_system_utilities
   - crop
   - datetime
+  - dropzonejs_eb_widget
   - entity_browser
   - field
   - image
   - image_widget_crop
   - language
   - link
+  - media_entity
   - menu_ui
   - node
   - path
+  - pathauto
   - responsive_image
   - taxonomy
   - text
   - user
   - views
-version: 8.x-1.1
+version: 8.x-1.0
 package: 'APL Mineral'
