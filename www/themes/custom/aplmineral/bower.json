@@ -1,0 +1,24 @@
+{
+  "name": "redeaplmineral",
+  "authors": [
+    "Gabriel Neutzling <gabrielneutzling@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "breakpoint-sass": "compass-breakpoint#^2.7.1",
+    "bootstrap-sass": "^3.3.7",
+    "font-awesome": "fontawesome#^4.7.0",
+    "normalize-css": "^6.0.0"
+  }
+}

@@ -1,0 +1,77 @@
+// partials/components/header
+
+$banner-main-color: #335277
+
+.banner-event
+  position: relative
+  z-index: $zindex-above
+  padding-top: 10px
+  padding-bottom: 10px
+  color: white
+  background-color: $banner-main-color
+  box-shadow: 0 2px 15px 0 #AAAAAA
+
+  &.is-visible
+    .banner-event__teaser
+      display: block
+
+    .banner-event__content
+      visibility: visible
+      height: auto
+
+
+.banner-event__teaser
+  display: block
+
+
+.banner-event__content
+  visibility: hidden
+  height: 0
+
+  img
+    display: block
+    width: 100%
+
+
+.banner-event__toggle
+  display: block
+  transform: translateX(-50%)
+  position: absolute
+  bottom: -30px
+  left: 50%
+  width: 40px
+  height: 30px
+  padding: 0 0 5px 0
+  margin: 0
+  color: white
+  text-align: center
+  border: none
+  border-radius: 0 0 10px 10px
+  background-color: $banner-main-color
+  box-shadow: none
+  cursor: pointer
+
+  &::after
+    content: $fa-var-chevron-down
+    font-size: $font-size-icon
+    font-family: $font-icon
+
+  &.is-opened
+    &::after
+      content: $fa-var-chevron-up
+
+  span
+    display: none
+
+
+
+.banner-event__inner
+  @extend %container
+
+  h2
+    margin-top: 0
+    text-transform: uppercase
+    color: white
+
+  p
+    text-align: center
