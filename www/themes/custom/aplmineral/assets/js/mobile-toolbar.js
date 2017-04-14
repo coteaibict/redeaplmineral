@@ -2,12 +2,16 @@
   var $html = $('html')
   var $toolbar = $('.mobile-toolbar')
   var $btnHome = $toolbar.find('.mobile-toolbar__home')
-  var $btnMenu = $toolbar.find('.mobile-toolbar__menu')
+  var $btnMenu = $toolbar.find('.mobile-toolbar__hamburger')
   var $btnSearch = $toolbar.find('.mobile-toolbar__search')
 
   var $layers = $toolbar.find('.mobile-toolbar-layer')
   var $searchLayer = $toolbar.find('.mobile-toolbar-layer--search')
+  var $menuLayer = $toolbar.find('.mobile-toolbar-layer--menu')
+
   var $searchField = $searchLayer.find('input')
+
+  $menuLayer.addClass('is-visible')
 
 
   // Listeners
@@ -27,7 +31,15 @@
   // Handler to Menu button.
   function handleMenuClick(event) {
     event.preventDefault()
-    // @TODO: To be implemented.
+
+    if ($menuLayer.hasClass('is-visible')) {
+      closeLayer()
+      return
+    }
+
+    closeLayer()
+    $html.addClass('no-scroll')
+    $menuLayer.addClass('is-visible')
   }
 
 
