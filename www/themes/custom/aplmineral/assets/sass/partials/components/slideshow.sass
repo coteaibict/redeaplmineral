@@ -1,0 +1,62 @@
+// partials/components/slideshow
+
+$slideshow-image-height: 310px
+
+.slideshow
+  z-index: $zindex-default
+
+  .slick-list
+    background: white
+
+  .slick-arrow
+    display: block
+    position: absolute
+    z-index: 100
+    top: $slideshow-image-height / 2
+    transform: translateY(-50%)
+    padding: 10px
+    margin: 0
+    color: white
+    font-size: 0
+    border: none
+    background: none
+    box-shadow: none
+
+    &:hover,
+    &:active
+      outline: none
+
+  .slick-prev
+    left: 0
+
+    &::after
+      content: $fa-var-chevron-left
+      display: block
+      font-family: $font-icon
+      font-size: $font-size-icon
+
+  .slick-next
+    right: 0
+
+    &::after
+      content: $fa-var-chevron-right
+      display: block
+      font-family: $font-icon
+      font-size: $font-size-icon
+
+  .slideshow-image
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 100%
+    height: $slideshow-image-height
+    overflow: hidden
+
+    img
+      display: block
+      max-width: 100%
+      min-height: 100%
+      object-fit: cover
+
+  .slideshow-content
+    @extend %container
