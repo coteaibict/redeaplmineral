@@ -2,7 +2,7 @@
 
 $toolbar-height: 44px
 $menu-item-length: 3
-$menu-item-width: 100% / $menu-item-length
+$menu-item-width: $width-full / $menu-item-length
 
 .mobile-toolbar-menu
   display: flex
@@ -10,7 +10,7 @@ $menu-item-width: 100% / $menu-item-length
   z-index: $zindex-reallyHigh
   bottom: 0
   left: 0
-  width: 100%
+  width: $width-full
   padding: 0
   margin: 0
 
@@ -47,13 +47,14 @@ $menu-item-width: 100% / $menu-item-length
     &::after
       content: $fa-var-search
 
+
 // Mobile Toolbar Layers
 .mobile-toolbar-layer
   position: fixed
   z-index: $zindex-high
   top: -100%
   left: 0
-  width: 100%
+  width: $width-full
   height: 100%
   padding-bottom: $toolbar-height
   overflow: scroll
