@@ -1,5 +1,12 @@
-global-styling:
-  version: VERSION
+base:
+  version: 1.x
+  js:
+    assets/lib/jquery/dist/jquery.js: {}
+    assets/lib/slick-carousel/slick/slick.js: {}
+    assets/js/slideshow.js: {}
   css:
-    base:
+    component:
       assets/css/main.css: {}
+      assets/lib/slick-carousel/slick/slick.css: {}
+  dependencies:
+      - core/drupal

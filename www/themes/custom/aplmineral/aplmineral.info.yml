@@ -6,7 +6,7 @@ package: custom
 core: 8.x
 
 libraries:
-  - aplmineral/global-styling
+  - aplmineral/base
 
 regions:
   header: header
