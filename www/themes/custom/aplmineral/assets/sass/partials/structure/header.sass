@@ -1,8 +1,8 @@
 // partials/components/header
 
 %header-menu-items
+  display: flex
   width: 100%
-  text-align: center
 
   li
     @include font-size(10px)
@@ -58,4 +58,4 @@
 
 .menu-institutional
   @extend %header-menu-items
-  text-align: right
+  justify-content: flex-end
