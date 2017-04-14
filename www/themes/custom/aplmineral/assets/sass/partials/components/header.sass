@@ -1,7 +1,11 @@
 // partials/components/header
 
 %header-menu-items
+  width: 100%
+  text-align: center
+
   li
+    @include font-size(10px)
     display: inline-block
     margin-right: 10px
 
@@ -26,8 +30,13 @@
     padding-top: 15px
     padding-bottom: 15px
 
+    a
+      display: block
+
     img
       display: block
+      width: 100%
+      max-width: 215px
 
 
 .header__inner
