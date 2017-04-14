@@ -1,0 +1,48 @@
+// partials/components/mobile-toolbar
+
+$toolbar-height: 44px
+$menu-item-length: 3
+$menu-item-width: 100% / $menu-item-length
+
+.mobile-toolbar
+  display: flex
+  position: fixed
+  z-index: $zindex-reallyHigh
+  bottom: 0
+  left: 0
+  width: 100%
+  padding: 0
+  margin: 0
+
+li
+  display: block
+  width: $menu-item-width
+  list-style: none
+
+a
+  display: flex
+  align-items: center
+  justify-content: center
+  height: $toolbar-height
+  color: #2C66CE
+  font-size: $font-size-icon
+  text-decoration: none
+  background-color: #F7F7F7
+
+  &::after
+    font-family: $font-icon
+
+  span
+    display: none
+
+.mobile-toolbar__menu
+  &::after
+    content: $fa-var-bars
+
+.mobile-toolbar__home
+  &::after
+    content: $fa-var-home
+
+.mobile-toolbar__search
+  &::after
+    content: $fa-var-search
