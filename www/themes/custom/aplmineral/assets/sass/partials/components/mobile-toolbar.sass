@@ -60,8 +60,6 @@ $menu-item-width: $width-full / $menu-item-length
   overflow: scroll
   visibility: hidden
   opacity: 0
-  color: $color-text-lightest
-  background: rgba(0, 0, 0, 0.8)
   transition: opacity 400ms
 
   &.is-visible
@@ -69,11 +67,16 @@ $menu-item-width: $width-full / $menu-item-length
     visibility: visible
     opacity: 1
 
-// Search form
+
+// LAYER: Search form
+.mobile-toolbar-layer--search
+  color: $color-text-lightest
+  background-color: rgba(0, 0, 0, 0.8)
+
 .mobile-search-form
   position: relative
-  padding: 20px
-  background: $bg-color-main
+  padding: $margin-double-default
+  background-color: $bg-color-main
 
   label
     display: none
@@ -81,11 +84,11 @@ $menu-item-width: $width-full / $menu-item-length
   input
     position: relative
     z-index: $zindex-default
-    width: 100%
+    width: $width-full
     height: 40px
-    padding-left: 10px
+    padding-left: $margin-default
     padding-right: 30px
-    background: $bg-color-lightest
+    background-color: $bg-color-lightest
     border: none
 
     &:active,
@@ -97,12 +100,12 @@ $menu-item-width: $width-full / $menu-item-length
     display: block
     position: absolute
     z-index: $zindex-above
-    top: 20px
-    right: 10px
+    top: $margin-double-default
+    right: $margin-default
     height: 40px
     width: 40px
-    padding: 0 10px
-    background: $bg-color-main
+    padding: 0 $margin-default
+    background-color: $bg-color-main
 
     &:active,
     &:focus,
