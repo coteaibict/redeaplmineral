@@ -21,6 +21,7 @@
   function handleHomeClick(event) {
     if (window.location.pathname === '/') {
       event.preventDefault()
+      closeLayer()
       jumpToTop()
     }
   }
