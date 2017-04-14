@@ -6,13 +6,15 @@
   box-sizing: border-box
 
 body
-  width: 100%
+  width: $width-full
   padding: 0
   margin: 0
-  color: $color-text
+  color: $color-text-darkest
   font-family: $font-base
   font-size: $font-size-base
   line-height: $font-line-base
+  background-color: $color-athens-gray
+
 
 h1,
 h2,
@@ -21,12 +23,40 @@ h4,
 h5,
 h6
   font-family: $font-title
+  margin: 0 0 0.5em
+
+h1
+  font-size: $font-size-h1
+
+h2
+  font-size: $font-size-h2
+
+h3
+  font-size: $font-size-h3
+
+h4
+  font-size: $font-size-h4
+
+h5
+  font-size: $font-size-h5
+
+h6
+  font-size: $font-size-h6
+
 
 p
   font-family: $font-text
+  margin: 0 0 1em
 
 a
   font-family: $font-link
+
+ul,
+li
+  padding: 0
+  margin: 0
+  list-style: none
+
 
 button
   padding: 0
@@ -34,9 +64,3 @@ button
   border: none
   box-shadow: none
   background: none
-
-ul,
-li
-  padding: 0
-  margin: 0
-  list-style: none

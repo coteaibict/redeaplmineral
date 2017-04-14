@@ -1,42 +1,42 @@
 // partials/components/header
 
+$logo-width: 215px
+
 %header-menu-items
   display: flex
-  width: 100%
+  width: $width-full
 
   li
     @include font-size(10px)
     display: inline-block
-    margin-right: 10px
+    margin-right: $margin-default
 
     &:last-child
       margin-right: 0
 
   a
     text-decoration: none
-    color: #2C66CE
+    color: $color-text-main
 
 
 .header
-  padding-top: 15px
-  padding-bottom: 15px
-  border-top: 1px solid #95989A
-  border-bottom: 1px solid #95989A
-  background: #EDEEF1
+  padding-top: $margin-default
+  padding-bottom: $margin-default
+  background-color: $color-athens-gray
 
   .block-system-branding-block
     display: flex
     justify-content: center
-    padding-top: 15px
-    padding-bottom: 15px
+    padding-top: $margin-default
+    padding-bottom: $margin-default
 
     a
       display: block
 
     img
       display: block
-      width: 100%
-      max-width: 215px
+      width: $width-full
+      max-width: $logo-width
 
 
 .header__inner
