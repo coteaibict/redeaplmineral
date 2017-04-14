@@ -11,8 +11,6 @@
 
   var $searchField = $searchLayer.find('input')
 
-  $menuLayer.addClass('is-visible')
-
 
   // Listeners
   $btnHome.on('click', handleHomeClick)
