@@ -1,0 +1,21 @@
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - node
+id: alias_news
+label: 'URLs para notícias'
+type: 'canonical_entities:node'
+pattern: 'noticias/[node:title]'
+selection_criteria:
+  e859cf00-f0cd-40ec-9942-84ce791eaafb:
+    id: node_type
+    bundles:
+      news: news
+    negate: false
+    context_mapping:
+      node: node
+    uuid: e859cf00-f0cd-40ec-9942-84ce791eaafb
+selection_logic: and
+weight: -5
+relationships: {  }

@@ -1,0 +1,22 @@
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - crop
+name: teaser
+label: Resumo
+effects:
+  2484e1e1-63c3-45c6-a856-314eeacb8b64:
+    uuid: 2484e1e1-63c3-45c6-a856-314eeacb8b64
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: teaser
+  88bacd4a-2ece-4ac7-97d2-fa240ec30028:
+    uuid: 88bacd4a-2ece-4ac7-97d2-fa240ec30028
+    id: image_scale
+    weight: 2
+    data:
+      width: 170
+      height: null
+      upscale: true

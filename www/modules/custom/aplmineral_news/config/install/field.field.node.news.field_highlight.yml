@@ -1,0 +1,22 @@
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_highlight
+    - node.type.news
+id: node.news.field_highlight
+field_name: field_highlight
+entity_type: node
+bundle: news
+label: Destaque
+description: 'Marque para determinar esta notícia como "destaque".'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Habilitado
+  off_label: Desliga
+field_type: boolean

@@ -14,8 +14,10 @@ assignments:
   base:
     types:
       config:
+        crop_type: crop_type
         block_content_type: block_content_type
         contact_form: contact_form
+        media_bundle: media_bundle
         shortcut_set: shortcut_set
         comment_type: comment_type
         node_type: node_type
@@ -29,6 +31,14 @@ assignments:
   core:
     types:
       config:
+        system_simple: system_simple
+        action: action
+        base_field_override: base_field_override
+        block: block
+        field_config: field_config
+        language_content_settings: language_content_settings
+        crop_type: crop_type
+        block_content_type: block_content_type
         editor: editor
         embed_button: embed_button
         entity_browser: entity_browser
@@ -40,11 +50,22 @@ assignments:
         date_format: date_format
         filter_format: filter_format
         entity_form_mode: entity_form_mode
+        contact_form: contact_form
         configurable_language: configurable_language
+        media_bundle: media_bundle
         menu: menu
         entity_view_mode: entity_view_mode
         user_role: user_role
+        pathauto_pattern: pathauto_pattern
+        rdf_mapping: rdf_mapping
         responsive_image_style: responsive_image_style
+        search_page: search_page
+        shortcut_set: shortcut_set
+        comment_type: comment_type
+        node_type: node_type
+        tour: tour
+        view: view
+        taxonomy_vocabulary: taxonomy_vocabulary
     enabled: true
     weight: 5
   dependency:

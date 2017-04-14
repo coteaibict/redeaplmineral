@@ -1,0 +1,52 @@
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - media_entity.bundle.image
+    - views.view.media_entity_browser
+  module:
+    - dropzonejs_eb_widget
+    - media_entity
+    - views
+name: browse_images
+label: 'Navegador de imagens (modal)'
+display: modal
+display_configuration:
+  width: ''
+  height: ''
+  link_text: Imagem
+  auto_open: false
+selection_display: no_display
+selection_display_configuration:
+  entity_type: crop
+  display: rendered_entity
+  display_settings:
+    view_mode: default
+  select_text: Selecione
+  selection_hidden: true
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  13b2e8e1-304c-493b-ac82-623837fba3a9:
+    settings:
+      media_entity_bundle: image
+      upload_location: 'public://[date:custom:Y]-[date:custom:m]'
+      dropzone_description: 'Arraste e solte o arquivo aqui.'
+      max_filesize: 100M
+      extensions: 'jpg jpeg gif png txt doc xls pdf ppt pps odt ods odp'
+      submit_text: Enviar
+      auto_select: false
+    uuid: 13b2e8e1-304c-493b-ac82-623837fba3a9
+    weight: 1
+    label: Enviar
+    id: dropzonejs_media_entity
+  2ad27dfa-c310-4152-becd-2979f2fad704:
+    settings:
+      view: media_entity_browser
+      view_display: entity_browser_1
+      submit_text: Enviar
+      auto_select: false
+    uuid: 2ad27dfa-c310-4152-becd-2979f2fad704
+    weight: 2
+    label: Biblioteca
+    id: view
