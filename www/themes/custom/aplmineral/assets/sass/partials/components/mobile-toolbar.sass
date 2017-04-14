@@ -14,35 +14,35 @@ $menu-item-width: 100% / $menu-item-length
   padding: 0
   margin: 0
 
-li
-  display: block
-  width: $menu-item-width
-  list-style: none
+  li
+    display: block
+    width: $menu-item-width
+    list-style: none
 
-a
-  display: flex
-  align-items: center
-  justify-content: center
-  height: $toolbar-height
-  color: #2C66CE
-  font-size: $font-size-icon
-  text-decoration: none
-  background-color: #F7F7F7
+  a
+    display: flex
+    align-items: center
+    justify-content: center
+    height: $toolbar-height
+    color: #2C66CE
+    font-size: $font-size-icon
+    text-decoration: none
+    background-color: #F7F7F7
 
-  &::after
-    font-family: $font-icon
+    &::after
+      font-family: $font-icon
 
-  span
-    display: none
+    span
+      display: none
 
-.mobile-toolbar__menu
-  &::after
-    content: $fa-var-bars
+  .mobile-toolbar__menu
+    &::after
+      content: $fa-var-bars
 
-.mobile-toolbar__home
-  &::after
-    content: $fa-var-home
+  .mobile-toolbar__home
+    &::after
+      content: $fa-var-home
 
-.mobile-toolbar__search
-  &::after
-    content: $fa-var-search
+  .mobile-toolbar__search
+    &::after
+      content: $fa-var-search
