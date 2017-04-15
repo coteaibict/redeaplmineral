@@ -1,0 +1,47 @@
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - views.view.browser_document
+  module:
+    - entity_browser_entity_form
+    - views
+name: browse_document_iframe
+label: 'Navegador de documentos (iframe)'
+display: iframe
+display_configuration:
+  width: '1170'
+  height: '840'
+  link_text: Selecione
+  auto_open: true
+selection_display: no_display
+selection_display_configuration:
+  entity_type: media
+  display: rendered_entity
+  display_settings:
+    view_mode: edit
+  select_text: 'Use selected'
+  selection_hidden: false
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  48a0a66b-81a6-4852-b5bc-7bcb7f69e76e:
+    settings:
+      view: browser_document
+      view_display: entity_browser_1
+      submit_text: Enviar
+      auto_select: false
+    uuid: 48a0a66b-81a6-4852-b5bc-7bcb7f69e76e
+    weight: -9
+    label: Biblioteca
+    id: view
+  251ea640-4f38-4e21-ae50-8c6174efb227:
+    settings:
+      entity_type: media
+      bundle: file
+      form_mode: default
+      submit_text: Enviar
+    uuid: 251ea640-4f38-4e21-ae50-8c6174efb227
+    weight: -10
+    label: Enviar
+    id: entity_form

@@ -13,6 +13,7 @@ dependencies:
   - editor
   - embed
   - entity_browser
+  - entity_browser_entity_form
   - entity_embed
   - features
   - field
@@ -20,8 +21,10 @@ dependencies:
   - filter
   - image
   - image_widget_crop
+  - language
   - link
   - media_entity
+  - media_entity_document
   - media_entity_image
   - node
   - path
@@ -32,5 +35,5 @@ dependencies:
   - text
   - user
   - views
-version: 8.x-1.0
+version: 8.x-1.1
 package: 'APL Mineral'

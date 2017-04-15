@@ -1,0 +1,40 @@
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.document_upload
+    - field.field.media.file.field_file
+    - media_entity.bundle.file
+  module:
+    - entity_browser
+id: media.file.default
+targetEntityType: media
+bundle: file
+mode: default
+content:
+  field_file:
+    weight: 1
+    settings:
+      entity_browser: document_upload
+      field_widget_remove: true
+      open: true
+      selection_mode: selection_append
+      field_widget_edit: true
+      view_mode: default
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: entity_browser_file
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  path: true
+  uid: true

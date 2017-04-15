@@ -1,0 +1,21 @@
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - node
+id: alias_events
+label: 'URLs para eventos'
+type: 'canonical_entities:node'
+pattern: 'eventos/[node:title]'
+selection_criteria:
+  d194e958-65e3-4242-a9dd-54fbf0e9f3e0:
+    id: node_type
+    bundles:
+      events: events
+    negate: false
+    context_mapping:
+      node: node
+    uuid: d194e958-65e3-4242-a9dd-54fbf0e9f3e0
+selection_logic: and
+weight: -5
+relationships: {  }

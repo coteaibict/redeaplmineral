@@ -1,0 +1,16 @@
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Eventos
+type: events
+description: 'Use essa opção para criar <strong>eventos</strong> da Rede APL Mineral.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

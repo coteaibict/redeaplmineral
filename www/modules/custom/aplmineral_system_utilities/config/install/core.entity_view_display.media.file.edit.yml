@@ -1,0 +1,43 @@
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.edit
+    - field.field.media.file.field_file
+    - media_entity.bundle.file
+  module:
+    - file
+id: media.file.edit
+targetEntityType: media
+bundle: file
+mode: edit
+content:
+  created:
+    type: timestamp
+    weight: 2
+    region: content
+    label: inline
+    settings:
+      date_format: short
+      custom_date_format: ''
+      timezone: ''
+    third_party_settings: {  }
+  field_file:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: file_table
+    region: content
+  name:
+    type: string
+    weight: 0
+    region: content
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  thumbnail: true
+  uid: true

@@ -1,0 +1,52 @@
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.events.field_announcement
+    - field.field.node.events.field_body
+    - field.field.node.events.field_date_end
+    - field.field.node.events.field_date_start
+    - field.field.node.events.field_highlight
+    - field.field.node.events.field_image
+    - field.field.node.events.field_place
+    - field.field.node.events.field_summary
+    - field.field.node.events.field_tags
+    - node.type.events
+  module:
+    - user
+id: node.events.teaser
+targetEntityType: node
+bundle: events
+mode: teaser
+content:
+  field_image:
+    type: entity_reference_entity_view
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      view_mode: teaser
+      link: false
+    third_party_settings: {  }
+  field_summary:
+    type: basic_string
+    weight: 1
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  links:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_announcement: true
+  field_body: true
+  field_date_end: true
+  field_date_start: true
+  field_highlight: true
+  field_place: true
+  field_tags: true
+  langcode: true

@@ -1,0 +1,28 @@
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_image
+    - media_entity.bundle.image
+    - node.type.events
+id: node.events.field_image
+field_name: field_image
+entity_type: node
+bundle: events
+label: Imagem
+description: 'Para exibição nas listagens, no corpo do evento e no slideshow, caso este evento esteja marcado como <strong>destaque</strong>. Você pode usar a ferramenta de corte para determinar qual a área da imagem será exibida em cada local onde ela aparece. O tamanho final será ajustado automaticamente.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: changed
+      direction: DESC
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

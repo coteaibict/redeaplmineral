@@ -30,7 +30,8 @@ settings:
           name: Media
           items:
             - Blockquote
-            - file_browser
+            - image
+            - document
         -
           name: 'Block Formatting'
           items:

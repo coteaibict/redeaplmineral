@@ -1,0 +1,31 @@
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - dropzonejs_eb_widget
+name: document_upload
+label: 'Envio de documentos'
+display: iframe
+display_configuration:
+  width: 100%
+  height: '300'
+  link_text: 'Escolher arquivos'
+  auto_open: true
+  path: '/*'
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: single
+widget_selector_configuration: {  }
+widgets:
+  e7db9f54-3d6f-4f77-828c-f002749cc775:
+    settings:
+      upload_location: 'public://[date:custom:Y]-[date:custom:m]'
+      dropzone_description: 'Arraste e solte arquivos aqui'
+      max_filesize: 100M
+      extensions: 'jpg jpeg gif png txt doc xls pdf ppt pps odt ods odp'
+      submit_text: Escolher
+      auto_select: false
+    uuid: e7db9f54-3d6f-4f77-828c-f002749cc775
+    weight: 1
+    label: Enviar
+    id: dropzonejs
