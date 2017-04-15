@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-cd sites/redeaplmineral
+cd sites/redeaplmineral && drush updb -y
