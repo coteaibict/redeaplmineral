@@ -87,6 +87,7 @@ settings.yml
 .vagrant
 *.log
 host.ini
+playbooks/setup.retry
 configuration/
 databases/
 !www/core/assets/vendor/*
