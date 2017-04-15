@@ -7,8 +7,6 @@
 #files/
 #www/sites/*/files
 #www/sites/*/private
-#www/vendor/
-
 
 # Ignore default text files
 #robots.txt
@@ -91,3 +89,5 @@ settings.yml
 host.ini
 configuration/
 databases/
+!www/core/assets/vendor/*
+!www/core/assets/vendor/*/backbone.js

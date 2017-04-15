@@ -1,4 +1,3 @@
-core/assets/vendor/**/*
 core/modules/locale/tests/locale_test.js
 vendor/**/*
 sites/**/files/**/*
