@@ -1,0 +1,11 @@
+general:
+  branches:
+    only:
+      - master # list of branches to build
+
+deployment:
+  master:
+    branch: master
+    owner: aplmineral
+    commands:
+      - ./deploy_master.sh
