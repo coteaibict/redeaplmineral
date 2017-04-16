@@ -1,0 +1,20 @@
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_body
+    - node.type.events
+  module:
+    - text
+id: node.events.field_body
+field_name: field_body
+entity_type: node
+bundle: events
+label: Corpo
+description: 'O corpo do evento. Use as opções do editor de texto para inserir estilos e demais elementos.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
