@@ -1,0 +1,19 @@
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - aplmineral
+id: aplmineral_search
+theme: aplmineral
+region: header
+weight: -5
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: Buscar
+  provider: search
+  label_display: visible
+visibility: {  }

@@ -12,3 +12,11 @@ effects:
     weight: 1
     data:
       crop_type: slideshow
+  fc7e4d3f-cb5f-4f2f-ad9e-55910279fbf2:
+    uuid: fc7e4d3f-cb5f-4f2f-ad9e-55910279fbf2
+    id: image_scale
+    weight: 2
+    data:
+      width: 1200
+      height: null
+      upscale: true

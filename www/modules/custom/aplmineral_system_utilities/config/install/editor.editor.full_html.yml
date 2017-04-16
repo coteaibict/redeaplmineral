@@ -37,6 +37,7 @@ settings:
           items:
             - Blockquote
             - image
+            - document
             - Table
             - HorizontalRule
         -

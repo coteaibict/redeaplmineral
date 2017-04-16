@@ -1,0 +1,19 @@
+langcode: pt-br
+status: true
+dependencies:
+  theme:
+    - aplmineral
+id: aplmineral_local_tasks
+theme: aplmineral
+region: content
+weight: -5
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Abas
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }
