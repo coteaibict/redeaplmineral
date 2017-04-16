@@ -1,9 +1,0 @@
-aplmineral-admin:
-  version: 1.x
-  css:
-    layout:
-      css/aplmineral-admin-layout.css: {}
-    theme:
-      css/aplmineral-admin-theme.css: {}
-  js:
-    js/aplmineral-admin.js: {}

@@ -1,7 +1,0 @@
-aplmineral_devroutines.content:
-  path: '/admin/config/development/devroutines'
-  defaults:
-    _controller: '\Drupal\aplmineral_devroutines\Controller\DevRoutinesController::content'
-    _title: 'Hello Dev'
-  requirements:
-    _permission: 'administer site configuration'

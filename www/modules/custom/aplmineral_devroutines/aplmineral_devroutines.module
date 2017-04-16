@@ -1,0 +1,16 @@
+<?php
+
+/**
+ * @file
+ * The module file for aplmineral_devroutines.
+ */
+
+/**
+ * Implements hook_preprocess_views_view().
+ */
+function aplmineral_devroutines_preprocess_views_view(&$variables) {
+  $view = $variables["view"];
+  if ($variables["view"]->id() === "browser_image" || "browser_document") {
+    $variables['view_array']['#attached']['library'][] = 'media_entity_browser/view';
+  }
+}
