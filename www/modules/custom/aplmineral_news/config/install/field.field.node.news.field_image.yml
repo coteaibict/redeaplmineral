@@ -10,7 +10,7 @@ field_name: field_image
 entity_type: node
 bundle: news
 label: Imagem
-description: 'Para exibição nas listagens, no corpo da notícia e no slideshow, caso esta notícia esteja marcada como "destaque". Você pode usar a ferramenta de corte para determinar qual a área da imagem será exibida em cada local onde ela aparece. O tamanho final será ajustado automaticamente.'
+description: 'Para exibição nas listagens, no corpo da notícia e no slideshow, caso esta notícia esteja marcada como <strong>destaque</strong>. Você pode usar a ferramenta de corte para determinar qual a área da imagem será exibida em cada local onde ela aparece. O tamanho final será ajustado automaticamente.'
 required: false
 translatable: false
 default_value: {  }
