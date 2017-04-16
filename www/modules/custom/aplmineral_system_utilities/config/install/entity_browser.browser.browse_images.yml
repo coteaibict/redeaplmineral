@@ -3,7 +3,7 @@ status: true
 dependencies:
   config:
     - media_entity.bundle.image
-    - views.view.media_entity_browser
+    - views.view.browser_image
   module:
     - dropzonejs_eb_widget
     - media_entity
@@ -42,7 +42,7 @@ widgets:
     id: dropzonejs_media_entity
   2ad27dfa-c310-4152-becd-2979f2fad704:
     settings:
-      view: media_entity_browser
+      view: browser_image
       view_display: entity_browser_1
       submit_text: Enviar
       auto_select: false

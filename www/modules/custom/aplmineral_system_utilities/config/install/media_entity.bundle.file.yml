@@ -6,7 +6,7 @@ dependencies:
     - media_entity_document
 third_party_settings:
   crop:
-    image_field: field_image
+    image_field: field_file
 id: file
 label: Arquivo
 description: ''

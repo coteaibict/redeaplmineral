@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - image.style.media_entity_browser_thumbnail
+    - media_entity.bundle.image
   module:
     - entity_browser
     - image
@@ -41,10 +42,10 @@ display:
       exposed_form:
         type: basic
         options:
-          submit_button: Apply
+          submit_button: Filtrar
           reset_button: false
           reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
+          exposed_sorts_label: 'Ordenar por'
           expose_sort_order: true
           sort_asc_label: Asc
           sort_desc_label: Desc
@@ -383,52 +384,6 @@ display:
           entity_type: media
           plugin_id: entity_browser_select
       filters:
-        status:
-          id: status
-          table: media_field_data
-          field: status
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: '='
-          value: '0'
-          group: 1
-          exposed: true
-          expose:
-            operator_id: ''
-            label: 'True'
-            description: null
-            use_operator: false
-            operator: status_op
-            identifier: status
-            required: true
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-          is_grouped: true
-          group_info:
-            label: 'Publishing status'
-            description: ''
-            identifier: status
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items:
-              1:
-                title: Published
-                operator: '='
-                value: '1'
-              2:
-                title: Unpublished
-                operator: '='
-                value: '0'
-          entity_type: media
-          entity_field: status
-          plugin_id: boolean
         bundle:
           id: bundle
           table: media_field_data
@@ -437,9 +392,10 @@ display:
           group_type: group
           admin_label: ''
           operator: in
-          value: {  }
+          value:
+            image: image
           group: 1
-          exposed: true
+          exposed: false
           expose:
             operator_id: bundle_op
             label: Provider
@@ -482,7 +438,7 @@ display:
           exposed: true
           expose:
             operator_id: name_op
-            label: 'Media name'
+            label: 'Nome da imagem'
             description: ''
             use_operator: false
             operator: name_op
@@ -493,6 +449,7 @@ display:
             remember_roles:
               authenticated: authenticated
               anonymous: '0'
+              administrator: '0'
           is_grouped: false
           group_info:
             label: ''
@@ -508,46 +465,52 @@ display:
           entity_type: media
           entity_field: name
           plugin_id: string
-        langcode:
-          id: langcode
+        status:
+          id: status
           table: media_field_data
-          field: langcode
+          field: status
           relationship: none
           group_type: group
           admin_label: ''
-          operator: in
-          value: {  }
+          operator: '='
+          value: '0'
           group: 1
           exposed: true
           expose:
-            operator_id: langcode_op
-            label: Language
-            description: ''
+            operator_id: ''
+            label: 'True'
+            description: null
             use_operator: false
-            operator: langcode_op
-            identifier: langcode
-            required: false
+            operator: status_op
+            identifier: status
+            required: true
             remember: false
             multiple: false
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
-            reduce: false
-          is_grouped: false
+          is_grouped: true
           group_info:
-            label: ''
+            label: Status
             description: ''
-            identifier: ''
+            identifier: status
             optional: true
             widget: select
             multiple: false
             remember: false
             default_group: All
             default_group_multiple: {  }
-            group_items: {  }
+            group_items:
+              1:
+                title: Publicado
+                operator: '='
+                value: '1'
+              2:
+                title: 'Não publicado'
+                operator: '='
+                value: '0'
           entity_type: media
-          entity_field: langcode
-          plugin_id: language
+          entity_field: status
+          plugin_id: boolean
       sorts: {  }
       header: {  }
       footer: {  }
@@ -559,6 +522,7 @@ display:
         operator: AND
         groups:
           1: AND
+      css_class: view-media-entity-browser
     cache_metadata:
       max-age: 0
       contexts:
