@@ -1,0 +1,23 @@
+langcode: pt-br
+status: false
+dependencies:
+  config:
+    - system.menu.tools
+  module:
+    - system
+  theme:
+    - aplmineral
+id: aplmineral_tools
+theme: aplmineral
+region: header
+weight: -2
+provider: null
+plugin: 'system_menu_block:tools'
+settings:
+  id: 'system_menu_block:tools'
+  label: Ferramentas
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+visibility: {  }

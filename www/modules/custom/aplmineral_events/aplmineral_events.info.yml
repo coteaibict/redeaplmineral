@@ -1,0 +1,16 @@
+name: Eventos
+type: module
+core: 8.x
+dependencies:
+  - aplmineral_system_utilities
+  - datetime
+  - entity_browser
+  - field
+  - language
+  - menu_ui
+  - node
+  - pathauto
+  - text
+  - user
+version: 8.x-1.0
+package: 'APL Mineral'

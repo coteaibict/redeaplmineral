@@ -92,3 +92,6 @@ configuration/
 databases/
 !www/core/assets/vendor/*
 !www/core/assets/vendor/*/backbone.js
+
+# Others
+.DS_Store

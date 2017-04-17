@@ -1,0 +1,20 @@
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_end
+    - node.type.events
+  module:
+    - datetime
+id: node.events.field_date_end
+field_name: field_date_end
+entity_type: node
+bundle: events
+label: 'Data final'
+description: 'Caso o evento tenha duração específica ou seja de vários dias, informe aqui a data final. Deixe em branco para não exibir data final.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

@@ -1,0 +1,61 @@
+// partials/components/header
+
+$logo-width: 215px
+
+%header-menu-items
+  display: flex
+  width: $width-full
+
+  li
+    @include font-size(10px)
+    display: inline-block
+    margin-right: $margin-default
+
+    &:last-child
+      margin-right: 0
+
+  a
+    text-decoration: none
+    color: $color-text-main
+
+
+.header
+  padding-top: $margin-default
+  padding-bottom: $margin-default
+  background-color: $color-athens-gray
+
+  .block-system-branding-block
+    display: flex
+    justify-content: center
+    padding-top: $margin-default
+    padding-bottom: $margin-default
+
+    a
+      display: block
+
+    img
+      display: block
+      width: $width-full
+      max-width: $logo-width
+
+
+.header__inner
+  @extend %container
+
+
+.header__topbar
+  display: flex
+  justify-content: space-between
+
+
+.a11y-menu
+  @extend %header-menu-items
+  text-transform: uppercase
+
+.i18n-menu
+  @extend %header-menu-items
+  text-transform: uppercase
+
+.menu-institutional
+  @extend %header-menu-items
+  justify-content: flex-end
