@@ -2,40 +2,5 @@ name: 'Utilidades padrão'
 description: 'Funções padrões para o site.'
 type: module
 core: 8.x
-dependencies:
-  - aplmineral_news
-  - block
-  - ckeditor
-  - comment
-  - crop
-  - datetime
-  - dropzonejs_eb_widget
-  - editor
-  - embed
-  - entity_browser
-  - entity_browser_entity_form
-  - entity_embed
-  - features
-  - field
-  - file
-  - filter
-  - help
-  - image
-  - image_widget_crop
-  - language
-  - link
-  - media_entity
-  - media_entity_document
-  - media_entity_image
-  - node
-  - path
-  - rdf
-  - responsive_image
-  - search
-  - system
-  - taxonomy
-  - text
-  - user
-  - views
 version: 8.x-1.3
 package: 'APL Mineral'
