@@ -3,5 +3,5 @@
 composer install
 cd www
 drush updb -y
+drush cr
 drush fra -y
-drush rr
