@@ -1,6 +1,10 @@
 {
   "name": "redeaplmineral",
   "version": "2.0.0",
+  "scripts": {
+    "start": "./node_modules/.bin/gulp watch",
+    "build": "./node_modules/.bin/gulp styles"
+  },
   "devDependencies": {
     "bower": "^1.8.0",
     "gulp": "^3.9.1",
