@@ -4,18 +4,18 @@
   register: npm_installed
   ignore_errors: true
 
-- name: NodeJS | Prepare for installation
-  raw: "curl -sL https://deb.nodesource.com/setup | sudo bash -"
-  become: true
-  when: npm_installed|failed
+- name: NodeJS | Download the nvm (node version manager) install script
+  get_url: url=https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh dest=/tmp/install.sh
 
-- name: NodeJS | Install NodeJS
-  apt: name=nodejs state=present
-  become: true
+- name: NodeJS | Execute the nvm install script
+  shell: bash install.sh chdir=/tmp executable=/bin/bash
 
-- name: NodeJS | Install build-essentials package
-  apt: name=build-essential state=present
-  become: true
+- name: NodeJS | Register the NVM_DIR
+  shell: echo $NVM_DIR
+  register: nvm_dir
+
+- name: NodeJS | Install the specified node version using the nvm command and set it as default
+  shell: . $NVM_DIR/nvm.sh && nvm install 7.4.0 && nvm run 7.4.0 --version && nvm alias default 7.4.0 creates=~/.nvm/versions/node/v7.4.0
 
 - name: NodeJS | Install Grunt, Bower and Gulp
   command: npm install -g {{ item }}
