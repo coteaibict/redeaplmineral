@@ -4,13 +4,9 @@ type: module
 core: 8.x
 dependencies:
   - aplmineral_system_utilities
-  - crop
   - datetime
-  - dropzonejs_eb_widget
   - entity_browser
   - field
-  - image
-  - image_widget_crop
   - language
   - link
   - media_entity
@@ -19,7 +15,6 @@ dependencies:
   - path
   - pathauto
   - responsive_image
-  - taxonomy
   - text
   - user
   - views

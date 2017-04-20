@@ -1,8 +1,11 @@
+uuid: 3f15e028-b098-4926-bd1d-5f75fb860651
 langcode: pt-br
 status: true
 dependencies:
   config:
     - node.type.news
+_core:
+  default_config_hash: EO3FMiwyBY5lzq8Rrx2bC6_YUjemT7BTm3XFl6eEkps
 id: node.news
 target_entity_type_id: node
 target_bundle: news
