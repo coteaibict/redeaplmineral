@@ -1,8 +1,11 @@
+uuid: a4a75aef-d317-4686-9e05-2742e847050e
 langcode: pt-br
 status: true
 dependencies:
   module:
     - node
+_core:
+  default_config_hash: SiAWlZ2F9_C74gPxxoRLWyMgG8wWnL9L3RY5Ffs8-Ik
 id: alias_events
 label: 'URLs para eventos'
 type: 'canonical_entities:node'

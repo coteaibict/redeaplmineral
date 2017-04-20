@@ -1,12 +1,9 @@
 bundle: aplmineral
 excluded:
-  - field.storage.node.field_date_end
-  - field.storage.node.field_date_start
-  - field.storage.node.field_place
+  - field.storage.node.field_tags
+  - taxonomy.vocabulary.tags
 required:
-  - core.entity_form_display.node.events.default
-  - core.entity_view_display.node.events.default
-  - core.entity_view_display.node.events.teaser
+  - field.field.node.events.field_announcement
   - field.field.node.events.field_body
   - field.field.node.events.field_date_end
   - field.field.node.events.field_date_start
@@ -16,4 +13,8 @@ required:
   - field.field.node.events.field_summary
   - field.field.node.events.field_tags
   - language.content_settings.node.events
+  - core.entity_view_display.node.events.default
+  - core.entity_view_display.node.events.teaser
+  - core.entity_form_display.node.events.default
+  - pathauto.pattern.alias_events
   - node.type.events
