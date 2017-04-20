@@ -1,6 +1,13 @@
 // partials/components/button
 
+%button-direction
+  position: absolute
+  top: 50%
+  transform: translateY(-50%)
+  font-family: $font-icon
+
 .button
+  position: relative
   display: block
   width: $width-full
   margin: 0
@@ -16,3 +23,26 @@
 
   &:hover
     background: darken($color-bg-main, 5%)
+
+.buttons-wrapper
+  display: flex
+  justify-content: space-between
+
+  .button
+    width: calc(50% - 10px)
+
+.button-next
+  padding-right: $margin-default-double
+
+  &::after
+    @extend %button-direction
+    content: $fa-var-chevron-right
+    right: $margin-default-double
+
+.button-prev
+  padding-left: $margin-default-double
+
+  &::after
+    @extend %button-direction
+    content: $fa-var-chevron-left
+    left: $margin-default-double
