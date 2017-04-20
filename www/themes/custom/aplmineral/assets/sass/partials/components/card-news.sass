@@ -3,7 +3,7 @@
 .card-news-wrapper
   .section-title
     padding: $margin-default
-    margin-bottom: $margin-default
+    margin-bottom: $margin-default-double
     font-size: $font-size-h2
     font-weight: 300
     text-align: center
@@ -13,7 +13,6 @@
 
   .section-subtitle
     padding: $margin-default
-    margin-top: $margin-default
     margin-bottom: $margin-default
     font-size: $font-size-h4
     font-weight: 300
@@ -35,6 +34,12 @@
   background-color: $color-bg-lightest
   border: 1px solid $color-border-midlight
 
+  img
+    display: block
+    width: 100%
+    max-width: 100%
+    margin-bottom: $margin-default-double
+
   .card-news__title
     margin-top: $margin-default
 
@@ -49,3 +54,8 @@
     margin-top: -5px
     text-align: right
     font-size: $font-size-small
+
+  .metadata-date
+    .date
+      display: block
+      font-size: $font-size-small
