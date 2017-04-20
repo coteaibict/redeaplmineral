@@ -1,3 +1,4 @@
+uuid: 1df8c5af-3d04-490f-9a15-aa6d3ec825ab
 langcode: pt-br
 status: true
 dependencies:
@@ -6,6 +7,8 @@ dependencies:
   module:
     - entity_embed
     - media_entity
+_core:
+  default_config_hash: jKxBIJzXBDKyPoDbmS53B_9CxGGn5ONlVaBjlj3BuAg
 label: Imagem
 id: image
 type_id: entity

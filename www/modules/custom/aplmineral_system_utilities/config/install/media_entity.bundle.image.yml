@@ -1,3 +1,4 @@
+uuid: 742347c2-53af-46f7-9170-bb836b8e7a1c
 langcode: pt-br
 status: true
 dependencies:
@@ -7,6 +8,8 @@ dependencies:
 third_party_settings:
   crop:
     image_field: field_image
+_core:
+  default_config_hash: 299htHJ5RNrKB5v1HbXJRj3fzpArvZ1PH_mA29KIS4k
 id: image
 label: Imagem
 description: ''

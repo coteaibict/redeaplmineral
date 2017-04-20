@@ -1,3 +1,4 @@
+uuid: d2699bf5-9e7a-4307-9fb0-96fec0d74953
 langcode: pt-br
 status: true
 dependencies:
@@ -6,6 +7,8 @@ dependencies:
     - node.type.news
   module:
     - link
+_core:
+  default_config_hash: wbwdv-qXe8auU2CJMv2Q8-sYOzWG2YpMMlIgRAy5j6Q
 id: node.news.field_source
 field_name: field_source
 entity_type: node

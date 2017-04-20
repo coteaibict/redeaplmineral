@@ -1,6 +1,9 @@
+uuid: cdfbecdf-3dae-4c02-ab89-e02d67265919
 langcode: pt-br
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: Ez6fBNgw-c4T0nUUWp9hc6255tXGUZpy6aij3hl4jjc
 label: Slideshow
 id: slideshow
 description: 'Corte para exibição no slideshow, caso a notícia esteja marcada como "destaque".'

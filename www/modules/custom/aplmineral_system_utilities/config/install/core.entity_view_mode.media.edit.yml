@@ -1,8 +1,11 @@
+uuid: b72364a0-3280-434c-b413-2a514822a514
 langcode: pt-br
 status: true
 dependencies:
   module:
     - media_entity
+_core:
+  default_config_hash: 5Y3wKE2UUNf8HzMb-SuspZEiD7TPB95Lycwcl9z5peU
 id: media.edit
 label: Edição
 targetEntityType: media

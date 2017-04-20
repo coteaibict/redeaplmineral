@@ -1,8 +1,0 @@
-langcode: pt-br
-status: true
-dependencies: {  }
-name: Tags
-vid: tags
-description: 'Use etiquetas para agrupar artigos sobre temas semelhantes em categorias.'
-hierarchy: 0
-weight: 0

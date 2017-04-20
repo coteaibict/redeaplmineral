@@ -1,3 +1,4 @@
+uuid: 51125c22-2d50-4f41-8aea-0634d421f825
 langcode: pt-br
 status: true
 dependencies:
@@ -17,6 +18,8 @@ dependencies:
     - link
     - path
     - text
+_core:
+  default_config_hash: ME55RpwNc4pp0gdLDAsD4LTaFpoMYXk_q2atut2sxLE
 id: node.news.default
 targetEntityType: node
 bundle: news

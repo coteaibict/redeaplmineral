@@ -1,14 +1,18 @@
+uuid: eaad8893-28c4-4a11-a8b8-ec9669202546
 langcode: pt-br
 status: true
 dependencies:
   module:
+    - link
     - node
-id: node.field_highlight
-field_name: field_highlight
+_core:
+  default_config_hash: X1uxag4J20VooOOSU7pQkXPSZlsmJv4z6mdkxWzcgZ0
+id: node.field_source
+field_name: field_source
 entity_type: node
-type: boolean
+type: link
 settings: {  }
-module: core
+module: link
 locked: false
 cardinality: 1
 translatable: true

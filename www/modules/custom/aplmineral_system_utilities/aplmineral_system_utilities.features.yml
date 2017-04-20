@@ -1,1 +1,31 @@
 bundle: aplmineral
+excluded:
+  - field.field.node.events.field_image
+  - field.field.node.news.field_image
+  - core.entity_view_display.node.events.default
+  - core.entity_view_display.node.events.teaser
+  - core.entity_view_display.node.news.default
+  - core.entity_view_display.node.news.teaser
+  - core.entity_form_display.node.events.default
+  - core.entity_form_display.node.news.default
+  - views.view.banner_highlightnews
+required:
+  - media_entity.bundle.file
+  - media_entity.bundle.image
+  - entity_browser.browser.document_upload
+  - field.storage.media.field_file
+  - field.storage.media.field_image
+  - core.entity_view_mode.media.edit
+  - core.entity_view_mode.media.full
+  - core.entity_view_mode.media.teaser
+  - core.entity_view_mode.media.slideshow
+  - image.style.full
+  - image.style.slideshow
+  - image.style.teaser
+  - image.style.media_entity_browser_thumbnail
+  - responsive_image.styles.full
+  - responsive_image.styles.slideshow
+  - responsive_image.styles.teaser
+  - crop.type.full
+  - crop.type.slideshow
+  - crop.type.teaser

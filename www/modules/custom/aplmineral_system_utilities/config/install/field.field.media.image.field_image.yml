@@ -1,3 +1,4 @@
+uuid: 99720521-b2f4-4a66-9001-4a82b5158268
 langcode: pt-br
 status: true
 dependencies:
@@ -6,6 +7,8 @@ dependencies:
     - media_entity.bundle.image
   module:
     - image
+_core:
+  default_config_hash: fft6yzu5UqeMEAkp1Cycr8rqPZ12WSWg5a1f4Pe4eEs
 id: media.image.field_image
 field_name: field_image
 entity_type: media
