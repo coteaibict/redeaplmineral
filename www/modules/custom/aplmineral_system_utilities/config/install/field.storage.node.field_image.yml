@@ -1,16 +1,15 @@
-uuid: abd00c6e-9be5-450a-9c09-cff7295b5217
 langcode: pt-br
 status: true
 dependencies:
   module:
+    - media_entity
     - node
-_core:
-  default_config_hash: SlCRujTsBFDQnZS_8JXYt3BpuGaFil2d9vk2sDzpS5c
-id: node.field_highlight
-field_name: field_highlight
+id: node.field_image
+field_name: field_image
 entity_type: node
-type: boolean
-settings: {  }
+type: entity_reference
+settings:
+  target_type: media
 module: core
 locked: false
 cardinality: 1

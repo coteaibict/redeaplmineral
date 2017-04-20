@@ -1,11 +1,8 @@
-uuid: e40ced89-8c95-4c1e-8c33-61b55f5632bd
 langcode: pt-br
 status: true
 dependencies:
   module:
     - crop
-_core:
-  default_config_hash: q3lD1Dyt8x5V-3X8LZvH_9qK6sNW_9bdO_ePjLB5fjE
 name: slideshow
 label: Slideshow
 effects:

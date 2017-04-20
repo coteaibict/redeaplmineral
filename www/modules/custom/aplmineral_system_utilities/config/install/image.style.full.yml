@@ -1,11 +1,8 @@
-uuid: d4c454b7-90ff-4ea7-b401-91a78a58b3b9
 langcode: pt-br
 status: true
 dependencies:
   module:
     - crop
-_core:
-  default_config_hash: NHLO0D7QRAkDTKJBjP1vXkExHbWOjZZKkGeoYDFqD8c
 name: full
 label: 'Conteúdo completo'
 effects:

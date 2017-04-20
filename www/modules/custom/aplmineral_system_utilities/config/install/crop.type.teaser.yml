@@ -1,9 +1,6 @@
-uuid: 0cfd4ebb-1510-4a6b-b97e-66c70ff5e6f8
 langcode: pt-br
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: SSZY1FJZK85yYZ-GPLwSFrQZvA1JfCNN89hpvDUqxZ8
 label: Resumo
 id: teaser
 description: 'Corte para exibição nas listagens.'

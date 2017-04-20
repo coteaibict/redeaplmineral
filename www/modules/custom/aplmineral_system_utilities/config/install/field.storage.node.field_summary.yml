@@ -1,11 +1,8 @@
-uuid: 2a1be1e1-7c7a-47a8-ad45-443d68e99220
 langcode: pt-br
 status: true
 dependencies:
   module:
     - node
-_core:
-  default_config_hash: CnbmcMCGf-jCyhhaGe8zcBQiZn4qkYxnqBUs95E-xXc
 id: node.field_summary
 field_name: field_summary
 entity_type: node

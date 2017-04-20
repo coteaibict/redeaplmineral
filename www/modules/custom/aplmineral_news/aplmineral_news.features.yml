@@ -9,8 +9,3 @@ excluded:
   - core.entity_form_display.node.events.default
 required:
   - views.view.banner_highlightnews
-  - field.storage.node.field_body
-  - field.storage.node.field_date
-  - field.storage.node.field_highlight
-  - field.storage.node.field_source
-  - field.storage.node.field_summary

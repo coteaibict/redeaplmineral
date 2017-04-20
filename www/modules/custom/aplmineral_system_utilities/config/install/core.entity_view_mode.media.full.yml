@@ -1,11 +1,8 @@
-uuid: 2895e2ab-31d2-4880-ace0-0ceedfea55a8
 langcode: pt-br
 status: true
 dependencies:
   module:
     - media_entity
-_core:
-  default_config_hash: twS7BNcI0op3xp_Vk3IMCWGkGseHrqZ5DocYAUzK30s
 id: media.full
 label: 'Conteúdo completo'
 targetEntityType: media

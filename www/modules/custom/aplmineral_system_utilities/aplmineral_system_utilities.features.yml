@@ -1,20 +1,21 @@
 bundle: aplmineral
-excluded:
-  - field.field.node.events.field_image
-  - field.field.node.news.field_image
-  - core.entity_view_display.node.events.default
-  - core.entity_view_display.node.events.teaser
-  - core.entity_view_display.node.news.default
-  - core.entity_view_display.node.news.teaser
-  - core.entity_form_display.node.events.default
-  - core.entity_form_display.node.news.default
-  - views.view.banner_highlightnews
 required:
   - media_entity.bundle.file
   - media_entity.bundle.image
   - entity_browser.browser.document_upload
   - field.storage.media.field_file
   - field.storage.media.field_image
+  - field.storage.node.field_announcement
+  - field.storage.node.field_body
+  - field.storage.node.field_date
+  - field.storage.node.field_date_end
+  - field.storage.node.field_date_start
+  - field.storage.node.field_highlight
+  - field.storage.node.field_image
+  - field.storage.node.field_place
+  - field.storage.node.field_source
+  - field.storage.node.field_summary
+  - field.storage.node.field_tags
   - core.entity_view_mode.media.edit
   - core.entity_view_mode.media.full
   - core.entity_view_mode.media.teaser
@@ -29,3 +30,19 @@ required:
   - crop.type.full
   - crop.type.slideshow
   - crop.type.teaser
+  - editor.editor.basic_html
+  - editor.editor.full_html
+  - features.bundle.aplmineral
+  - core.date_format.long
+  - core.date_format.medium
+  - core.date_format.short
+  - taxonomy.vocabulary.tags
+  - crop.settings
+  - dropzonejs.settings
+  - embed.settings
+  - entity_embed.settings
+  - image_widget_crop.settings
+  - media_entity.settings
+  - pathauto.settings
+  - file.settings
+  - text.settings

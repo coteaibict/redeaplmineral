@@ -1,18 +1,15 @@
-uuid: 219264da-4bdd-4782-9ec0-8a71493b32b2
 langcode: pt-br
 status: true
 dependencies:
   module:
+    - link
     - node
-    - text
-_core:
-  default_config_hash: Z31wsb0pA8F_D7HpIKMFd3I7TMS27rFoqw_uy54lDog
-id: node.field_body
-field_name: field_body
+id: node.field_source
+field_name: field_source
 entity_type: node
-type: text_long
+type: link
 settings: {  }
-module: text
+module: link
 locked: false
 cardinality: 1
 translatable: true

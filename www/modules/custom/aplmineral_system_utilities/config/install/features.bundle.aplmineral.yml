@@ -1,0 +1,98 @@
+langcode: pt-br
+status: true
+dependencies: {  }
+name: 'APL Mineral'
+machine_name: aplmineral
+description: 'APL Mineral Features'
+assignments:
+  alter:
+    core: 1
+    uuid: 1
+    user_permissions: 0
+    enabled: true
+    weight: 0
+  base:
+    types:
+      config:
+        comment_type: comment_type
+        node_type: node_type
+      content:
+        user: user
+    enabled: true
+    weight: -2
+  core:
+    types:
+      config:
+        image_style: image_style
+        field_storage_config: field_storage_config
+        date_format: date_format
+        entity_form_mode: entity_form_mode
+        menu: menu
+        entity_view_mode: entity_view_mode
+        user_role: user_role
+        responsive_image_style: responsive_image_style
+    enabled: true
+    weight: 5
+  dependency:
+    enabled: true
+    weight: 15
+  exclude:
+    types:
+      config:
+        features_bundle: features_bundle
+    curated: false
+    module:
+      installed: false
+      profile: false
+      namespace: true
+      namespace_any: true
+    enabled: true
+    weight: -5
+  existing:
+    enabled: true
+    weight: 12
+  forward_dependency:
+    enabled: true
+    weight: 4
+  namespace:
+    enabled: true
+    weight: 0
+  optional:
+    types:
+      config:
+        language_content_settings: language_content_settings
+        configurable_language: configurable_language
+    enabled: true
+    weight: 0
+  packages:
+    enabled: true
+    weight: -20
+  profile:
+    curated: true
+    standard:
+      files: true
+      dependencies: false
+    types:
+      config:
+        block: block
+        language_content_settings: language_content_settings
+        configurable_language: configurable_language
+        shortcut_set: shortcut_set
+        tour: tour
+    enabled: true
+    weight: 10
+  site:
+    types:
+      config:
+        action: action
+        block_content_type: block_content_type
+        editor: editor
+        filter_format: filter_format
+        contact_form: contact_form
+        rdf_mapping: rdf_mapping
+        search_page: search_page
+        taxonomy_vocabulary: taxonomy_vocabulary
+    enabled: true
+    weight: 7
+profile_name: standard
+is_profile: false

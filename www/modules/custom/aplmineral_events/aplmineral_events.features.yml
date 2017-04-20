@@ -16,9 +16,5 @@ required:
   - core.entity_view_display.node.events.default
   - core.entity_view_display.node.events.teaser
   - core.entity_form_display.node.events.default
-  - field.storage.node.field_announcement
-  - field.storage.node.field_date_end
-  - field.storage.node.field_date_start
-  - field.storage.node.field_place
   - pathauto.pattern.alias_events
   - node.type.events

@@ -1,4 +1,3 @@
-uuid: 07d58861-6ebb-42de-b099-9a86df5679bb
 langcode: pt-br
 status: true
 dependencies:
@@ -7,8 +6,6 @@ dependencies:
     - media_entity.bundle.image
   module:
     - image_widget_crop
-_core:
-  default_config_hash: DmVd9JOfsmqkHsOFpO8y5VL97CLW26eEoqmjnTuUYeU
 id: media.image.default
 targetEntityType: media
 bundle: image

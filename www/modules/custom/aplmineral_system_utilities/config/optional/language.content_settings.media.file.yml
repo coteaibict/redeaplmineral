@@ -1,11 +1,10 @@
-uuid: cc8813f5-1c0c-457d-8823-58d57af95ba3
 langcode: pt-br
 status: true
 dependencies:
   config:
-    - media_entity.bundle.image
-id: media.image
+    - media_entity.bundle.file
+id: media.file
 target_entity_type_id: media
-target_bundle: image
+target_bundle: file
 default_langcode: site_default
 language_alterable: false

@@ -1,3 +1,4 @@
+uuid: c63de6d4-a94d-4c93-a29c-a0e0681afd22
 langcode: pt-br
 status: true
 dependencies:
@@ -17,6 +18,8 @@ dependencies:
     - datetime
     - entity_browser
     - text
+_core:
+  default_config_hash: V6ZxR30M--d6QpQCedlrP0xXleIXf-H7urxaMESgK90
 id: node.events.default
 targetEntityType: node
 bundle: events

@@ -1,11 +1,8 @@
-uuid: 140b1ec7-89b1-4784-9c17-4fa38fc4644b
 langcode: pt-br
 status: true
 dependencies:
   module:
     - crop
-_core:
-  default_config_hash: fVKzIU7RMj2Id2UNQEchlYcwBw23s4USbQnCq1SSl98
 name: teaser
 label: Resumo
 effects:

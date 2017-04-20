@@ -1,9 +1,6 @@
-uuid: 0890215e-1b99-44bb-9e6e-0a6915238a92
 langcode: pt-br
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: p4L9SZ5rq3fpWWRV98Uct-9Bw_jYJIMVsgjzwSVPxwA
 label: 'Conteúdo completo'
 id: full
 description: 'Corte para exibição na página da notícia.'
