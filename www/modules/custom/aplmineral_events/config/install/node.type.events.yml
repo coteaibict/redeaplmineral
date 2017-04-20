@@ -1,3 +1,4 @@
+uuid: 724fa2be-aa98-4b32-9852-683fc86f1e67
 langcode: pt-br
 status: true
 dependencies:
@@ -7,6 +8,8 @@ third_party_settings:
   menu_ui:
     available_menus: {  }
     parent: ''
+_core:
+  default_config_hash: EpT0_otjzGD5vl9To69YYPGSK_arIV6lNhPLPSSL5nY
 name: Eventos
 type: events
 description: 'Use essa opção para criar <strong>eventos</strong> da Rede APL Mineral.'
