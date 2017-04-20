@@ -1,5 +1,33 @@
 // partials/components/card-news
 
+.card-news-wrapper
+  .section-title
+    padding: $margin-default
+    margin-bottom: $margin-default
+    font-size: $font-size-h2
+    font-weight: 300
+    text-align: center
+    text-transform: uppercase
+    color: $color-text-lightest
+    background-color: $color-bg-main
+
+  .section-subtitle
+    padding: $margin-default
+    margin-top: $margin-default
+    margin-bottom: $margin-default
+    font-size: $font-size-h4
+    font-weight: 300
+    text-transform: uppercase
+    color: $color-text-lightest
+    background-color: $color-bg-secondary
+
+  .card-news-filter
+    margin-bottom: $margin-default
+    text-align: right
+
+    select
+      min-width: 50px
+
 .card-news
   position: relative
   padding: $margin-default
@@ -8,10 +36,11 @@
   border: 1px solid $color-border-midlight
 
   .card-news__title
-    margin-top: $margin-default  
+    margin-top: $margin-default
 
     a
-      font-size: $font-size-h3
+      font-size: $font-size-h2
+      font-weight: 300
       color: $color-text-main
       text-decoration: none
 
