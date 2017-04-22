@@ -1,0 +1,363 @@
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_body
+    - field.storage.node.field_date_end
+    - field.storage.node.field_date_start
+    - field.storage.node.field_place
+    - field.storage.node.field_summary
+    - field.storage.node.field_tags
+    - field.storage.node.field_date
+    - field.storage.node.field_source
+    - field.storage.media.field_file
+    - field.storage.media.field_image
+    - search_api.server.database
+  module:
+    - file
+    - search_api
+    - node
+    - media_entity
+    - taxonomy
+id: default_search
+name: 'Busca padrão'
+description: ''
+read_only: false
+field_settings:
+  node_grants:
+    label: 'Node access information'
+    property_path: search_api_node_grants
+    type: string
+    indexed_locked: true
+    type_locked: true
+    hidden: true
+  aggregated_field:
+    label: 'Aggregated field'
+    property_path: aggregated_field
+    type: text
+    boost: !!float 21
+    configuration:
+      type: union
+      fields:
+        - 'entity:node/changed'
+        - 'entity:node/field_body'
+        - 'entity:node/field_date'
+        - 'entity:node/field_date_end'
+        - 'entity:node/field_date_start'
+        - 'entity:node/field_summary'
+        - 'entity:node/field_highlight'
+        - 'entity:node/field_announcement'
+        - 'entity:node/created'
+        - 'entity:node/uid'
+        - 'entity:node/field_source'
+        - 'entity:node/nid'
+        - 'entity:node/vid'
+        - 'entity:node/field_image'
+        - 'entity:node/field_place'
+        - 'entity:node/revision_log'
+        - 'entity:node/revision_timestamp'
+        - 'entity:node/revision_uid'
+        - 'entity:node/field_tags'
+        - 'entity:node/type'
+        - 'entity:node/title'
+        - 'entity:media/field_file'
+        - 'entity:media/changed'
+        - 'entity:media/created'
+        - 'entity:media/vid'
+        - 'entity:media/field_image'
+        - 'entity:media/mid'
+        - 'entity:media/name'
+        - 'entity:media/thumbnail'
+        - 'entity:media/bundle'
+        - 'entity:media/uid'
+        - 'entity:media/revision_log'
+        - 'entity:media/revision_uid'
+        - 'entity:media/revision_timestamp'
+        - 'entity:taxonomy_term/changed'
+        - 'entity:taxonomy_term/description'
+        - 'entity:taxonomy_term/tid'
+        - 'entity:taxonomy_term/name'
+        - 'entity:taxonomy_term/vid'
+        - 'entity:taxonomy_term/weight'
+  status:
+    label: status
+    datasource_id: 'entity:node'
+    property_path: status
+    type: boolean
+    indexed_locked: true
+    type_locked: true
+  uid:
+    label: uid
+    datasource_id: 'entity:node'
+    property_path: uid
+    type: integer
+    indexed_locked: true
+    type_locked: true
+  title:
+    label: Título
+    datasource_id: 'entity:node'
+    property_path: title
+    type: string
+    boost: !!float 13
+  field_body:
+    label: Corpo
+    datasource_id: 'entity:node'
+    property_path: field_body
+    type: text
+    boost: !!float 8
+    dependencies:
+      config:
+        - field.storage.node.field_body
+  field_date_end:
+    label: 'Data final'
+    datasource_id: 'entity:node'
+    property_path: field_date_end
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_date_end
+  field_date_start:
+    label: 'Data inicial'
+    datasource_id: 'entity:node'
+    property_path: field_date_start
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_date_start
+  field_place:
+    label: Local
+    datasource_id: 'entity:node'
+    property_path: field_place
+    type: string
+    boost: !!float 5
+    dependencies:
+      config:
+        - field.storage.node.field_place
+  field_summary:
+    label: 'Descrição (resumo)'
+    datasource_id: 'entity:node'
+    property_path: field_summary
+    type: text
+    boost: !!float 8
+    dependencies:
+      config:
+        - field.storage.node.field_summary
+  field_tags:
+    label: 'Tags (categorização)'
+    datasource_id: 'entity:node'
+    property_path: field_tags
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_tags
+  field_date:
+    label: Data
+    datasource_id: 'entity:node'
+    property_path: field_date
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_date
+  field_source:
+    label: Fonte
+    datasource_id: 'entity:node'
+    property_path: field_source
+    type: string
+    boost: !!float 5
+    dependencies:
+      config:
+        - field.storage.node.field_source
+  nid:
+    label: Identificador
+    datasource_id: 'entity:node'
+    property_path: nid
+    type: integer
+  type:
+    label: 'Tipo de conteúdo'
+    datasource_id: 'entity:node'
+    property_path: type
+    type: string
+  title_source:
+    label: 'Fonte » Texto do link'
+    datasource_id: 'entity:node'
+    property_path: 'field_source:title'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_source
+  mid:
+    label: 'Media ID'
+    datasource_id: 'entity:media'
+    property_path: mid
+    type: integer
+  bundle:
+    label: Pacote
+    datasource_id: 'entity:media'
+    property_path: bundle
+    type: string
+  filename_document:
+    label: 'Arquivo » Arquivo » Filename'
+    datasource_id: 'entity:media'
+    property_path: 'field_file:entity:filename'
+    type: string
+    dependencies:
+      config:
+        - field.storage.media.field_file
+      module:
+        - file
+  filemime_document:
+    label: 'Arquivo » Arquivo » File MIME type'
+    datasource_id: 'entity:media'
+    property_path: 'field_file:entity:filemime'
+    type: string
+    dependencies:
+      config:
+        - field.storage.media.field_file
+      module:
+        - file
+  filename_image:
+    label: 'Imagem » Arquivo » Filename'
+    datasource_id: 'entity:media'
+    property_path: 'field_image:entity:filename'
+    type: string
+    dependencies:
+      config:
+        - field.storage.media.field_image
+      module:
+        - file
+  filemime_image:
+    label: 'Imagem » Arquivo » File MIME type'
+    datasource_id: 'entity:media'
+    property_path: 'field_image:entity:filemime'
+    type: string
+    dependencies:
+      config:
+        - field.storage.media.field_image
+      module:
+        - file
+  tid:
+    label: 'ID do termo'
+    datasource_id: 'entity:taxonomy_term'
+    property_path: tid
+    type: integer
+  vid:
+    label: Vocabulário
+    datasource_id: 'entity:taxonomy_term'
+    property_path: vid
+    type: string
+  name_vocab:
+    label: Name
+    datasource_id: 'entity:taxonomy_term'
+    property_path: name
+    type: string
+    boost: !!float 13
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: true
+      selected: {  }
+    languages:
+      default: true
+      selected: {  }
+  'entity:media':
+    bundles:
+      default: true
+      selected: {  }
+    languages:
+      default: true
+      selected: {  }
+  'entity:taxonomy_term':
+    bundles:
+      default: true
+      selected: {  }
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  hierarchy:
+    fields:
+      field_tags: taxonomy_term-parent
+    weights:
+      preprocess_index: -45
+  add_url: {  }
+  aggregated_field: {  }
+  content_access:
+    weights:
+      preprocess_query: -30
+  entity_status: {  }
+  highlight:
+    highlight: always
+    highlight_partial: true
+    excerpt: true
+    excerpt_length: 256
+    exclude_fields: {  }
+    prefix: '<strong>'
+    suffix: '</strong>'
+    weights:
+      postprocess_query: 0
+  html_filter:
+    fields:
+      - aggregated_field
+      - field_body
+    title: true
+    alt: true
+    tags:
+      h1: 5
+      h2: 3
+      h3: 2
+      strong: 2
+      b: 2
+    weights:
+      preprocess_index: -15
+      preprocess_query: -15
+  ignorecase:
+    fields:
+      - node_grants
+      - aggregated_field
+      - title
+      - field_body
+      - field_place
+      - field_summary
+      - field_tags
+      - field_source
+      - type
+      - title_source
+      - bundle
+      - filename_document
+      - filemime_document
+      - filename_image
+      - filemime_image
+      - vid
+      - name_vocab
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
+  rendered_item: {  }
+  transliteration:
+    fields:
+      - node_grants
+      - aggregated_field
+      - title
+      - field_body
+      - field_place
+      - field_summary
+      - field_tags
+      - field_source
+      - type
+      - title_source
+      - bundle
+      - filename_document
+      - filemime_document
+      - filename_image
+      - filemime_image
+      - vid
+      - name_vocab
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
+tracker_settings:
+  default: {  }
+options:
+  index_directly: true
+  cron_limit: 500
+server: database

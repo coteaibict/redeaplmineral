@@ -1,0 +1,27 @@
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.search_index
+    - field.field.media.file.field_file
+    - media_entity.bundle.file
+  module:
+    - file
+id: media.file.search_index
+targetEntityType: media
+bundle: file
+mode: search_index
+content:
+  field_file:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: file_table
+    region: content
+hidden:
+  created: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

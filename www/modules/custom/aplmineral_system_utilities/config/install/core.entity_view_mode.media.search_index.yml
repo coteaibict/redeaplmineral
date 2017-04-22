@@ -1,0 +1,9 @@
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - media_entity
+id: media.search_index
+label: 'Índice de busca'
+targetEntityType: media
+cache: true

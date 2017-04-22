@@ -1,0 +1,468 @@
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - search_api.index.default_search
+  module:
+    - search_api
+    - user
+id: search
+label: Busca
+module: views
+description: ''
+tag: ''
+base_table: search_api_index_default_search
+base_field: search_api_id
+core: 8.x
+display:
+  default:
+    display_plugin: default
+    id: default
+    display_title: Master
+    position: 0
+    display_options:
+      access:
+        type: perm
+        options:
+          perm: 'access content'
+      cache:
+        type: tag
+        options: {  }
+      query:
+        type: views_query
+        options:
+          bypass_access: false
+          skip_access: false
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Pesquisar
+          reset_button: true
+          reset_button_label: 'Limpar tudo'
+          exposed_sorts_label: 'Ordenar por'
+          expose_sort_order: false
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      pager:
+        type: full
+        options:
+          items_per_page: 20
+          offset: 0
+          id: 0
+          total_pages: null
+          tags:
+            previous: ‹‹
+            next: ››
+            first: '« Primeira'
+            last: 'Última »'
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Resultados por página'
+            items_per_page_options: '5, 10, 20, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+          quantity: 5
+      style:
+        type: default
+        options:
+          row_class: ''
+          default_row_class: true
+          uses_fields: false
+      row:
+        type: search_api
+        options:
+          view_modes:
+            'entity:node':
+              events: default
+              news: default
+            'entity:media':
+              file: default
+              image: default
+            'entity:taxonomy_term':
+              tags: ''
+      fields: {  }
+      filters:
+        aggregated_field:
+          id: aggregated_field
+          table: search_api_index_default_search
+          field: aggregated_field
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value:
+            min: ''
+            max: ''
+            value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: aggregated_field_op
+            label: 'Texto da busca'
+            description: ''
+            use_operator: false
+            operator: aggregated_field_op
+            identifier: keys
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: search_api_text
+        title:
+          id: title
+          table: search_api_index_default_search
+          field: title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value:
+            min: ''
+            max: ''
+            value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: title_op
+            label: Título
+            description: ''
+            use_operator: false
+            operator: title_op
+            identifier: title
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: search_api_text
+        field_summary:
+          id: field_summary
+          table: search_api_index_default_search
+          field: field_summary
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value:
+            min: ''
+            max: ''
+            value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_summary_op
+            label: 'Descrição (resumo)'
+            description: ''
+            use_operator: false
+            operator: field_summary_op
+            identifier: summary
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: search_api_text
+        field_date:
+          id: field_date
+          table: search_api_index_default_search
+          field: field_date
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value:
+            min: ''
+            max: ''
+            value: ''
+            type: date
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_date_op
+            label: Data
+            description: null
+            use_operator: false
+            operator: field_date_op
+            identifier: field_date
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: true
+          group_info:
+            label: 'Notícias desde'
+            description: ''
+            identifier: date
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items:
+              1:
+                title: Sempre
+                operator: '<='
+                value:
+                  type: offset
+                  value: '-1 minute'
+                  min: ''
+                  max: ''
+              2:
+                title: 'Último mês'
+                operator: '>='
+                value:
+                  type: offset
+                  value: '-1 month'
+                  min: ''
+                  max: ''
+              3:
+                title: 'Úlima semana'
+                operator: '>='
+                value:
+                  type: offset
+                  value: '-1 week'
+                  min: ''
+                  max: ''
+              4:
+                title: Ontem
+                operator: '>='
+                value:
+                  type: offset
+                  value: '-1 day'
+                  min: ''
+                  max: ''
+          plugin_id: search_api_date
+        type:
+          id: type
+          table: search_api_index_default_search
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: type_op
+            label: 'Tipo de conteúdo'
+            description: ''
+            use_operator: false
+            operator: type_op
+            identifier: type
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          plugin_id: search_api_options
+        uid:
+          id: uid
+          table: search_api_index_default_search
+          field: uid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: uid_op
+            label: Autor
+            description: ''
+            use_operator: false
+            operator: uid_op
+            identifier: uid
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: search_api_user
+      sorts:
+        search_api_datasource:
+          id: search_api_datasource
+          table: search_api_index_default_search
+          field: search_api_datasource
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: search_api
+      title: Busca
+      header:
+        result:
+          id: result
+          table: views
+          field: result
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          content: 'Foram encontrados @total resultados.'
+          plugin_id: result
+      footer: {  }
+      empty:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content:
+            value: 'Nenhum resultado foi encontrado.'
+            format: full_html
+          plugin_id: text
+      relationships: {  }
+      arguments:
+        search_api_fulltext:
+          id: search_api_fulltext
+          table: search_api_index_default_search
+          field: search_api_fulltext
+          relationship: none
+          group_type: group
+          admin_label: ''
+          default_action: default
+          exception:
+            value: tudo
+            title_enable: false
+            title: 'Resultados da busca por "tudo".'
+          title_enable: true
+          title: 'Resultados da busca por "{{ arguments.search_api_fulltext }}".'
+          default_argument_type: query_parameter
+          default_argument_options:
+            query_param: keys
+            fallback: tudo
+            multiple: or
+          default_argument_skip_url: false
+          summary_options: null
+          summary:
+            sort_order: asc
+            number_of_records: 0
+            format: default_summary
+          specify_validation: true
+          validate:
+            type: none
+            fail: ignore
+          validate_options: {  }
+          break_phrase: true
+          not: false
+          parse_mode: terms
+          fields: {  }
+          conjunction: OR
+          plugin_id: search_api_fulltext
+      display_extenders: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: OR
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user.permissions
+      tags: {  }
+  page_1:
+    display_plugin: page
+    id: page_1
+    display_title: Page
+    position: 1
+    display_options:
+      display_extenders: {  }
+      path: search/node
+      exposed_block: false
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user.permissions
+      tags: {  }
