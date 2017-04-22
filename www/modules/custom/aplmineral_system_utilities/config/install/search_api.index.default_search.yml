@@ -37,7 +37,7 @@ field_settings:
     type: text
     boost: !!float 21
     configuration:
-      type: concat
+      type: union
       fields:
         - 'entity:node/changed'
         - 'entity:node/field_body'
@@ -77,12 +77,8 @@ field_settings:
         - 'entity:taxonomy_term/description'
         - 'entity:taxonomy_term/tid'
         - 'entity:taxonomy_term/name'
-        - 'entity:taxonomy_term/weight'
         - 'entity:taxonomy_term/vid'
-        - search_api_node_grants
-        - rendered_item
-        - search_api_url
-        - 'entity:media/status'
+        - 'entity:taxonomy_term/weight'
   status:
     label: status
     datasource_id: 'entity:node'
@@ -290,7 +286,7 @@ processor_settings:
       preprocess_query: -30
   entity_status: {  }
   highlight:
-    highlight: server
+    highlight: always
     highlight_partial: true
     excerpt: true
     excerpt_length: 256
@@ -301,23 +297,8 @@ processor_settings:
       postprocess_query: 0
   html_filter:
     fields:
-      - node_grants
       - aggregated_field
-      - title
       - field_body
-      - field_place
-      - field_summary
-      - field_tags
-      - field_source
-      - type
-      - title_source
-      - bundle
-      - filename_document
-      - filemime_document
-      - filename_image
-      - filemime_image
-      - vid
-      - name_vocab
     title: true
     alt: true
     tags:
