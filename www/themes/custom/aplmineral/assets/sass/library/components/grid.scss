@@ -12,6 +12,9 @@
   @include breakpoint($breakpoint-min-lg) {
     width: $container-lg;
   }
+  @include breakpoint($breakpoint-min-xl) {
+    width: $container-xl;
+  }
 }
 
 %container-fluid {
