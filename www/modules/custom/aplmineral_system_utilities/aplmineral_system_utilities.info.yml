@@ -3,6 +3,7 @@ description: 'Utilidades para o portal Rede APL Mineral.'
 type: module
 core: 8.x
 dependencies:
+  - block
   - ckeditor
   - crop
   - datetime
@@ -33,5 +34,5 @@ dependencies:
   - text
   - user
   - views
-version: 8.x-1.4
+version: 8.x-1.5
 package: 'APL Mineral'

@@ -1,0 +1,9 @@
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.search_index
+label: 'Índice de busca'
+targetEntityType: taxonomy_term
+cache: true

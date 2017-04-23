@@ -44,5 +44,5 @@ core/phpunit.xml
 
 # Ignore dev modules.
 modules/contrib/examples/
-modules/contrib/config_devel/
+# modules/contrib/config_devel/
 modules/contrib/devel/
