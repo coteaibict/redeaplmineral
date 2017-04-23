@@ -12,6 +12,6 @@ regions:
   content: Content
   footer: Footer
   header: Header
-  main_menu: Main Menu
+  main_navigation: Main Navigation
   mobile_search: Mobile Search
   sidebar: Sidebar
