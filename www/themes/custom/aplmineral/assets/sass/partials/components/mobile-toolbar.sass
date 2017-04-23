@@ -4,6 +4,10 @@ $toolbar-height: 44px
 $menu-item-length: 3
 $menu-item-width: $width-full / $menu-item-length
 
+.mobile-toolbar
+  @include breakpoint($sm-min)
+    display: none
+
 .mobile-toolbar-menu
   display: flex
   position: fixed

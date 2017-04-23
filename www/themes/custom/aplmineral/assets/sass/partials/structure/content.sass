@@ -3,5 +3,8 @@
 .layout-container
   padding-bottom: 54px
 
+  @include breakpoint($sm-min)
+    padding-bottom: 0
+
 .container
   @extend %container
