@@ -1,0 +1,64 @@
+// library/components/slideshow
+
+$slideshow-image-height: 310px
+
+%slideshow
+  z-index: $zindex-default
+  margin-bottom: $margin-default
+  background-color: $color-bg-lightest
+
+%slideshow-arrow
+  display: block
+  position: absolute
+  z-index: $zindex-high
+  top: $slideshow-image-height / 2
+  padding: $margin-default
+  margin: 0
+  color: $color-text-lightest
+  font-size: 0
+  background: none
+  border: none
+  box-shadow: none
+  transform: translateY(-50%)
+
+  &:hover,
+  &:active
+    outline: none
+
+%slideshow-arrow-prev
+  left: 0
+
+  &::after
+    content: $fa-var-chevron-left
+    display: block
+    font-family: $font-icon
+    font-size: $font-size-icon
+
+%slideshow-arrow-next
+  right: 0
+
+  &::after
+    content: $fa-var-chevron-right
+    display: block
+    font-family: $font-icon
+    font-size: $font-size-icon
+
+%slideshow-slide
+  display: flex
+  align-items: center
+  justify-content: center
+  width: $width-full
+  min-height: $slideshow-image-height
+  overflow: hidden
+
+%slideshow-image
+  display: block
+  min-width: $width-full
+  max-height: $slideshow-image-height
+  object-fit: cover
+
+%slideshow-title
+  color: $color-text-main
+  font-size: $font-size-h3
+  font-weight: 700
+  text-decoration: none

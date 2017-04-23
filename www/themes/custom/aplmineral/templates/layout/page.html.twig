@@ -44,137 +44,52 @@
 #}
 <div class="layout-wrapper">
   <header class="header" role="banner">
-      <div class="header__inner">
-        <div class="header__topbar">
-          <ul class="a11y-menu">
-            <li>
-              <a href="#">Acessibilidade</a>
-            </li>
-            <li>
-              <a href="#">Alto Contraste</a>
-            </li>
-            <li>
-              <a href="#">Mapa do Site</a>
-            </li>
-          </ul>
-        </div>
-
-        {{ page.header }}
-
-        <ul class="menu-institutional">
+    <div class="header__inner">
+      <div class="header__topbar">
+        <ul class="a11y-menu">
           <li>
-            <a href="#">Instituições participantes</a>
+            <a href="#">Acessibilidade</a>
           </li>
           <li>
-            <a href="#">Perguntas frequentes</a>
+            <a href="#">Alto Contraste</a>
           </li>
           <li>
-            <a href="#">Fale conosco</a>
+            <a href="#">Mapa do Site</a>
           </li>
         </ul>
       </div>
-    </header>
+
+      {{ page.header }}
+
+      <ul class="menu-institutional">
+        <li>
+          <a href="#">Instituições participantes</a>
+        </li>
+        <li>
+          <a href="#">Perguntas frequentes</a>
+        </li>
+        <li>
+          <a href="#">Fale conosco</a>
+        </li>
+      </ul>
+    </div>
+  </header>
 
   <div class="banner-event">
-      <div class="banner-event__inner">
-        <div class="banner-event__teaser">
-          <h2>Evento</h2>
-          <p>Seminário Nacional de Arranjos Produtivos Locas de Base Mineral e X Encontro do Comitê Temático Rede APL Mineral</p>
-        </div>
-        <div class="banner-event__content">
-          <img src="http://placehold.it/750x650" alt="">
-        </div>
-        <button class="banner-event__toggle">
-          <span>Ver mais</span>
-        </button>
+    <div class="banner-event__inner">
+      <div class="banner-event__teaser">
+        <h2>Evento</h2>
+        <p>Seminário Nacional de Arranjos Produtivos Locas de Base Mineral e X Encontro do Comitê Temático Rede APL Mineral</p>
       </div>
+      <div class="banner-event__content">
+        <img src="http://placehold.it/750x650" alt="">
+      </div>
+      <button class="banner-event__toggle">
+        <span>Ver mais</span>
+      </button>
     </div>
+  </div>
 
-  <div class="slideshow">
-      <div>
-        <div class="slideshow-image">
-          <img src="http://lorempixel.com/800/600/business/1/" alt="">
-        </div>
-        <div class="slideshow-content">
-          <h2>Título do destaque do Banner Rotativo em multiplas linhas com 70 caracteres</h2>
-          <p>Descrição da noítica referente a imagem. Descrição do layout Chamada do texto do tile Banner Rotativo - Slidshow</p>
-        </div>
-      </div>
-      <div>
-        <div class="slideshow-image">
-          <img src="http://lorempixel.com/800/600/business/2/" alt="">
-        </div>
-        <div class="slideshow-content">
-          <h2>Lorem ipsum dolor issue</h2>
-          <p>Descrição da noítica referente a imagem. Descrição do layout Chamada do texto do tile Banner Rotativo - Slidshow</p>
-        </div>
-      </div>
-      <div>
-        <div class="slideshow-image">
-          <img src="http://lorempixel.com/800/600/business/3/" alt="">
-        </div>
-        <div class="slideshow-content">
-          <h2>Testando título do slider com bastante caracteres para saber se não irá quebrar quando o conteúdo for inserido no admin do Drupal.</h2>
-          <p>Descrição da noítica referente a imagem. Descrição do layout Chamada do texto do tile Banner Rotativo - Slidshow</p>
-        </div>
-      </div>
-    </div>
-
-  <div class="container">
-      <div class="card-banner">
-        <img src="http://lorempixel.com/400/200/abstract/4" alt="">
-      </div>
-      <div class="card-banner">
-        <img src="http://lorempixel.com/400/200/abstract/5" alt="">
-      </div>
-      <div class="card-banner">
-        <img src="http://lorempixel.com/400/200/abstract/6" alt="">
-      </div>
-    </div>
-
-  <div class="container">
-      <div class="block-calendar">
-        <h2 class="title">Eventos</h2>
-        <ul class="block-calendar-list">
-          <li>
-            <div class="date">
-              <b>23</b>
-              <small>outubro</small>
-              <small>2017</small>
-            </div>
-            <div class="description">
-              <h3>Título do Evento</h3>
-              <p>Descrição do evento: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-          </li>
-          <li>
-            <div class="date">
-              <b>23</b>
-              <small>outubro</small>
-              <small>2017</small>
-            </div>
-            <div class="description">
-              <h3>Título do Evento</h3>
-              <p>Descrição do evento: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-          </li>
-          <li>
-            <div class="date">
-              <b>23</b>
-              <small>outubro</small>
-              <small>2017</small>
-            </div>
-            <div class="description">
-              <h3>Título do Evento</h3>
-              <p>Descrição do evento: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-          </li>
-        </ul>
-        <a href="#" class="button">Veja mais</a>
-      </div>
-    </div>
-
-  <hr /><br /><br /><br />
 
   {{ page.primary_menu }}
   {{ page.secondary_menu }}

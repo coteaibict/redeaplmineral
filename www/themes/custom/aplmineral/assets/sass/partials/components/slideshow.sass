@@ -1,65 +1,29 @@
 // partials/components/slideshow
 
-$slideshow-image-height: 310px
-
-.slideshow
-  z-index: $zindex-default
-  margin-bottom: $margin-default
-  background-color: $color-bg-lightest
-
-  .slick-arrow
-    display: block
-    position: absolute
-    z-index: $zindex-high
-    top: $slideshow-image-height / 2
-    padding: $margin-default
-    margin: 0
-    color: $color-text-lightest
-    font-size: 0
-    background: none
-    border: none
-    box-shadow: none
-    transform: translateY(-50%)
-
-    &:hover,
-    &:active
-      outline: none
-
+.view-display-id-slideshow
   .slick-prev
-    left: 0
-
-    &::after
-      content: $fa-var-chevron-left
-      display: block
-      font-family: $font-icon
-      font-size: $font-size-icon
+    @extend %slideshow-arrow
+    @extend %slideshow-arrow-prev
 
   .slick-next
-    right: 0
+    @extend %slideshow-arrow
+    @extend %slideshow-arrow-next
 
-    &::after
-      content: $fa-var-chevron-right
-      display: block
-      font-family: $font-icon
-      font-size: $font-size-icon
+  .view-content
+    @extend %slideshow
 
-  .slideshow-image
-    display: flex
-    align-items: center
-    justify-content: center
-    width: $width-full
-    height: $slideshow-image-height
-    overflow: hidden
+  .views-row
+    @extend %slideshow-slide
 
-    img
-      display: block
-      max-width: $width-full
-      min-height: $height-full
-      object-fit: cover
+  .views-field-field-image *
+    @extend %slideshow-image
 
-  .slideshow-content
+  .views-field-title
     @extend %container
-    padding-top: $margin-default
+    margin-top: $margin-default
 
-    h2
-      font-size: $font-size-h3
+    a
+      @extend %slideshow-title
+
+  .views-field-field-summary
+    @extend %container

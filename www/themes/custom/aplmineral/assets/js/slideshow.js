@@ -1,13 +1,10 @@
 (function ($) {
-
-  $slideshow = $('.slideshow')
-
-  options = {
+  var $slideshow = $('.view-display-id-slideshow .view-content')
+  var options = {
     adaptiveHeight: true,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 5000,
   }
 
   $slideshow.slick(options)
-
 })(jQuery)
