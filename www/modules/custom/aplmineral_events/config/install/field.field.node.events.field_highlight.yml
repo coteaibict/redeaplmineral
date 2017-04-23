@@ -1,12 +1,9 @@
-uuid: 147db6e5-167d-4951-ab07-00af40019548
 langcode: pt-br
 status: true
 dependencies:
   config:
     - field.storage.node.field_highlight
     - node.type.events
-_core:
-  default_config_hash: ruYTeYDyfMVqrNCrpsG8YAFXjM3D5h4l64PqyJoWVNA
 id: node.events.field_highlight
 field_name: field_highlight
 entity_type: node

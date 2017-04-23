@@ -2,6 +2,7 @@ langcode: pt-br
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.search_index
     - field.field.node.events.field_announcement
     - field.field.node.events.field_body
     - field.field.node.events.field_date_end
@@ -14,22 +15,14 @@ dependencies:
     - node.type.events
   module:
     - datetime
-    - text
     - user
-id: node.events.default
+id: node.events.search_index
 targetEntityType: node
 bundle: events
-mode: default
+mode: search_index
 content:
-  field_body:
-    weight: 2
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
-    region: content
   field_date_end:
-    weight: 5
+    weight: 4
     label: inline
     settings:
       timezone_override: ''
@@ -38,7 +31,7 @@ content:
     type: datetime_default
     region: content
   field_date_start:
-    weight: 4
+    weight: 3
     label: inline
     settings:
       timezone_override: ''
@@ -50,13 +43,13 @@ content:
     weight: 0
     label: hidden
     settings:
-      view_mode: full
+      view_mode: search_index
       link: false
     third_party_settings: {  }
     type: entity_reference_entity_view
     region: content
   field_place:
-    weight: 3
+    weight: 2
     label: inline
     settings:
       link_to_entity: false
@@ -71,12 +64,13 @@ content:
     type: basic_string
     region: content
   links:
-    weight: 6
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
   field_announcement: true
+  field_body: true
   field_highlight: true
   field_tags: true
   langcode: true

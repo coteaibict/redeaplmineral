@@ -5,6 +5,7 @@ core: 8.x
 dependencies:
   - aplmineral_news
   - aplmineral_system_utilities
+  - block
   - datetime
   - entity_browser
   - field
@@ -15,5 +16,6 @@ dependencies:
   - taxonomy
   - text
   - user
-version: 8.x-1.1
+  - views
+version: 8.x-1.2
 package: 'APL Mineral'

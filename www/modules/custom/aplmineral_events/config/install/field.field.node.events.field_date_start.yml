@@ -1,4 +1,3 @@
-uuid: 9f862918-2c28-49b1-8492-8e4c05cad7fe
 langcode: pt-br
 status: true
 dependencies:
@@ -7,8 +6,6 @@ dependencies:
     - node.type.events
   module:
     - datetime
-_core:
-  default_config_hash: tenHeaZyFbKvmiIEgzXp9w1pzqpAA4gpGhgix57E1OQ
 id: node.events.field_date_start
 field_name: field_date_start
 entity_type: node

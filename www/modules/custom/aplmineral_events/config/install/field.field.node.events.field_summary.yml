@@ -1,12 +1,9 @@
-uuid: 66bade3a-93b8-4422-bc1e-2880df47bc37
 langcode: pt-br
 status: true
 dependencies:
   config:
     - field.storage.node.field_summary
     - node.type.events
-_core:
-  default_config_hash: IeX_4aT8FYMhpFnsoecNLv2E4t-xgL6O8kkHyJzZQfU
 id: node.events.field_summary
 field_name: field_summary
 entity_type: node

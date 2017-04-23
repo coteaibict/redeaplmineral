@@ -1,4 +1,3 @@
-uuid: de092882-2755-41a8-8745-882ed69e5435
 langcode: pt-br
 status: true
 dependencies:
@@ -6,8 +5,6 @@ dependencies:
     - field.storage.node.field_tags
     - node.type.events
     - taxonomy.vocabulary.tags
-_core:
-  default_config_hash: '-ZzUgK24d4ksfpcLDEzr6o4cIb21s4ZYbmghhAB8L_8'
 id: node.events.field_tags
 field_name: field_tags
 entity_type: node
