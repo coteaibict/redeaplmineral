@@ -1,49 +1,49 @@
-// partials/components/button
-
-%button-direction
-  position: absolute
-  top: 50%
-  transform: translateY(-50%)
-  font-family: $font-icon
-
-a.button,
-button.button
-  position: relative
-  display: block
-  width: $width-full
-  margin: 0
-  padding: $margin-default
-  font-size: $font-size-base
-  color: $color-text-lightest
-  text-align: center
-  text-decoration: none
-  text-transform: uppercase
-  background-color: $color-bg-main
-  box-shadow: $box-shadow-quiet
-  border-radius: 2px
-
-  &:hover
-    background: darken($color-bg-main, 5%)
-
-.buttons-wrapper
-  display: flex
-  justify-content: space-between
-
-  .button
-    width: calc(50% - 10px)
-
-.button-next
-  padding-right: $margin-default-double
-
-  &::after
-    @extend %button-direction
-    content: $fa-var-chevron-right
-    right: $margin-default-double
-
-.button-prev
-  padding-left: $margin-default-double
-
-  &::after
-    @extend %button-direction
-    content: $fa-var-chevron-left
-    left: $margin-default-double
+// // partials/components/button
+//
+// %button-direction
+//   position: absolute
+//   top: 50%
+//   transform: translateY(-50%)
+//   font-family: $font-icon
+//
+// a.button,
+// button.button
+//   position: relative
+//   display: block
+//   width: $width-full
+//   margin: 0
+//   padding: $margin-default
+//   font-size: $font-size-base
+//   color: $color-text-lightest
+//   text-align: center
+//   text-decoration: none
+//   text-transform: uppercase
+//   background-color: $color-bg-main
+//   box-shadow: $box-shadow-quiet
+//   border-radius: 2px
+//
+//   &:hover
+//     background: darken($color-bg-main, 5%)
+//
+// .buttons-wrapper
+//   display: flex
+//   justify-content: space-between
+//
+//   .button
+//     width: calc(50% - 10px)
+//
+// .button-next
+//   padding-right: $margin-default-double
+//
+//   &::after
+//     @extend %button-direction
+//     content: $fa-var-chevron-right
+//     right: $margin-default-double
+//
+// .button-prev
+//   padding-left: $margin-default-double
+//
+//   &::after
+//     @extend %button-direction
+//     content: $fa-var-chevron-left
+//     left: $margin-default-double
