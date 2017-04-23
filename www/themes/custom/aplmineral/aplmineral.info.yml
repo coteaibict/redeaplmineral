@@ -8,6 +8,11 @@ core: 8.x
 libraries:
   - aplmineral/base
 
+stylesheets-remove:
+  - core/themes/classy/css/components/button.css
+  - core/themes/classy/css/components/form.css
+  - core/themes/classy/css/components/inline-form.css
+
 regions:
   content: Content
   footer: Footer
