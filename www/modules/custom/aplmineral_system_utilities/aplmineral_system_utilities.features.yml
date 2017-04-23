@@ -1,4 +1,8 @@
 bundle: aplmineral
+excluded:
+  - block.block.aplmineral_main_menu
+  - block.block.bartik_main_menu
+  - views.view.glossary
 required:
   - media_entity.bundle.file
   - media_entity.bundle.image
@@ -24,6 +28,7 @@ required:
   - core.entity_view_mode.node.search_index
   - core.entity_view_mode.node.search_result
   - core.entity_view_mode.taxonomy_term.search_index
+  - core.entity_view_mode.node.full
   - image.style.full
   - image.style.slideshow
   - image.style.teaser

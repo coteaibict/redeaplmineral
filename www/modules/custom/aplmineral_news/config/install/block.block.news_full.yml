@@ -1,0 +1,40 @@
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - views.view.full_news
+  module:
+    - ctools
+    - node
+    - views
+  theme:
+    - aplmineral
+id: news_full
+theme: aplmineral
+region: content
+weight: -2
+provider: null
+plugin: 'views_block:full_news-block_1'
+settings:
+  id: 'views_block:full_news-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      news: news
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+  node_type:
+    id: node_type
+    bundles:
+      news: news
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

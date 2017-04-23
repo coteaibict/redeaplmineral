@@ -1,0 +1,23 @@
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - views.view.teaser_news
+  module:
+    - views
+  theme:
+    - aplmineral
+id: news_teaser
+theme: aplmineral
+region: content
+weight: -3
+provider: null
+plugin: 'views_block:teaser_news-block_1'
+settings:
+  id: 'views_block:teaser_news-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility: {  }
