@@ -1,0 +1,16 @@
+// partials/components/pages/node-news
+
+.node--type-news
+  .node__content
+    @extend %card-news
+
+    > h2
+      @extend %card-news-title
+
+  .node-readmore
+    display: none
+
+// Used for full page
+.page-node-type-news
+  .field--name-field-summary
+    display: none

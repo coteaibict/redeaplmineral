@@ -1,0 +1,72 @@
+// library/components/card-news
+
+// Page title
+%section-title
+  padding: $margin-default
+  margin-bottom: $margin-default-double
+  font-size: $font-size-h2
+  font-weight: 300
+  text-align: center
+  text-transform: uppercase
+  color: $color-text-lightest
+  background-color: $color-bg-main
+
+%section-subtitle
+  padding: $margin-default
+  margin-bottom: $margin-default
+  font-size: $font-size-h4
+  font-weight: 300
+  text-transform: uppercase
+  color: $color-text-lightest
+  background-color: $color-bg-secondary
+
+
+// Filter to choose the number of items to show.
+.card-news-filter
+  margin-bottom: $margin-default
+  text-align: right
+
+  select
+    min-width: 50px
+
+
+// Wrapper to the news
+%card-news
+  position: relative
+  padding: $margin-default
+  margin-bottom: $margin-default
+  background-color: $color-bg-lightest
+  border: 1px solid $color-border-midlight
+
+  img
+    display: block
+    width: 100%
+    max-width: 100%
+    margin-bottom: $margin-default-double
+
+
+// Nesw title
+%card-news-title
+  margin-top: $margin-default
+
+  a
+    font-size: $font-size-h2
+    font-weight: 300
+    color: $color-text-main
+    text-decoration: none
+
+
+// Date on bottom right side.
+%card-news-date
+  display: block
+  margin-top: -5px
+  text-align: right
+  font-size: $font-size-small
+
+
+// Metadata
+// @TODO: improvements are needed.
+%metadata-date
+  .date
+    display: block
+    font-size: $font-size-small
