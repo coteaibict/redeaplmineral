@@ -5,7 +5,7 @@ $menu-item-length: 3
 $menu-item-width: $width-full / $menu-item-length
 
 .mobile-toolbar
-  @include breakpoint($sm-min)
+  @include breakpoint($md-min)
     display: none
 
 .mobile-toolbar-menu
@@ -146,26 +146,13 @@ $menu-item-width: $width-full / $menu-item-length
 
 // LAYER: Hamburger menu
 .mobile-toolbar-layer--menu
-  text-transform: uppercase
-  background-color: $color-bg-light
+  @extend %main-navigation
 
-  .menu--main
-    > h2
-      @include font-size(12px)
-      padding: $margin-default
-      margin: 0
-      color: $color-link
-      font-weight: 400
-      border-top: 4px solid $color-border-main
-      border-bottom: 1px solid darken($color-bg-light, 20%)
-      background-color: darken($color-bg-light, 1%)
+  .menu--main > h2
+    @extend %main-navigation-title
 
-    .menu
-      margin-left: 0
+  .menu
+    @extend %main-navigation-menu
 
-      a
-        display: block
-        padding: $margin-default
-        color: $color-text-darkest
-        text-decoration: none
-        border-bottom: 1px solid darken($color-bg-light, 20%)
+    a
+      @extend %main-navigation-link
