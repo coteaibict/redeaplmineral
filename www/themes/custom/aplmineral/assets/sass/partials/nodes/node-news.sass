@@ -1,16 +1,42 @@
 // partials/components/pages/node-news
 
-.node--type-news
-  .node__content
+
+// list of news.
+.view-teaser-news
+  margin-top: $margin-default
+  margin-bottom: $margin-default
+
+  .views-row
     @extend %card-news
 
-    > h2
-      @extend %card-news-title
+  .views-field-title a
+    @extend %card-news-title
 
-  .node-readmore
-    display: none
+  .views-field-field-date
+    @extend %card-news-metadata
+    text-align: right
 
-// Used for full page
-.page-node-type-news
-  .field--name-field-summary
-    display: none
+  .view-filters
+    @extend %card-news-filter
+
+    .form-actions
+      display: none
+
+    .form-item
+      display: flex
+      justify-content: flex-end
+
+  .more-link a
+    @extend %button-primary
+
+
+// news full mode version.
+.view-full-news
+  .view-content
+    @extend %card-news
+
+  .views-field-title a
+    @extend %card-news-title
+
+  .views-field-field-date
+    @extend %card-news-metadata
