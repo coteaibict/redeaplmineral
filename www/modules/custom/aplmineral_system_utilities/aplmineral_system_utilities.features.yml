@@ -56,4 +56,6 @@ required:
   - search.page.node_search
   - search_api.server.database
   - block.block.search_form
+  - block.block.menu_main
   - core.entity_view_display.taxonomy_term.tags.search_index
+  - system.menu.main
