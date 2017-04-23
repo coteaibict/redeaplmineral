@@ -144,20 +144,23 @@ $menu-item-width: $width-full / $menu-item-length
   text-transform: uppercase
   background-color: $color-bg-light
 
-.mobile-hamburger-title
-  @include font-size(12px)
-  padding: $margin-default
-  margin: 0
-  color: $color-link
-  font-weight: 400
-  border-top: 4px solid $color-border-main
-  border-bottom: 1px solid darken($color-bg-light, 20%)
-  background-color: darken($color-bg-light, 1%)
+  .menu--main
+    > h2
+      @include font-size(12px)
+      padding: $margin-default
+      margin: 0
+      color: $color-link
+      font-weight: 400
+      border-top: 4px solid $color-border-main
+      border-bottom: 1px solid darken($color-bg-light, 20%)
+      background-color: darken($color-bg-light, 1%)
 
-.mobile-hamburger-menu
-  a
-    display: block
-    padding: $margin-default
-    color: $color-text-darkest
-    text-decoration: none
-    border-bottom: 1px solid darken($color-bg-light, 20%)
+    .menu
+      margin-left: 0
+
+      a
+        display: block
+        padding: $margin-default
+        color: $color-text-darkest
+        text-decoration: none
+        border-bottom: 1px solid darken($color-bg-light, 20%)
