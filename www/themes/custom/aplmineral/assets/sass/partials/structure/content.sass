@@ -3,8 +3,23 @@
 .layout-container
   padding-bottom: 54px
 
-  @include breakpoint($sm-min)
+  @include breakpoint($md-min)
     padding-bottom: 0
 
 .container
   @extend %container
+
+
+.layout-container
+  @extend %container
+
+.layout-content
+  @extend %col-xs-24
+  @extend %col-md-16
+
+.layout-sidebar
+  @extend %col-md-8
+  display: none
+
+  @include breakpoint($md-min)
+    display: block
