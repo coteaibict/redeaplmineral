@@ -9,7 +9,8 @@ libraries:
   - aplmineral/base
 
 regions:
-  header: header
-  content: content
-  sidebar: sidebar
+  header: Header
+  content: Content
+  sidebar: Sidebar
   footer: Footer
+  mobile_search: Mobile Search
