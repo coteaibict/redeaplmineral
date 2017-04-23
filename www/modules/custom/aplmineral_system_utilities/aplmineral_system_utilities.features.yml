@@ -21,6 +21,9 @@ required:
   - core.entity_view_mode.media.teaser
   - core.entity_view_mode.media.slideshow
   - core.entity_view_mode.media.search_index
+  - core.entity_view_mode.node.search_index
+  - core.entity_view_mode.node.search_result
+  - core.entity_view_mode.taxonomy_term.search_index
   - image.style.full
   - image.style.slideshow
   - image.style.teaser
@@ -52,3 +55,5 @@ required:
   - search_api_db.settings
   - search.page.node_search
   - search_api.server.database
+  - block.block.search_form
+  - core.entity_view_display.taxonomy_term.tags.search_index
