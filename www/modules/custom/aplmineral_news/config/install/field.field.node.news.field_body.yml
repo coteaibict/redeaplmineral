@@ -1,4 +1,3 @@
-uuid: d2aef93f-f901-4960-abac-74609043bce9
 langcode: pt-br
 status: true
 dependencies:
@@ -7,8 +6,6 @@ dependencies:
     - node.type.news
   module:
     - text
-_core:
-  default_config_hash: hmPQbiGjmFCW7Y2cincD-9YDrj0pRjYMtt4U_9VukVM
 id: node.news.field_body
 field_name: field_body
 entity_type: node

@@ -1,11 +1,8 @@
-uuid: 5aeaa9ca-4b05-4d0c-a852-88c4ebba137d
 langcode: pt-br
 status: true
 dependencies:
   module:
     - node
-_core:
-  default_config_hash: wfqfceZYF2jEv4ABx3_PNEfK3Vsqk6rK1I4jezMPTMs
 id: alias_news
 label: 'URLs para notícias'
 type: 'canonical_entities:node'

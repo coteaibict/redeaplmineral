@@ -1,4 +1,3 @@
-uuid: 8e659ac9-019f-4fbd-9bd8-636213fa3cd0
 langcode: pt-br
 status: true
 dependencies:
@@ -8,8 +7,6 @@ third_party_settings:
   menu_ui:
     available_menus: {  }
     parent: ''
-_core:
-  default_config_hash: Au9utY6ZUlQMdp131IQgqcui_alAlNhahtCVCpW3F84
 name: Notícias
 type: news
 description: 'Use essa opção para criar <strong>notícias</strong> da Rede APL Mineral.'

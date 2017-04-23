@@ -1,12 +1,9 @@
-uuid: 70dc94e2-eb30-44f6-a6ef-0549e6de93b2
 langcode: pt-br
 status: true
 dependencies:
   config:
     - field.storage.node.field_highlight
     - node.type.news
-_core:
-  default_config_hash: hTcP-A5Q_tA5P4tah7AwYXZLYQZmugA7rqUKcfst3uU
 id: node.news.field_highlight
 field_name: field_highlight
 entity_type: node
