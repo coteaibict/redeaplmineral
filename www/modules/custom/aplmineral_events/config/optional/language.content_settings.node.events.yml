@@ -1,11 +1,8 @@
-uuid: eadddaea-2dcc-4f9d-ae7d-7eab2ced3b08
 langcode: pt-br
 status: true
 dependencies:
   config:
     - node.type.events
-_core:
-  default_config_hash: YLt8pYzZIfItLlBLTigobUx24_xGJvH__tVKKdjLnag
 id: node.events
 target_entity_type_id: node
 target_bundle: events

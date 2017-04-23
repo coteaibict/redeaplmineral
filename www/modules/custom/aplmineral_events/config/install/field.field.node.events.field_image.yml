@@ -1,4 +1,3 @@
-uuid: 7aaeb049-d03b-4a7e-ab53-d5e59d90b1db
 langcode: pt-br
 status: true
 dependencies:
@@ -6,8 +5,6 @@ dependencies:
     - field.storage.node.field_image
     - media_entity.bundle.image
     - node.type.events
-_core:
-  default_config_hash: GkWsU_0xrlyVprJvlNKq7TuQ3hI-WEN-isaAt7f2NJM
 id: node.events.field_image
 field_name: field_image
 entity_type: node

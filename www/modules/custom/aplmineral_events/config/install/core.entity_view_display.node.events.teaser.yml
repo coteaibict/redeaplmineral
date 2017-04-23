@@ -1,4 +1,3 @@
-uuid: 3817cf35-09d6-4d23-a6da-4ac745d46225
 langcode: pt-br
 status: true
 dependencies:
@@ -16,8 +15,6 @@ dependencies:
     - node.type.events
   module:
     - user
-_core:
-  default_config_hash: 65iuZQFlq__ftIx_60sG1sp8ER-yD90lwkPiLU8qLtM
 id: node.events.teaser
 targetEntityType: node
 bundle: events

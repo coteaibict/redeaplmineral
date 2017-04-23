@@ -1,12 +1,9 @@
-uuid: ea6525dc-9520-42d4-b2fa-4f6961023466
 langcode: pt-br
 status: true
 dependencies:
   config:
     - field.storage.node.field_announcement
     - node.type.events
-_core:
-  default_config_hash: 7CxcUxzuwBCYa_ss3HbKRNwMBIKACtXzrkRURIg0Bi8
 id: node.events.field_announcement
 field_name: field_announcement
 entity_type: node

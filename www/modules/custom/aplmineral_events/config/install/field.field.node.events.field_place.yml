@@ -1,12 +1,9 @@
-uuid: b3df0164-ddfe-410d-9f72-cf5c14df58f2
 langcode: pt-br
 status: true
 dependencies:
   config:
     - field.storage.node.field_place
     - node.type.events
-_core:
-  default_config_hash: T8MbOYmfrHZ-a9tYrWWdiK2uk8YhEdX_-3X3boDClOQ
 id: node.events.field_place
 field_name: field_place
 entity_type: node
