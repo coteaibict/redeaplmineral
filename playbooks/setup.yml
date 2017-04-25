@@ -4,11 +4,14 @@
   vars_files:
     - ../settings.yml
 
+  environment:
+    NVM_DIR: "{{ home_dir }}/.nvm"
+
   roles:
-    - base
-    - nginx
-    - php
-    - mysql
+#    - base
+#    - nginx
+#    - php
+#    - mysql
     - front
 
   tasks:
@@ -42,8 +45,8 @@
       with_items:
         - "{{ settings_file.results }}"
 
-  post_tasks:
-    - include: tests/main.yml
+#  post_tasks:
+#    - include: tests/main.yml
 
   handlers:
       - include: common/handlers/main.yml
