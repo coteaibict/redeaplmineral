@@ -2,10 +2,35 @@
 
 .footer
   width: $width-full
-  min-height: 140px
   margin-top: $margin-default-double
   background-color: $color-bg-main
 
   .footer__inner
     @extend %container
     color: $color-text-lightest
+
+  .footer__logos
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    justify-content: center
+
+    @include breakpoint($lg-min)
+      justify-content: space-between
+
+    li
+      display: flex
+      justify-content: center
+      flex-basis: 25%
+      width: 25%
+      padding: 15px 10px
+
+      @include breakpoint($lg-min)
+        flex-basis: auto
+        width: auto
+        padding-top: 26px
+        padding-bottom: 25px
+
+    img
+      display: block
+      max-width: 100%
