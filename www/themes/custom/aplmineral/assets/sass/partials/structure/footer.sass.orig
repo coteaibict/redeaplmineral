@@ -1,0 +1,22 @@
+// partials/structure/footer
+
+.footer
+<<<<<<< HEAD
+  width: $width-full
+  min-height: 140px
+  margin-top: $margin-default-double
+  background-color: $color-bg-main
+
+  .footer__inner
+    @extend %container
+    color: $color-text-lightest
+=======
+  width: 100%
+  min-height: 140px
+  margin-top: 20px
+  background: #2C66CE
+
+  .footer__inner
+    @extend %container
+    color: white
+>>>>>>> 745cf15072e66449dae2fae04a17b98f6cb43888

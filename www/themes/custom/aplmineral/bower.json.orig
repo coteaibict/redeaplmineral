@@ -1,0 +1,29 @@
+{
+  "name": "redeaplmineral",
+  "authors": [
+    "Gabriel Neutzling <gabrielneutzling@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "breakpoint-sass": "compass-breakpoint#^2.7.1",
+    "bootstrap-sass": "^3.3.7",
+    "font-awesome": "fontawesome#^4.7.0",
+<<<<<<< HEAD
+    "normalize-css": "^6.0.0",
+    "slick-carousel": "^1.6.0"
+=======
+    "normalize-css": "^6.0.0"
+>>>>>>> 745cf15072e66449dae2fae04a17b98f6cb43888
+  }
+}

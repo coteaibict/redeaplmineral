@@ -1,0 +1,35 @@
+// source/main
+
+
+// Import base library.
+@import ../../lib/normalize-css/normalize.css
+@import ../library/library
+
+
+// Import partials.
+@import ../partials/base
+
+@import ../partials/structure/content
+@import ../partials/structure/footer
+@import ../partials/structure/header
+
+<<<<<<< HEAD
+@import ../partials/components/buttons
+@import ../partials/components/block-calendar
+@import ../partials/components/card-banner
+@import ../partials/components/card-news
+@import ../partials/components/tags
+
+@import ../partials/components/banner-event
+@import ../partials/components/mobile-toolbar
+@import ../partials/components/slideshow
+
+@import ../partials/regions/content
+@import ../partials/regions/main-navigation
+
+@import ../partials/nodes/node-news
+
+@import ../partials/helpers
+=======
+@import ../partials/components/banner-event
+>>>>>>> 745cf15072e66449dae2fae04a17b98f6cb43888

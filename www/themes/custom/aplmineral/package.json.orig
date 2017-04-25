@@ -1,0 +1,25 @@
+{
+  "name": "redeaplmineral",
+  "version": "2.0.0",
+<<<<<<< HEAD
+  "scripts": {
+    "start": "./node_modules/.bin/gulp watch",
+    "build": "./node_modules/.bin/gulp styles"
+  },
+=======
+>>>>>>> 745cf15072e66449dae2fae04a17b98f6cb43888
+  "devDependencies": {
+    "bower": "^1.8.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-bower": "0.0.13",
+    "gulp-sass": "^3.1.0",
+    "gulp-sequence": "^0.4.6",
+    "require-dir": "^0.3.1"
+  },
+  "author": "Gabriel Neutzling <gabrielneutzling@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "normalize.css": "^6.0.0"
+  }
+}

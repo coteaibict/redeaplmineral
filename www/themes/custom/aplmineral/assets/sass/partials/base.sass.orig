@@ -1,0 +1,86 @@
+// partials/base
+
+*,
+*:before,
+*:after
+  box-sizing: border-box
+
+body
+<<<<<<< HEAD
+  width: $width-full
+  padding: 0
+  margin: 0
+  color: $color-text-darkest
+  font-family: $font-base
+  font-size: $font-size-base
+  line-height: $font-line-base
+  background-color: $color-athens-gray
+
+  @include breakpoint($md-min)
+    background-color: $color-bg-lightest
+=======
+  width: 100%
+  padding: 0
+  margin: 0
+  font-family: $font-base
+  font-size: $font-size-base
+  line-height: $font-line-base
+>>>>>>> 745cf15072e66449dae2fae04a17b98f6cb43888
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+  font-family: $font-title
+<<<<<<< HEAD
+  margin: 0 0 0.5em
+
+h1
+  font-size: $font-size-h1
+
+h2
+  font-size: $font-size-h2
+
+h3
+  font-size: $font-size-h3
+
+h4
+  font-size: $font-size-h4
+
+h5
+  font-size: $font-size-h5
+
+h6
+  font-size: $font-size-h6
+
+
+p
+  font-family: $font-text
+  margin: 0 0 1em
+=======
+
+p
+  font-family: $font-text
+>>>>>>> 745cf15072e66449dae2fae04a17b98f6cb43888
+
+a
+  font-family: $font-link
+
+ul,
+li
+  padding: 0
+  margin: 0
+  list-style: none
+<<<<<<< HEAD
+
+
+button
+  padding: 0
+  margin: 0
+  border: none
+  box-shadow: none
+  background: none
+=======
+>>>>>>> 745cf15072e66449dae2fae04a17b98f6cb43888

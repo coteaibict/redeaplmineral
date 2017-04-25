@@ -1,0 +1,93 @@
+// partials/components/header
+
+<<<<<<< HEAD
+$logo-width: 215px
+
+%header-menu-items
+  display: flex
+  width: $width-full
+=======
+%header-menu-items
+  display: flex
+  width: 100%
+>>>>>>> 745cf15072e66449dae2fae04a17b98f6cb43888
+
+  li
+    @include font-size(10px)
+    display: inline-block
+<<<<<<< HEAD
+    margin-right: $margin-default
+=======
+    margin-right: 10px
+>>>>>>> 745cf15072e66449dae2fae04a17b98f6cb43888
+
+    &:last-child
+      margin-right: 0
+
+  a
+    text-decoration: none
+<<<<<<< HEAD
+    color: $color-text-main
+
+
+.header
+  padding-top: $margin-default
+  padding-bottom: $margin-default
+  background-color: $color-athens-gray
+=======
+    color: #2C66CE
+
+
+.header
+  padding-top: 15px
+  padding-bottom: 15px
+  border-top: 1px solid #95989A
+  border-bottom: 1px solid #95989A
+  background: #EDEEF1
+>>>>>>> 745cf15072e66449dae2fae04a17b98f6cb43888
+
+  .block-system-branding-block
+    display: flex
+    justify-content: center
+<<<<<<< HEAD
+    padding-top: $margin-default
+    padding-bottom: $margin-default
+=======
+    padding-top: 15px
+    padding-bottom: 15px
+>>>>>>> 745cf15072e66449dae2fae04a17b98f6cb43888
+
+    a
+      display: block
+
+    img
+      display: block
+<<<<<<< HEAD
+      width: $width-full
+      max-width: $logo-width
+=======
+      width: 100%
+      max-width: 215px
+>>>>>>> 745cf15072e66449dae2fae04a17b98f6cb43888
+
+
+.header__inner
+  @extend %container
+
+
+.header__topbar
+  display: flex
+  justify-content: space-between
+
+
+.a11y-menu
+  @extend %header-menu-items
+  text-transform: uppercase
+
+.i18n-menu
+  @extend %header-menu-items
+  text-transform: uppercase
+
+.menu-institutional
+  @extend %header-menu-items
+  justify-content: flex-end

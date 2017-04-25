@@ -1,0 +1,33 @@
+name: aplmineral
+type: theme
+base theme: classy
+Description: ""
+package: custom
+core: 8.x
+
+libraries:
+<<<<<<< HEAD
+  - aplmineral/base
+
+stylesheets-remove:
+  - core/themes/classy/css/components/button.css
+  - core/themes/classy/css/components/form.css
+  - core/themes/classy/css/components/inline-form.css
+
+regions:
+  content: Content
+  footer: Footer
+  header: Header
+  highlighted: Highlighted
+  main_navigation: Main Navigation
+  mobile_search: Mobile Search
+  sidebar: Sidebar
+=======
+  - aplmineral/global-styling
+
+regions:
+  header: header
+  content: content
+  sidebar: sidebar
+  footer: Footer
+>>>>>>> 745cf15072e66449dae2fae04a17b98f6cb43888

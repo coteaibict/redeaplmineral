@@ -1,0 +1,28 @@
+// partials/structure/content
+
+.layout-container
+  padding-bottom: 54px
+<<<<<<< HEAD
+
+  @include breakpoint($md-min)
+    padding-bottom: 0
+
+.container
+  @extend %container
+
+
+.layout-container
+  @extend %container
+
+.layout-content
+  @extend %col-xs-24
+  @extend %col-md-16
+
+.layout-sidebar
+  @extend %col-md-8
+  display: none
+
+  @include breakpoint($md-min)
+    display: block
+=======
+>>>>>>> 745cf15072e66449dae2fae04a17b98f6cb43888
