@@ -13,3 +13,8 @@ base:
       assets/lib/slick-carousel/slick/slick.css: {}
   dependencies:
       - core/drupal
+
+global-scripts:
+  version: 1.x
+  js:
+    https://barra.brasil.gov.br/barra.js:  { type: external }
