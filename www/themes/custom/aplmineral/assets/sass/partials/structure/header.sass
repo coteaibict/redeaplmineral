@@ -11,6 +11,9 @@ $logo-width: 215px
     display: inline-block
     margin-right: $margin-default
 
+    @include breakpoint($md-min)
+      @include font-size(12px)
+
     &:last-child
       margin-right: 0
 
@@ -21,7 +24,6 @@ $logo-width: 215px
 
 .header
   padding-top: $margin-default
-  padding-bottom: $margin-default
   background-color: $color-athens-gray
 
   .block-system-branding-block
@@ -29,6 +31,11 @@ $logo-width: 215px
     justify-content: center
     padding-top: $margin-default
     padding-bottom: $margin-default
+
+    @include breakpoint($md-min)
+      justify-content: flex-start
+      padding-top: $margin-default-double
+      padding-bottom: $margin-default-double
 
     a
       display: block
@@ -38,15 +45,15 @@ $logo-width: 215px
       width: $width-full
       max-width: $logo-width
 
+      @include breakpoint($md-min)
+        min-width: 330px
 
 .header__inner
   @extend %container
 
-
 .header__topbar
   display: flex
   justify-content: space-between
-
 
 .a11y-menu
   @extend %header-menu-items
@@ -56,6 +63,16 @@ $logo-width: 215px
   @extend %header-menu-items
   text-transform: uppercase
 
-.menu-institutional
+.menu-institutional-wrapper
   @extend %header-menu-items
+  padding-top: $margin-default
+  padding-bottom: $margin-default
+  background-color: $color-athens-gray
+
+  @include breakpoint($md-min)
+    background-color: $color-text-midlight
+
+.menu-institutional
+  @extend %container
+  display: flex
   justify-content: flex-end

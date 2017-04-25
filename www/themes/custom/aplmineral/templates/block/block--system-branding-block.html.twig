@@ -2,7 +2,7 @@
 {#
 /**
  * @file
- * Bartik's theme implementation for a branding block.
+ * Theme override for a branding block.
  *
  * Each branding element variable (logo, name, slogan) is only available if
  * enabled in the block configuration.
@@ -13,6 +13,7 @@
  * - site_slogan: Slogan for site as defined in Site information settings.
  */
 #}
+
 {% set attributes = attributes.addClass('site-branding') %}
 {% block content %}
   {% if site_logo %}
