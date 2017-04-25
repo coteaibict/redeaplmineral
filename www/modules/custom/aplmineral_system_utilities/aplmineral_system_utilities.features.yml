@@ -1,8 +1,4 @@
 bundle: aplmineral
-excluded:
-  - block.block.aplmineral_main_menu
-  - block.block.bartik_main_menu
-  - views.view.glossary
 required:
   - media_entity.bundle.file
   - media_entity.bundle.image
@@ -64,3 +60,5 @@ required:
   - block.block.menu_main
   - core.entity_view_display.taxonomy_term.tags.search_index
   - system.menu.main
+  - user.role.anonymous
+  - user.role.authenticated
