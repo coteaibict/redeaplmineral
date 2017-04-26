@@ -58,7 +58,37 @@ required:
   - search_api.server.database
   - block.block.search_form
   - block.block.menu_main
+  - block.block.aplmineral_branding
+  - block.block.aplmineral_breadcrumbs
+  - block.block.aplmineral_content
+  - block.block.aplmineral_help
+  - block.block.aplmineral_local_actions
+  - block.block.aplmineral_local_tasks
+  - block.block.aplmineral_messages
+  - block.block.aplmineral_page_title
+  - block.block.aplmineral_powered
+  - block.block.bartik_branding
+  - block.block.bartik_breadcrumbs
+  - block.block.bartik_content
+  - block.block.bartik_help
+  - block.block.bartik_local_actions
+  - block.block.bartik_local_tasks
+  - block.block.bartik_messages
+  - block.block.bartik_page_title
+  - block.block.bartik_powered
+  - block.block.formulariodebusca
+  - block.block.search_form_header
+  - block.block.seven_breadcrumbs
+  - block.block.seven_content
+  - block.block.seven_help
+  - block.block.seven_local_actions
+  - block.block.seven_login
+  - block.block.seven_messages
+  - block.block.seven_page_title
+  - block.block.seven_primary_local_tasks
+  - block.block.seven_secondary_local_tasks
   - core.entity_view_display.taxonomy_term.tags.search_index
   - system.menu.main
   - user.role.anonymous
   - user.role.authenticated
+  - rdf.mapping.taxonomy_term.tags

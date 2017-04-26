@@ -1,0 +1,19 @@
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - bartik
+id: formulariodebusca
+theme: bartik
+region: sidebar_first
+weight: -6
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Formulário de busca'
+  provider: search
+  label_display: '0'
+visibility: {  }

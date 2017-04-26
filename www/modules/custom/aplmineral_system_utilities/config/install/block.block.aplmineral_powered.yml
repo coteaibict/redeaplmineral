@@ -1,0 +1,19 @@
+langcode: pt-br
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - aplmineral
+id: aplmineral_powered
+theme: aplmineral
+region: header
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Desenvolvido com Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }
