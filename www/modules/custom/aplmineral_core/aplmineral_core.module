@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains aplmineral_core.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function aplmineral_core_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the aplmineral_core module.
+    case 'help.page.aplmineral_core':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Módulo principal do projeto APL Mineral') . '</p>';
+      return $output;
+
+    default:
+  }
+}

@@ -1,5 +1,5 @@
 langcode: pt-br
-status: true
+status: false
 dependencies:
   config:
     - views.view.full_news

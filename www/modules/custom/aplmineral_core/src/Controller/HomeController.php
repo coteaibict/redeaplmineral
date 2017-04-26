@@ -1,5 +1,6 @@
 <?php
-namespace Drupal\aplmineral\Controller;
+
+namespace Drupal\aplmineral_core\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
 
@@ -14,7 +15,7 @@ class HomeController extends ControllerBase {
 public function content() {
     $build = array(
       '#type' => 'markup',
-      '#markup' => t('Hello World!'),
+      '#markup' => t('Home page'),
     );
     return $build;
   }

@@ -1,0 +1,7 @@
+name: Aplmineral Core
+type: module
+description: Módulo principal do projeto APL Mineral
+core: 8.x
+package: aplmineral
+dependencies:
+  - image
