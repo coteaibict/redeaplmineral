@@ -6,6 +6,7 @@ dependencies:
   module:
     - ctools
     - node
+    - system
     - views
   theme:
     - aplmineral
@@ -38,3 +39,8 @@ visibility:
     negate: false
     context_mapping:
       node: '@node.node_route_context:node'
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
+    context_mapping: {  }

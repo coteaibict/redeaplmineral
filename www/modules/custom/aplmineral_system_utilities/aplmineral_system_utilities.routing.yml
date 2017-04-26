@@ -1,0 +1,7 @@
+apl.home:
+  path: '/home'
+  defaults:
+    _controller: '\Drupal\aplmineral\Controller\HomeController::content'
+    _title: 'APL Mineral - Home'
+  requirements:
+    _permission: 'access content'

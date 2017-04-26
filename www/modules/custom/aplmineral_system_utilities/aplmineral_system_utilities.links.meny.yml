@@ -1,0 +1,3 @@
+apl.home:
+  title: 'Home - APL'
+  route_name: apl.home

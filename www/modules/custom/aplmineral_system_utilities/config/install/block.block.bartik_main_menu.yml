@@ -6,18 +6,18 @@ dependencies:
   module:
     - system
   theme:
-    - aplmineral
-id: menu_main
-theme: aplmineral
-region: main_navigation
+    - bartik
+id: bartik_main_menu
+theme: bartik
+region: primary_menu
 weight: 0
 provider: null
 plugin: 'system_menu_block:main'
 settings:
   id: 'system_menu_block:main'
-  label: 'Menu Principal'
+  label: 'Main navigation'
   provider: system
-  label_display: visible
+  label_display: '0'
   level: 1
-  depth: 0
+  depth: 1
 visibility: {  }
