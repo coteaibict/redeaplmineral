@@ -1,14 +1,11 @@
 // partials/components/header
 
-$logo-width: 215px
-
 %header-menu-items
   display: flex
-  width: $width-full
+  width: auto
 
   li
     @include font-size(10px)
-    display: inline-block
     margin-right: $margin-default
 
     @include breakpoint($md-min)
@@ -32,14 +29,30 @@ $logo-width: 215px
 .header__topbar
   display: flex
   justify-content: space-between
+  align-items: center
 
 .a11y-menu
   @extend %header-menu-items
   text-transform: uppercase
 
+  @include breakpoint($md-min)
+    justify-content: flex-end
+
 .i18n-menu
   @extend %header-menu-items
   text-transform: uppercase
+
+.shortcuts-menu
+  @extend %header-menu-items
+  display: none
+
+  span
+    padding: 1px 3px
+    color: $color-text-lightest
+    background-color: $color-bg-main
+
+  @include breakpoint($md-min)
+    display: flex
 
 .menu-institutional-wrapper
   @extend %header-menu-items
