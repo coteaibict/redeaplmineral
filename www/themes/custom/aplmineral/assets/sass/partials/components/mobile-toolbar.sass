@@ -77,72 +77,10 @@ $menu-item-width: $width-full / $menu-item-length
   color: $color-text-lightest
   background-color: rgba(0, 0, 0, 0.8)
 
-.search-block-form
-  h2
-    display: none
-
-  form
-    position: relative
+  .search-block-form
+    @extend %search-block
     padding: $margin-default-double
     background-color: $color-bg-main
-
-    label
-      display: none
-
-    input[type="search"]
-      position: relative
-      z-index: $zindex-default
-      width: $width-full
-      height: 40px
-      padding-left: $margin-default
-      padding-right: 30px
-      color: $color-text-darkest
-      background-color: $color-bg-lightest
-      border: none
-      box-sizing: border-box
-
-      &:active,
-      &:focus,
-      &:hover,
-        outline: none
-
-    .form-actions
-      position: relative
-      position: absolute
-      z-index: $zindex-above
-      top: $margin-default-double
-      right: $margin-default
-      height: 40px
-      width: 40px
-      padding: 0 $margin-default
-      background-color: $color-bg-main
-
-      &::after
-        display: block
-        position: absolute
-        z-index: $zindex-default
-        top: 50%
-        left: $margin-default
-        content: $fa-var-search
-        font-family: $font-icon
-        font-size: $font-size-icon
-        color: $color-text-lightest
-        transform: translateY(-50%)
-
-    input[type="submit"]
-      display: block
-      position: relative
-      z-index: $zindex-above
-      overflow: hidden
-      width: 100%
-      height: 100%
-      opacity: 0
-
-      &:active,
-      &:focus,
-      &:hover,
-        outline: none
-
 
 // LAYER: Hamburger menu
 .mobile-toolbar-layer--menu

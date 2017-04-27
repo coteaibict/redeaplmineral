@@ -26,28 +26,6 @@ $logo-width: 215px
   padding-top: $margin-default
   background-color: $color-athens-gray
 
-  .block-system-branding-block
-    display: flex
-    justify-content: center
-    padding-top: $margin-default
-    padding-bottom: $margin-default
-
-    @include breakpoint($md-min)
-      justify-content: flex-start
-      padding-top: $margin-default-double
-      padding-bottom: $margin-default-double
-
-    a
-      display: block
-
-    img
-      display: block
-      width: $width-full
-      max-width: $logo-width
-
-      @include breakpoint($md-min)
-        min-width: 330px
-
 .header__inner
   @extend %container
 

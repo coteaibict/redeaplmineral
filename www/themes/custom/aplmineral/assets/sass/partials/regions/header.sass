@@ -1,0 +1,19 @@
+// partials/components/regions/header
+
+.region-header
+  position: relative
+
+  @include breakpoint($md-min)
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+  .block-system-branding-block
+    @extend %branding
+
+  .block-search
+    @extend %search-block
+    display: none
+
+    @include breakpoint($md-min)
+      display: block
