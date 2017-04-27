@@ -50,9 +50,11 @@
         content: $fa-var-search
         font-family: $font-icon
         font-size: $font-size-icon
-        color: $color-text-lightest
         color: $color-bg-main
         transform: translate(-50%, -50%)
+
+        body.high-contrast &
+          color: $color-text-high-contrast-dark
 
     input[type="submit"]
       display: block

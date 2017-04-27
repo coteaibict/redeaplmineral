@@ -51,6 +51,10 @@
     color: $color-text-lightest
     background-color: $color-bg-main
 
+    body.high-contrast &
+      color: $color-text-high-contrast-dark
+      background: $color-bg-high-contrast-light
+
   @include breakpoint($md-min)
     display: flex
 
@@ -58,10 +62,15 @@
   @extend %header-menu-items
   padding-top: $margin-default
   padding-bottom: $margin-default
-  background-color: $color-athens-gray
 
   @include breakpoint($md-min)
-    background-color: $color-text-midlight
+    border-top: 1px solid $color-border-midlight
+    border-bottom: 1px solid $color-border-midlight
+    background-color: $color-bg-midlight
+
+  body.high-contrast &
+    border-top-color: $color-border-high-contrast-light
+    border-bottom-color: $color-border-high-contrast-light
 
 .menu-institutional
   @extend %container
