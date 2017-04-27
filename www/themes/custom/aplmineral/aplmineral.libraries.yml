@@ -7,6 +7,7 @@ base:
     assets/js/mobile-toolbar.js: {}
     assets/js/news-filter.js: {}
     assets/js/event-banner.js: {}
+    assets/js/a11y.js: {}
   css:
     component:
       assets/css/main.css: {}
