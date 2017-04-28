@@ -1,0 +1,3 @@
+@mixin simple-transition($property, $delay: 250ms) {
+  transition: $property $delay
+}
