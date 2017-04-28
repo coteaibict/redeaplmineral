@@ -4,7 +4,13 @@ $slideshow-image-height: 310px
 
 %slideshow
   z-index: $zindex-default
+  margin-bottom: $margin-default-double
   background-color: $color-bg-lightest
+  box-shadow: $box-shadow-quiet
+
+  body.high-contrast &
+    background-color: $color-bg-high-contrast-dark
+    box-shadow: $box-shadow-high-contrast
 
 %slideshow-arrow
   display: block
