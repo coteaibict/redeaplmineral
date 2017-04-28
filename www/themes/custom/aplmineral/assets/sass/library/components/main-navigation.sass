@@ -25,8 +25,16 @@
   margin-left: 0
 
 %main-navigation-link
+  @include simple-transition(background-color)
   display: block
   padding: $margin-default
   color: $color-text-darkest
   text-decoration: none
   border-bottom: 1px solid darken($color-bg-light, 20%)
+
+  &:hover
+    background-color: darken($color-bg-light, 1%)
+
+  body.high-contrast &
+    &:hover
+      background-color: $color-bg-high-contrast-dark
