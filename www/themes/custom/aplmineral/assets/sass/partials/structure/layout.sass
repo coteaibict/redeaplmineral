@@ -1,4 +1,4 @@
-// partials/structure/content
+// partials/structure/layout
 
 .layout-wrapper
   padding-bottom: 44px
@@ -6,20 +6,23 @@
   @include breakpoint($md-min)
     padding-bottom: 0
 
-.container
-  @extend %container
-
-
-.layout-container
-  @extend %container
 
 .layout-content
   @extend %col-xs-24
-  @extend %col-md-16
+  @extend %col-md-18
+
+  @include breakpoint($md-min)
+    float: right
+
 
 .layout-sidebar
-  @extend %col-md-8
+  @extend %col-md-5
   display: none
 
   @include breakpoint($md-min)
     display: block
+
+
+.layout-container,
+.container
+  @extend %container
