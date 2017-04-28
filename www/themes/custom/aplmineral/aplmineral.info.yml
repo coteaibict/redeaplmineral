@@ -13,6 +13,7 @@ stylesheets-remove:
   - core/themes/classy/css/components/button.css
   - core/themes/classy/css/components/form.css
   - core/themes/classy/css/components/inline-form.css
+  - core/themes/classy/css/components/item-list.css
 
 regions:
   content: Content

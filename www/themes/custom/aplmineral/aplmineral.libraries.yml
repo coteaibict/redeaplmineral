@@ -1,19 +1,21 @@
 base:
   version: 1.x
   js:
-    assets/lib/jquery/dist/jquery.js: {}
     assets/lib/slick-carousel/slick/slick.js: {}
     assets/js/slideshow.js: {}
     assets/js/mobile-toolbar.js: {}
     assets/js/news-filter.js: {}
     assets/js/event-banner.js: {}
     assets/js/a11y.js: {}
+
   css:
     component:
       assets/css/main.css: {}
       assets/lib/slick-carousel/slick/slick.css: {}
   dependencies:
       - core/drupal
+      - core/jquery
+      - core/jquery.once
 
 global-scripts:
   version: 1.x
