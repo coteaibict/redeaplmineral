@@ -1,10 +1,18 @@
-(function ($) {
-  var $slideshow = $('.view-display-id-slideshow .view-content')
-  var options = {
-    adaptiveHeight: true,
-    autoplay: false,
-    autoplaySpeed: 5000,
-  }
+var Drupal = Drupal || {};
 
-  $slideshow.slick(options)
-})(jQuery)
+(function($, Drupal) {
+  Drupal.behaviors.slideshow = {
+    attach: function (context, settings) {
+      var selector = '.view-display-id-slideshow_block .view-content .item-list > ul';
+      var $context = $(context);
+      var $slideshow = $context.find(selector);
+      var options = {
+        adaptiveHeight: true,
+        autoplay: false,
+        autoplaySpeed: 5000,
+      };
+
+      $slideshow.slick(options);
+    }
+  }
+})(jQuery, Drupal);
