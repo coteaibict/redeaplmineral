@@ -1,0 +1,16 @@
+name: 'Pagina Básica'
+description: 'Provides Pagina Básica tipo de conteúdo and related configuration. Criação de paginas na aplicação'
+type: module
+core: 8.x
+dependencies:
+  - aplmineral_system_utilities
+  - field
+  - language
+  - menu_ui
+  - node
+  - path
+  - pathauto
+  - text
+  - user
+package: 'APL Mineral'
+version: 8.x-1.0
