@@ -10,7 +10,7 @@ dependencies:
 id: menu_main
 theme: aplmineral
 region: main_navigation
-weight: 0
+weight: -10
 provider: null
 plugin: 'system_menu_block:main'
 settings:
