@@ -28,7 +28,7 @@ content:
     type: text_default
     region: content
   field_date:
-    weight: 1
+    weight: 0
     label: hidden
     settings:
       timezone_override: America/Sao_Paulo
@@ -37,7 +37,7 @@ content:
     type: datetime_custom
     region: content
   field_image:
-    weight: 0
+    weight: 1
     label: hidden
     settings:
       view_mode: full

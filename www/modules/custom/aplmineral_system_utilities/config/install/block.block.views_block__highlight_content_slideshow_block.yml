@@ -1,21 +1,21 @@
 langcode: pt-br
-status: false
+status: true
 dependencies:
   config:
-    - views.view.teaser_news
+    - views.view.highlight_content
   module:
     - system
     - views
   theme:
     - aplmineral
-id: news_teaser
+id: views_block__highlight_content_slideshow_block
 theme: aplmineral
 region: content
-weight: -2
+weight: -4
 provider: null
-plugin: 'views_block:teaser_news-block_1'
+plugin: 'views_block:highlight_content-slideshow_block'
 settings:
-  id: 'views_block:teaser_news-block_1'
+  id: 'views_block:highlight_content-slideshow_block'
   label: ''
   provider: views
   label_display: '0'
@@ -25,5 +25,5 @@ visibility:
   request_path:
     id: request_path
     pages: '<front>'
-    negate: true
+    negate: false
     context_mapping: {  }

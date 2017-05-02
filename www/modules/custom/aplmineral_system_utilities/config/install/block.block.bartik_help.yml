@@ -1,4 +1,4 @@
-langcode: pt-br
+langcode: en
 status: true
 dependencies:
   module:
@@ -8,12 +8,12 @@ dependencies:
 id: bartik_help
 theme: bartik
 region: content
-weight: -7
+weight: -30
 provider: null
 plugin: help_block
 settings:
   id: help_block
-  label: Ajuda
+  label: Help
   provider: help
   label_display: '0'
 visibility: {  }

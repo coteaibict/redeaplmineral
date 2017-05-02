@@ -15,7 +15,7 @@ class HomeController extends ControllerBase {
 public function content() {
     $build = array(
       '#type' => 'markup',
-      '#markup' => t('Home page'),
+      '#markup' => t(''),
     );
     return $build;
   }

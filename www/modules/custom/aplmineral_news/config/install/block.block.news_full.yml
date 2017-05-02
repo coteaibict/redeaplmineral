@@ -13,7 +13,7 @@ dependencies:
 id: news_full
 theme: aplmineral
 region: content
-weight: -2
+weight: -1
 provider: null
 plugin: 'views_block:full_news-block_1'
 settings:
