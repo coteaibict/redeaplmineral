@@ -9,6 +9,7 @@ var Drupal = Drupal || {};
       var options = {
         adaptiveHeight: true,
         autoplay: true,
+        dots: true,
         autoplaySpeed: 5000,
       };
 
