@@ -30,13 +30,37 @@
     @extend %button-primary
 
 
+%card-news-aligned-image
+  margin-top: 0
+  margin-bottom: $margin-default
+  max-width: 50%
+
+  img
+    width: 100%
+
 // news full mode version.
-.view-full-news
-  .view-content
+.node--view-mode-full
+  .node__content
     @extend %card-news
 
-  .views-field-title a
-    @extend %card-news-title
+    > h2 a
+      @extend %card-news-title
 
-  .views-field-field-date
-    @extend %card-news-metadata
+    > .field--name-field-image img
+      @extend %card-news-image-featured
+
+    .field--name-field-date
+      @extend %card-news-metadata
+
+    .align-left
+      @extend %card-news-aligned-image
+      margin-right: $margin-default
+
+    .align-right
+      @extend %card-news-aligned-image
+      margin-left: $margin-default
+
+    .align-center
+      @extend %card-news-aligned-image
+      display: flex
+      justify-content: center
