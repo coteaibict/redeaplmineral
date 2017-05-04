@@ -8,12 +8,41 @@
     align-items: center
     justify-content: space-between
 
+    @include breakpoint($md-min)
+      display: block
+
   .block-system-branding-block
     @extend %branding
+
+    @include breakpoint($md-min)
+      float: left
 
   .block-search
     @extend %search-block
     display: none
+    float: right
+    margin-top: $margin-default-double
 
     @include breakpoint($md-min)
       display: block
+
+  .menu--social-network
+    display: none
+    float: right
+    clear: right
+    margin-top: $margin-default
+
+    @include breakpoint($md-min)
+      display: block
+
+    .menu
+      display: flex
+
+      li
+        margin-left: $margin-default
+
+      a
+        display: block
+        width: 22px
+        height: 22px
+        font-size: 0
