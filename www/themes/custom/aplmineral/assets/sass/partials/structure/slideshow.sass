@@ -12,11 +12,15 @@
   .view-content
     @extend %slideshow
 
-  .views-row
+  .slick-slide
     @extend %slideshow-slide
 
-  .views-field-field-image *
-    @extend %slideshow-image
+  .views-field-field-image
+    position: relative
+    z-index: $zindex-default
+
+    *
+      @extend %slideshow-image
 
   .views-field-title
     @extend %container
@@ -28,6 +32,15 @@
   .views-field-field-summary
     @extend %container
     padding-bottom: $margin-default
+
+  .views-field-field-tags
+    position: absolute
+    z-index: $zindex-above
+    top: $margin-default
+    left: $margin-default
+
+    a
+      @extend %tags-item
 
   .more-link a
     @extend %button-primary
