@@ -8,7 +8,7 @@ var Drupal = Drupal || {};
       var $slideshow = $context.find(selector);
       var options = {
         adaptiveHeight: true,
-        autoplay: false,
+        autoplay: true,
         autoplaySpeed: 5000,
       };
 
