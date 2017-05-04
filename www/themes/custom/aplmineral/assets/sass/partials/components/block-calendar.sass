@@ -1,51 +1,16 @@
 // partials/components/block-calendar
 
-.block-calendar
-  margin-bottom: $margin-default
+.block-views-blockteaser-events-teaser-short
+  margin-top: $margin-default-double
 
-  .title
-    padding: $margin-default
-    margin-bottom: 0
-    font-size: $font-size-base
-    font-weight: 300
-    color: $color-text-lightest
-    text-align: center
-    text-decoration: none
-    text-transform: uppercase
-    background-color: $color-bg-main
-    border-top-left-radius: 10px
-    border-top-right-radius: 10px
+  > h2
+    @extend %events-title
 
   .block-calendar-list
-    padding-top: $margin-default
-    padding-bottom: $margin-default
-    background-color: $color-bg-lightest
-    border-left: 1px solid $color-border-midlight
-    border-right: 1px solid $color-border-midlight
+    @extend %events-list
 
     li
-      display: flex
-      align-items: center
+      @extend %events-list-item
 
-      .date
-        min-width: 86px
-        padding: $margin-default
-        text-align: center
-        border-right: 1px solid $color-border-midlight
-
-        b
-          display: block
-          font-size: $font-size-h1
-          font-weight: 300
-
-        small
-          display: block
-          text-transform: uppercase
-
-      .description
-        padding: $margin-default
-        margin-left: -1px
-        border-left: 1px solid $color-border-midlight
-
-        p
-          margin-bottom: 0
+  .more-link a
+    @extend %button-primary
