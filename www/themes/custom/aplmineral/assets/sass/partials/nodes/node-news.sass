@@ -33,9 +33,15 @@
 %card-news-aligned-image
   margin-top: 0
   margin-bottom: $margin-default
-  max-width: 50%
+
+  @include breakpoint($breakpoint-max-sm)
+    float: none
+
+  @include breakpoint($md-min)
+    width: 50%
 
   img
+    display: block
     width: 100%
 
 // news full mode version.
@@ -54,13 +60,13 @@
 
     .align-left
       @extend %card-news-aligned-image
-      margin-right: $margin-default
+      @include breakpoint($md-min)
+        margin-right: $margin-default
 
     .align-right
       @extend %card-news-aligned-image
-      margin-left: $margin-default
+      @include breakpoint($md-min)
+        margin-left: $margin-default
 
     .align-center
       @extend %card-news-aligned-image
-      display: flex
-      justify-content: center
