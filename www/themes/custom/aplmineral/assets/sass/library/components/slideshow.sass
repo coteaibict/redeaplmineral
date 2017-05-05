@@ -67,8 +67,14 @@ $slideshow-image-height: 310px
     border-radius: 100%
     background-color: $color-bg-main
 
+    body.high-contrast &
+      background-color: $color-bg-high-contrast-dark
+
   .slick-active button
     background-color: $color-bg-lightest
+
+    body.high-contrast &
+      background-color: $color-bg-high-contrast-light
 
 %slideshow-slide
   position: relative

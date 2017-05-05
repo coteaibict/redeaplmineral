@@ -10,8 +10,14 @@
   text-decoration: none
   text-transform: uppercase
   background-color: $color-bg-main
+  border: 1px solid $color-border-main
   border-top-left-radius: 10px
   border-top-right-radius: 10px
+
+  body.high-contrast &
+    color: $color-text-high-contrast-light
+    border-color: $color-border-high-contrast-light
+    background-color: $color-bg-high-contrast-dark
 
 %events-list
   padding-top: $margin-default
@@ -19,6 +25,10 @@
   background-color: $color-bg-lightest
   border-left: 1px solid $color-border-midlight
   border-right: 1px solid $color-border-midlight
+
+  body.high-contrast &
+    color: $color-text-high-contrast-light
+    background-color: $color-bg-high-contrast-dark
 
 %events-list-item
   display: flex
