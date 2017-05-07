@@ -1,0 +1,20 @@
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.banner.field_normal_image_banner
+    - node.type.banner
+  module:
+    - user
+id: node.banner.teaser
+targetEntityType: node
+bundle: banner
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_normal_image_banner: true
+  langcode: true

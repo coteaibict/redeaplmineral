@@ -1,0 +1,18 @@
+name: Banner
+description: 'Blocos de banner no site.'
+type: module
+core: 8.x
+dependencies:
+  - aplmineral_system_utilities
+  - field
+  - file
+  - image
+  - language
+  - link
+  - menu_ui
+  - node
+  - options
+  - path
+  - user
+  - views
+package: 'APL Mineral'
