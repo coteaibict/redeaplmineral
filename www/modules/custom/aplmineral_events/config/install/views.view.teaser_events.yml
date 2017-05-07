@@ -833,7 +833,7 @@ display:
           type: datetime_custom
           settings:
             timezone_override: ''
-            date_format: 'd F Y'
+            date_format: '<b>d</b>\<\s\m\a\l\l\>F\<\/\s\m\a\l\l\>\<\s\m\a\l\l\> Y\<\/\s\m\a\l\l\>'
           group_column: value
           group_columns: {  }
           group_rows: true
