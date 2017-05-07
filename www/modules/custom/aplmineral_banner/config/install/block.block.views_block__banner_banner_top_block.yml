@@ -1,23 +1,23 @@
 langcode: pt-br
-status: false
+status: true
 dependencies:
   config:
-    - views.view.teaser_events
+    - views.view.banner
   module:
     - views
   theme:
     - aplmineral
-id: events_teaser
+id: views_block__banner_banner_top_block
 theme: aplmineral
 region: content
-weight: 0
+weight: -12
 provider: null
-plugin: 'views_block:teaser_events-teaser_short'
+plugin: 'views_block:banner-banner_top_block'
 settings:
-  id: 'views_block:teaser_events-teaser_short'
+  id: 'views_block:banner-banner_top_block'
   label: ''
   provider: views
-  label_display: visible
+  label_display: '0'
   views_label: ''
   items_per_page: none
 visibility: {  }

@@ -4,6 +4,7 @@ type: module
 core: 8.x
 dependencies:
   - aplmineral_system_utilities
+  - block
   - field
   - file
   - image
@@ -16,3 +17,4 @@ dependencies:
   - user
   - views
 package: 'APL Mineral'
+version: 8.x-1.0

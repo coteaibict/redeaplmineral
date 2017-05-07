@@ -3,7 +3,11 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.banner.field_banner_type
+    - field.field.node.banner.field_image_banner_mobile
+    - field.field.node.banner.field_mobile_text_call
     - field.field.node.banner.field_normal_image_banner
+    - field.field.node.banner.field_source
     - node.type.banner
   module:
     - user
@@ -16,5 +20,9 @@ content:
     weight: 100
     region: content
 hidden:
+  field_banner_type: true
+  field_image_banner_mobile: true
+  field_mobile_text_call: true
   field_normal_image_banner: true
+  field_source: true
   langcode: true

@@ -6,7 +6,7 @@ dependencies:
 id: aplmineral_page_title
 theme: aplmineral
 region: content
-weight: -8
+weight: -11
 provider: null
 plugin: page_title_block
 settings:
