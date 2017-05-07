@@ -1,7 +1,6 @@
 // library/components/main-navigation
 
 %main-navigation
-  text-transform: uppercase
   background-color: $color-bg-light
 
   @include breakpoint($md-min)
@@ -9,10 +8,11 @@
 
 %main-navigation-title
   @include font-size(12px)
-  padding: $margin-default
+  padding: $margin-default-half $margin-default 15px
   margin: 0
   color: $color-link
-  font-weight: 400
+  font-weight: 700
+  text-transform: uppercase
   border-top: 4px solid $color-border-main
   border-bottom: 1px solid darken($color-bg-light, 20%)
   background-color: darken($color-bg-light, 1%)
@@ -23,6 +23,7 @@
 
 %main-navigation-menu
   margin-left: 0
+  margin-bottom: $margin-medium
 
 %main-navigation-link
   @include simple-transition(background-color)
@@ -31,6 +32,9 @@
   color: $color-text-darkest
   text-decoration: none
   border-bottom: 1px solid darken($color-bg-light, 20%)
+
+  @include breakpoint($md-min)
+    text-transform: none
 
   &:hover
     background-color: darken($color-bg-light, 1%)

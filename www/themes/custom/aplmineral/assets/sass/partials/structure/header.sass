@@ -62,7 +62,6 @@
   @extend %header-menu-items
   padding-top: $margin-default
   padding-bottom: $margin-default
-  margin-bottom: $margin-default-double
 
   @include breakpoint($md-min)
     border-top: 1px solid $color-border-midlight
@@ -70,6 +69,8 @@
     background-color: $color-bg-midlight
 
   body.high-contrast &
+    color: $color-text-high-contrast-light
+    background-color: $color-bg-high-contrast-dark
     border-top-color: $color-border-high-contrast-light
     border-bottom-color: $color-border-high-contrast-light
 
