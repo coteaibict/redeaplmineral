@@ -4,6 +4,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.basic_page.body
+    - field.field.node.basic_page.field_tags
     - node.type.basic_page
   module:
     - text
@@ -25,4 +26,5 @@ content:
     weight: 100
     region: content
 hidden:
+  field_tags: true
   langcode: true
