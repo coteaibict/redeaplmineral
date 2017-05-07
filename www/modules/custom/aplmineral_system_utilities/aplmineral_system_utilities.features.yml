@@ -54,7 +54,6 @@ required:
   - search.settings
   - search_api.settings
   - search_api_db.settings
-  - core.extension
   - search.page.node_search
   - search_api.server.database
   - block.block.search_form
