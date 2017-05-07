@@ -1,0 +1,54 @@
+// partials/structure/banner-block
+
+// SMALL BANNERS
+.block-views-blockbanner-banner-small-block
+  position: relative
+  margin-top: $margin-default-double
+
+  .view-content
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    @include breakpoint($md-min)
+      flex-direction: row
+
+  .views-row
+    margin-bottom: $margin-default-double
+
+    img
+      display: block
+      width: 100%
+
+  .views-field-title
+    display: none
+
+
+// MAIN BANNER
+.view-display-id-banner_top_block
+  margin-bottom: $margin-default-double
+
+  img
+    display: block
+    width: 100%
+
+  .views-field-title
+    display: none
+
+  .views-field-field-mobile-text-call
+    display: block
+
+    @include breakpoint($md-min)
+      display: none
+
+  .views-field-field-normal-image-banner
+    display: none
+
+    @include breakpoint($md-min)
+      display: block
+
+  .views-field-field-image-banner-mobile
+    display: block
+
+    @include breakpoint($md-min)
+      display: none
