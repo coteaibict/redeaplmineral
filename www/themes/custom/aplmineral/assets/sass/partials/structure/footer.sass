@@ -2,18 +2,18 @@
 
 .footer
   width: $width-full
-  margin-top: $margin-default-double
-  background-color: $color-bg-main
+  margin-top: $margin-medium
 
-  .footer__inner
+  .footer-copyright
+    background-color: $color-bg-main
+
+  .footer-logos
     @extend %container
-    color: $color-text-lightest
-
-  .footer__logos
     display: flex
     flex-wrap: wrap
     align-items: center
     justify-content: center
+    color: $color-text-lightest
 
     @include breakpoint($md-min)
       justify-content: space-between
