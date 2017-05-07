@@ -1,4 +1,6 @@
 bundle: aplmineral
+excluded:
+  - block.block.bartik_main_menu
 required:
   - media_entity.bundle.file
   - media_entity.bundle.image
@@ -57,7 +59,6 @@ required:
   - search.page.node_search
   - search_api.server.database
   - block.block.search_form
-  - block.block.menu_main
   - block.block.aplmineral_branding
   - block.block.aplmineral_breadcrumbs
   - block.block.aplmineral_content
@@ -88,7 +89,6 @@ required:
   - block.block.seven_primary_local_tasks
   - block.block.seven_secondary_local_tasks
   - core.entity_view_display.taxonomy_term.tags.search_index
-  - system.menu.main
   - user.role.anonymous
   - user.role.authenticated
   - rdf.mapping.taxonomy_term.tags

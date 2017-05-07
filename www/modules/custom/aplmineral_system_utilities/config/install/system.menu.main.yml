@@ -1,7 +1,0 @@
-langcode: pt-br
-status: true
-dependencies: {  }
-id: main
-label: 'Menu Principal'
-description: 'Links da navegação principal'
-locked: true
