@@ -1,0 +1,83 @@
+// partials/components/header
+
+%highlighted-banner
+  @include breakpoint($breakpoint-max-md)
+    position: relative
+    z-index: $zindex-above
+    padding: $margin-default
+    color: $color-text-lightest
+    background-color: #335277
+    box-shadow: $box-shadow-smooth
+
+  // &.is-visible
+  //   .banner-event__teaser
+  //     display: block
+  //
+  //   .banner-event__content
+  //     visibility: visible
+  //     height: auto
+  //     padding-top: $margin-default
+
+
+%highlighted-banner-title
+  @include font-size(20px)
+  font-weight: bold
+  text-transform: uppercase
+  text-decoration: none
+  color: $color-text-lightest
+
+%highlighted-banner-text
+  @include font-size(12px)
+  text-align: center
+  text-decoration: none
+  color: $color-text-lightest
+
+%banner-event__teaser
+  display: block
+
+
+%banner-event__content
+  visibility: hidden
+  height: 0
+
+  img
+    display: block
+    width: $width-full
+
+
+%banner-event__toggle
+  display: block
+  transform: translateX(-50%)
+  position: absolute
+  bottom: -30px
+  left: 50%
+  width: 40px
+  height: 30px
+  padding-bottom: $margin-default-half
+  color: $color-text-lightest
+  text-align: center
+  border-radius: 0 0 10px 10px
+  background-color: #335277
+  cursor: pointer
+
+  &:active,
+  &:focus,
+  &:hover
+    outline: none
+
+  &::after
+    content: $fa-var-chevron-down
+    font-size: $font-size-icon
+    font-family: $font-icon
+
+  &.is-opened
+    &::after
+      content: $fa-var-chevron-up
+
+  span
+    display: none
+
+
+
+%banner-event__inner
+  @extend %container
