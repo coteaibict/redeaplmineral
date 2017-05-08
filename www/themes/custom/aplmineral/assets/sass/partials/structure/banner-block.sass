@@ -29,16 +29,25 @@
 .view-display-id-banner_top_block
   margin-bottom: $margin-default-double
 
+  .views-row
+    @extend %highlighted-banner
+
   img
     display: block
     width: 100%
     height: auto
 
-  .views-field-title
-    display: none
+  .views-field-title a
+    @extend %highlighted-banner-title
+
+    @include breakpoint($md-min)
+      display: none
 
   .views-field-field-mobile-text-call
     display: block
+
+    a
+      @extend %highlighted-banner-text
 
     @include breakpoint($md-min)
       display: none
@@ -51,6 +60,7 @@
 
   .views-field-field-image-banner-mobile
     display: block
+    margin-top: $margin-default
 
     @include breakpoint($md-min)
       display: none

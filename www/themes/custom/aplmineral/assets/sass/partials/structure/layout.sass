@@ -23,7 +23,8 @@
     display: block
 
 #main-content
-  padding-top: 30px
+  @include breakpoint($md-min)
+    padding-top: 30px
 
 .layout-container,
 .container
