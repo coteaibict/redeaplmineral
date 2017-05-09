@@ -17,12 +17,22 @@
 
 // Structure
 .block-views-blockteaser-events-teaser-short
+  @extend %col-xs-24
   @extend %col-md-16
   padding-left: 0
+  margin-bottom: $margin-default-double
+
+  @include breakpoint($breakpoint-max-md)
+    padding-right: 0
 
 #block-facebook
+  @extend %col-xs-24
   @extend %col-md-8
   padding-right: 0
+  margin-bottom: $margin-default-double
+
+  @include breakpoint($breakpoint-max-md)
+    padding-left: 0
 
   iframe
     width: 100%
