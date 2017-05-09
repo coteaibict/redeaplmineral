@@ -7,7 +7,9 @@ $slideshow-image-height: 380px
   position: relative
   margin-bottom: $margin-default-double
   background-color: $color-bg-lightest
-  box-shadow: $box-shadow-quiet
+
+  @include breakpoint($md-min)
+    box-shadow: $box-shadow-quiet
 
   body.high-contrast &
     background-color: $color-bg-high-contrast-dark
