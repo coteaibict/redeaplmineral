@@ -15,6 +15,9 @@
   .slick-slide
     @extend %slideshow-slide
 
+    @include breakpoint($md-min)
+      padding-bottom: $margin-default-double
+
   .views-field-field-image
     position: relative
     z-index: $zindex-default
@@ -29,6 +32,10 @@
     padding-right: $margin-default-double
     margin-top: $margin-default
 
+    @include breakpoint($md-min)
+      padding-left: $margin-medium
+      padding-right: $margin-medium
+
     a
       @extend %slideshow-title
 
@@ -37,6 +44,10 @@
     padding-left: $margin-default-double
     padding-right: $margin-default-double
     padding-bottom: $margin-default
+
+    @include breakpoint($md-min)
+      padding-left: $margin-medium
+      padding-right: $margin-medium
 
   .views-field-field-tags
     position: absolute
