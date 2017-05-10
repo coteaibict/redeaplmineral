@@ -28,10 +28,15 @@
 
 %card-news
   position: relative
-  padding: $margin-default-double
+  padding-top: $margin-default-double
+  padding-bottom: $margin-default-double
   margin-bottom: $margin-default
   background-color: $color-bg-lightest
   border: 1px solid $color-border-midlight
+
+  > *:not(.field--name-field-image)
+    padding-left: $margin-default-double
+    padding-right: $margin-default-double
 
   body.high-contrast &
     color: $color-text-high-contrast-light
