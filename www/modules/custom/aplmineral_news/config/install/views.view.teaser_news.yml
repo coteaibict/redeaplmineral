@@ -386,6 +386,7 @@ display:
         use_more: false
         use_more_always: false
         use_more_text: false
+        css_class: false
       path: noticias
       pager:
         type: full
@@ -411,6 +412,7 @@ display:
       use_more: false
       use_more_always: true
       use_more_text: 'Veja mais'
+      css_class: card-content
     cache_metadata:
       max-age: -1
       contexts:

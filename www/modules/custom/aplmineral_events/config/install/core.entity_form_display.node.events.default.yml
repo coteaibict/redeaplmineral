@@ -38,13 +38,13 @@ content:
     type: text_textarea
     region: content
   field_date_end:
-    weight: 3
+    weight: 1
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
     region: content
   field_date_start:
-    weight: 2
+    weight: 0
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
@@ -79,7 +79,7 @@ content:
     type: string_textfield
     region: content
   field_summary:
-    weight: 1
+    weight: 3
     settings:
       rows: 5
       placeholder: ''
@@ -97,7 +97,7 @@ content:
     region: content
   title:
     type: string_textfield
-    weight: 0
+    weight: 2
     region: content
     settings:
       size: 60
