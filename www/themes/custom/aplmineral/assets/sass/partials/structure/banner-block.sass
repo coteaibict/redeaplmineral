@@ -38,6 +38,9 @@
     .views-field-field-image-banner-mobile
       display: block
 
+      @include breakpoint($md-min)
+        display: none
+
   img
     display: block
     width: 100%
