@@ -1,7 +1,7 @@
 var Drupal = Drupal || {};
 
 (function($, Drupal) {
-  Drupal.behaviors.slideshow = {
+  Drupal.behaviors.APL_slideshow = {
     attach: function (context, settings) {
       var selector = '.view-display-id-slideshow_block .view-content .item-list > ul';
       var $context = $(context);
