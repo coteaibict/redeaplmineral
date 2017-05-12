@@ -1,35 +1,44 @@
+var Drupal = Drupal || {};
 
-(function ($) {
+(function($, Drupal) {
+  Drupal.behaviors.slideshow = {
 
-  var $wrapper = jQuery('.banner-event')
-  var $btnToggle = $wrapper.find('.banner-event__toggle')
-  var isVisible = false
-  var imageHeight = $wrapper.find('.banner-event__content img').height()
+    attach: function (context, settings) {
+      var $context = $(context)
+      var $wrapper = $context.find('.block-views-blockbanner-banner-top-block')
+      var $bannerContainer = $context.find('.view-display-id-banner_top_block')
+      var $bannerImage = $context.find('.views-field-field-image-banner-mobile')
+      var isVisible = false
 
-  $btnToggle.on('click', toggleEventBanner)
+      // Add toggle button.
+      $bannerContainer
+        .find('.views-row')
+        .append('<button class="banner-toggle-button"><span>Abrir/fechar</span></button>')
 
-  function toggleEventBanner(event) {
-    event.preventDefault()
+      var $btnToggle = $context.find('.banner-toggle-button')
+      $btnToggle.on('click', toggleEventBanner)
 
-    if (isVisible) {
-      openEventBanner()
-    } else {
-      hideEventBanner()
+      function toggleEventBanner(event) {
+        event.preventDefault()
+
+        if (isVisible) {
+          openEventBanner()
+        } else {
+          hideEventBanner()
+        }
+      }
+
+      function openEventBanner() {
+        isVisible = false
+        $bannerContainer.removeClass('is-visible')
+        $btnToggle.removeClass('is-opened')
+      }
+
+      function hideEventBanner() {
+        isVisible = true
+        $bannerContainer.addClass('is-visible')
+        $btnToggle.addClass('is-opened')
+      }
     }
   }
-
-  function openEventBanner() {
-    isVisible = false
-    $wrapper.removeClass('is-visible')
-    $btnToggle.removeClass('is-opened')
-
-    $wrapper.find('.banner-event__content').slideDown()
-  }
-
-  function hideEventBanner() {
-    isVisible = true
-    $wrapper.addClass('is-visible')
-    $btnToggle.addClass('is-opened')
-  }
-
-})(jQuery)
+})(jQuery, Drupal);
