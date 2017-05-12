@@ -29,14 +29,12 @@
  * @see template_preprocess_views_view_fields()
  */
 #}
-<div class="block-calendar">
-  <a href="{{fields.nid.content}}">
-    <span class="date">
-      {{fields.field_date_start.content}}
-    </span>
-    <span class="description">
-      <span>{{fields.title.content}}</span>
-      <span>{{fields.field_summary.content}}</span>
-    </span>
-  </a>
-</div>
+<a href="{{fields.nid.content}}">
+  <span class="date">
+    {{fields.field_date_start.content}}
+  </span>
+  <span class="description">
+    <span class="title">{{fields.title.content}}</span>
+    <span class="summary">{{fields.field_summary.content}}</span>
+  </span>
+</a>
