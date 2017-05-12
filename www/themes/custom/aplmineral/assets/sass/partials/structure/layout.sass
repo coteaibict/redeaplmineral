@@ -29,3 +29,8 @@
 .layout-container,
 .container
   @extend %container
+
+.region-highlighted
+  @include breakpoint($breakpoint-max-sm)
+    margin-left: -20px
+    margin-right: -20px
