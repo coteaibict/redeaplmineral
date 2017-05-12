@@ -26,16 +26,25 @@
 
 
 // MAIN BANNER
+.block-views-blockbanner-banner-top-block
+  position: relative
+  z-index: $zindex-above
+
 .view-display-id-banner_top_block
+  position: relative
   margin-bottom: $margin-default-double
 
-  .views-row
-    @extend %highlighted-banner
+  &.is-visible
+    .views-field-field-image-banner-mobile
+      display: block
 
   img
     display: block
     width: 100%
     height: auto
+
+  .views-row
+    @extend %highlighted-banner
 
   .views-field-title a
     @extend %highlighted-banner-title
@@ -59,8 +68,14 @@
       display: block
 
   .views-field-field-image-banner-mobile
-    display: block
+    display: none
     margin-top: $margin-default
+
+    @include breakpoint($md-min)
+      display: none
+
+  .banner-toggle-button
+    @extend %highlighted-banner-toggle
 
     @include breakpoint($md-min)
       display: none

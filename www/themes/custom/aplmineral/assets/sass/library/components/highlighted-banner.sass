@@ -9,16 +9,6 @@
     background-color: #335277
     box-shadow: $box-shadow-smooth
 
-  // &.is-visible
-  //   .banner-event__teaser
-  //     display: block
-  //
-  //   .banner-event__content
-  //     visibility: visible
-  //     height: auto
-  //     padding-top: $margin-default
-
-
 %highlighted-banner-title
   @include font-size(20px)
   font-weight: bold
@@ -32,20 +22,7 @@
   text-decoration: none
   color: $color-text-lightest
 
-%banner-event__teaser
-  display: block
-
-
-%banner-event__content
-  visibility: hidden
-  height: 0
-
-  img
-    display: block
-    width: $width-full
-
-
-%banner-event__toggle
+%highlighted-banner-toggle
   display: block
   transform: translateX(-50%)
   position: absolute
@@ -76,8 +53,3 @@
 
   span
     display: none
-
-
-
-%banner-event__inner
-  @extend %container
