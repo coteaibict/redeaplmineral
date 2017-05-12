@@ -1,7 +1,7 @@
 var Drupal = Drupal || {};
 
 (function($, Drupal) {
-  Drupal.behaviors.slideshow = {
+  Drupal.behaviors.APL_EventBanner = {
 
     attach: function (context, settings) {
       var $context = $(context)
