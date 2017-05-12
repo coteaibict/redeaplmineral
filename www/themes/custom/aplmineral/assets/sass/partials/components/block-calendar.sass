@@ -8,8 +8,12 @@
   .view-content
     @extend %events-list
 
-  .views-row a
-    @extend %events-list-item
+  .views-row
+    padding-top: $margin-default
+    padding-bottom: $margin-default
+
+    a
+      @extend %events-list-item
 
   .more-link a
     @extend %button-primary
