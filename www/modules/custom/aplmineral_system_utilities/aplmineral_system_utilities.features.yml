@@ -25,6 +25,15 @@ required:
   - core.entity_view_mode.node.search_result
   - core.entity_view_mode.taxonomy_term.search_index
   - core.entity_view_mode.node.full
+  - core.entity_view_mode.block.token
+  - core.entity_view_mode.block_content.full
+  - core.entity_view_mode.block_content.token
+  - core.entity_view_mode.menu_link_content.token
+  - core.entity_view_mode.node.rss
+  - core.entity_view_mode.node.teaser
+  - core.entity_view_mode.node.token
+  - core.entity_view_mode.taxonomy_term.full
+  - core.entity_view_mode.taxonomy_term.token
   - image.style.full
   - image.style.slideshow
   - image.style.teaser
@@ -62,3 +71,4 @@ required:
   - system.menu.main
   - user.role.anonymous
   - user.role.authenticated
+  - views.view.media_entity_browser

@@ -1,0 +1,191 @@
+<?php
+
+/**
+ * @file
+ * Contains general functions, updates and tasks for Rede APL Mineral
+ * development.
+ */
+
+use \Drupal\field\Entity\FieldStorageConfig;
+use \Drupal\field\Entity\FieldConfig;
+use \Drupal\block\Entity\Block;
+use \Drupal\Core\Database\Database;
+
+/**
+ * Implements hook_install().
+ */
+function aplmineral_devroutines_install() {
+  // Install aplmineral theme.
+  \Drupal::service('theme_installer')
+    ->install(['aplmineral']);
+  
+  // Set default theme to aplmineral.
+  \Drupal::configFactory()
+    ->getEditable('system.theme')
+    ->set('default', 'aplmineral')
+    ->save(TRUE);
+  
+  \Drupal::service('theme_installer')
+    ->uninstall(['bartik']);
+  
+  // Delete default node types.
+  \Drupal::entityManager()
+    ->getStorage('node_type')
+    ->load('page')
+    ->delete();
+  \Drupal::entityManager()
+    ->getStorage('node_type')
+    ->load('article')
+    ->delete();
+  
+  // Install system utilities module.
+  \Drupal::service('module_installer')
+    ->install(['aplmineral_system_utilities']);
+  
+  // Update entity fields definitions.
+  \Drupal::entityDefinitionUpdateManager()
+    ->applyUpdates();
+  
+//  // Prepare to update field_image type from standard profile.
+  $database = \Drupal::database();
+  $table = 'node__field_image';
+  $entity_type = 'node';
+  $field_name = 'field_image';
+
+  $field_storage = FieldStorageConfig::loadByName($entity_type, $field_name);
+
+  if (is_null($field_storage)) {
+    return;
+  }
+
+  $rows = NULL;
+
+  if ($database->schema()->tableExists($table)) {
+    // Get table data to restore after the update is completed.
+    $rows = $database->select($table, 'n')
+      ->fields('n')
+      ->execute()
+      ->fetchAll();
+  }
+
+  $new_fields = array();
+
+  // Use existing field config for new settings.
+  foreach ($field_storage->getBundles() as $bundle => $label) {
+    $field = FieldConfig::loadByName($entity_type, $bundle, $field_name);
+    $new_field = $field->toArray();
+    $new_field['field_type'] = 'image';
+    $new_field['settings'] = array();
+
+    $new_fields[] = $new_field;
+  }
+
+  // Deleting field storage which will also delete bundles(fields).
+  $new_field_storage = $field_storage->toArray();
+  $new_field_storage['type'] = 'entity_reference';
+  $new_field_storage['settings'] = array(
+    'target_type' => 'media'
+  );
+
+  $field_storage->delete();
+
+  // Purge field data now to allow new field and field_storage with same name
+  // to be created. You may need to increase batch size.
+  field_purge_batch(100);
+
+  // Create new field storage.
+  $new_field_storage = FieldStorageConfig::create($new_field_storage);
+  $new_field_storage->save();
+
+  // Create new fields.
+  foreach ($new_fields as $new_field) {
+    $new_field = FieldConfig::create($new_field);
+    $new_field->save();
+  }
+
+  // Restore existing data in the same table.
+  if (!is_null($rows)) {
+    foreach ($rows as $row) {
+      $database->insert($table)
+        ->fields((array) $row)
+        ->execute();
+    }
+  }
+  
+  $blocks = array(
+    'block.block.aplmineral_account_menu',
+    'block.block.aplmineral_footer',
+    'block.block.aplmineral_help',
+    'block.block.aplmineral_main_menu',
+    'block.block.aplmineral_tools',
+    'block.block.aplmineral_search',
+    'block.block.aplmineral_powered'
+  );
+  $config_factory = \Drupal::configFactory();
+  foreach ($blocks as $block_config_name) {
+    $block = $config_factory->getEditable($block_config_name);
+    $block->set('status', FALSE);
+    $block->save(TRUE);
+  }
+  
+  // Execute all developer updates when install.
+  for ($n = 8001; $n < 9000; $n++) {
+    $update = 'aplmineral_devroutines_update_' . $n;
+    if (function_exists($update)) {
+      $update();
+    }
+  }
+  
+  drupal_flush_all_caches();
+}
+
+/**
+ * Import configurations from system utilities module.
+ */
+function aplmineral_devroutines_update_8101() {
+  
+  \Drupal::service('aplmineral_devroutines.features')
+    ->import(['aplmineral_system_utilities']);
+  
+  drupal_flush_all_caches();
+}
+
+/**
+ * Install aplmineral_news and required modules and import configurations.
+ */
+function aplmineral_devroutines_update_8102() {
+  
+  $modules = array(
+    'aplmineral_news',
+    'features_ui', // Comentar no branch master.
+    'search_api_views_taxonomy',
+    'config_devel',
+    'media_entity_browser',
+    'crop_media_entity',
+    'libraries',
+    'config_update_ui', // Comentar no branch master.
+    'devel', // Comentar no branch master.
+    'devel_generate' // Comentar no branch master.
+  );
+  $enable = \Drupal::service('module_installer');
+  $enable->install($modules);
+  
+  \Drupal::service('aplmineral_devroutines.features')
+    ->import(['aplmineral_system_utilities']);
+
+  drupal_flush_all_caches();
+}
+
+/**
+ * Install aplmineral_events module and import configurations.
+ */
+function aplmineral_devroutines_update_8103() {
+
+  \Drupal::service('module_installer')
+    ->install(['aplmineral_events']);
+  
+  \Drupal::service('aplmineral_devroutines.features')
+    ->import(['aplmineral_system_utilities']);
+
+  drupal_flush_all_caches();
+}

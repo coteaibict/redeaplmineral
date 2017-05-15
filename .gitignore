@@ -90,6 +90,7 @@ host.ini
 playbooks/setup.retry
 configuration/
 databases/
+patches/
 !www/core/assets/vendor/*
 !www/core/assets/vendor/*/backbone.js
 

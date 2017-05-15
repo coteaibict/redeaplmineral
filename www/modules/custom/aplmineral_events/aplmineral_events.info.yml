@@ -3,7 +3,6 @@ description: 'Feature de eventos.'
 type: module
 core: 8.x
 dependencies:
-  - aplmineral_news
   - aplmineral_system_utilities
   - block
   - datetime

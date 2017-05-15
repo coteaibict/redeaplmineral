@@ -1,0 +1,3 @@
+services:
+  aplmineral_devroutines.features:
+    class: Drupal\aplmineral_devroutines\Helpers\Features

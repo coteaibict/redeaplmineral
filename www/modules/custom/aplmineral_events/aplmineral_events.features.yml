@@ -1,7 +1,4 @@
 bundle: aplmineral
-excluded:
-  - field.storage.node.field_tags
-  - taxonomy.vocabulary.tags
 required:
   - field.field.node.events.field_announcement
   - field.field.node.events.field_body

@@ -1,10 +1,15 @@
 bundle: aplmineral
-excluded:
-  - field.field.node.events.field_body
-  - field.field.node.events.field_highlight
-  - field.field.node.events.field_image
-  - field.field.node.events.field_summary
-  - core.entity_view_display.node.events.default
-  - core.entity_view_display.node.events.teaser
-  - core.entity_form_display.node.events.default
-  - core.entity_view_mode.node.full
+required:
+  - field.field.node.news.field_body
+  - field.field.node.news.field_date
+  - field.field.node.news.field_highlight
+  - field.field.node.news.field_image
+  - field.field.node.news.field_source
+  - field.field.node.news.field_summary
+  - field.field.node.news.field_tags
+  - language.content_settings.node.news
+  - core.entity_view_display.node.news.default
+  - core.entity_view_display.node.news.teaser
+  - core.entity_form_display.node.news.default
+  - pathauto.pattern.alias_news
+  - node.type.news

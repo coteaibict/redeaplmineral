@@ -2,5 +2,6 @@ name: Rotinas de desenvolvimento
 description: Implementa tarefas necessárias durante o desenvolvimento e evolução contínua.
 package: 'APL Mineral'
 type: module
+version: 8.x-1.0
 core: 8.x
-hidden: true
+#hidden: true
