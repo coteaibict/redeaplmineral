@@ -1,32 +1,15 @@
 // partials/structure/contact-form
 
 .contact-form
+  @extend %form
+
   label
     display: none
 
-  .form-item
-    margin-bottom: 20px
-
-    input,
-    textarea
-      padding: 10px
-      margin: 0
-      width: 100%
-      border: none
-      border-bottom: 2px solid #DDDDDD
-
-    textarea
-      resize: none
-      max-height: 100px
+  textarea
+    resize: none
+    max-height: 100px
 
   .form-actions
-    display: flex
-    justify-content: flex-end
-
-    #edit-submit
-      @extend %button-primary
-      box-shadow: none
-      width: auto
-
     input[data-drupal-selector="edit-preview"]
       display: none
