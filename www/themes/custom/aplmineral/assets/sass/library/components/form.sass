@@ -1,0 +1,34 @@
+// library/components/form
+
+%form-input
+  @include simple-transition(border)
+  padding: 10px
+  margin: 0
+  width: 100%
+  border: none
+  border-bottom: 2px solid $color-border-midlight
+
+  &:focus
+    outline: none
+    border-bottom: 2px solid $color-border-main
+
+%form
+  @extend %card-news
+
+  input,
+  textarea
+    @extend %form-input
+
+  .form-item,
+  .field--name-subject,
+  .field--name-message
+    margin-bottom: 20px
+
+  .form-actions
+    display: flex
+    justify-content: flex-end
+
+    #edit-submit
+      @extend %button-primary
+      box-shadow: none
+      width: auto
