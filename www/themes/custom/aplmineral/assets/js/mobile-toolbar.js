@@ -3,8 +3,9 @@ var Drupal = Drupal || {};
 (function($, Drupal) {
   Drupal.behaviors.APL_MobileToolbar = {
     attach: function (context, settings) {
-      var $html = $('html')
-      var $toolbar = $('.mobile-toolbar')
+      var $context = $(context)
+      var $html = $context.find('html')
+      var $toolbar = $context.find('.mobile-toolbar')
       var $btnHome = $toolbar.find('.mobile-toolbar__home')
       var $btnMenu = $toolbar.find('.mobile-toolbar__hamburger')
       var $btnSearch = $toolbar.find('.mobile-toolbar__search')
@@ -34,7 +35,6 @@ var Drupal = Drupal || {};
       // Handler to Menu button.
       function handleMenuClick(event) {
         event.preventDefault()
-
         if ($menuLayer.hasClass('is-visible')) {
           closeLayer()
           return
