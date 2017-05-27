@@ -32,10 +32,11 @@ dependencies:
   - search
   - search_api
   - search_api_db
+  - search_api_views_taxonomy
   - system
   - taxonomy
   - text
   - user
   - views
-version: 8.x-1.8.1
+version: 8.x-1.8.2
 package: 'APL Mineral'

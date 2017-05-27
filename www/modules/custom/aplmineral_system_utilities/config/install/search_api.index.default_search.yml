@@ -10,14 +10,10 @@ dependencies:
     - field.storage.node.field_tags
     - field.storage.node.field_date
     - field.storage.node.field_source
-    - field.storage.media.field_file
-    - field.storage.media.field_image
     - search_api.server.database
   module:
-    - file
     - search_api
     - node
-    - media_entity
     - taxonomy
 id: default_search
 name: 'Busca padrão'
@@ -101,7 +97,7 @@ field_settings:
     label: Título
     datasource_id: 'entity:node'
     property_path: title
-    type: string
+    type: text
     boost: !!float 13
   field_body:
     label: Corpo
@@ -189,56 +185,6 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_source
-  mid:
-    label: 'Media ID'
-    datasource_id: 'entity:media'
-    property_path: mid
-    type: integer
-  bundle:
-    label: Pacote
-    datasource_id: 'entity:media'
-    property_path: bundle
-    type: string
-  filename_document:
-    label: 'Arquivo » Arquivo » Filename'
-    datasource_id: 'entity:media'
-    property_path: 'field_file:entity:filename'
-    type: string
-    dependencies:
-      config:
-        - field.storage.media.field_file
-      module:
-        - file
-  filemime_document:
-    label: 'Arquivo » Arquivo » File MIME type'
-    datasource_id: 'entity:media'
-    property_path: 'field_file:entity:filemime'
-    type: string
-    dependencies:
-      config:
-        - field.storage.media.field_file
-      module:
-        - file
-  filename_image:
-    label: 'Imagem » Arquivo » Filename'
-    datasource_id: 'entity:media'
-    property_path: 'field_image:entity:filename'
-    type: string
-    dependencies:
-      config:
-        - field.storage.media.field_image
-      module:
-        - file
-  filemime_image:
-    label: 'Imagem » Arquivo » File MIME type'
-    datasource_id: 'entity:media'
-    property_path: 'field_image:entity:filemime'
-    type: string
-    dependencies:
-      config:
-        - field.storage.media.field_image
-      module:
-        - file
   tid:
     label: 'ID do termo'
     datasource_id: 'entity:taxonomy_term'
@@ -263,13 +209,6 @@ datasource_settings:
     languages:
       default: true
       selected: {  }
-  'entity:media':
-    bundles:
-      default: true
-      selected: {  }
-    languages:
-      default: true
-      selected: {  }
   'entity:taxonomy_term':
     bundles:
       default: true
@@ -278,17 +217,6 @@ datasource_settings:
       default: true
       selected: {  }
 processor_settings:
-  hierarchy:
-    fields:
-      field_tags: taxonomy_term-parent
-    weights:
-      preprocess_index: -45
-  add_url: {  }
-  aggregated_field: {  }
-  content_access:
-    weights:
-      preprocess_query: -30
-  entity_status: {  }
   highlight:
     highlight: server
     highlight_partial: true
@@ -299,6 +227,51 @@ processor_settings:
     suffix: '</strong>'
     weights:
       postprocess_query: 0
+  content_access:
+    weights:
+      preprocess_query: -30
+  hierarchy:
+    fields:
+      field_tags: taxonomy_term-parent
+    weights:
+      preprocess_index: -45
+  transliteration:
+    fields:
+      - node_grants
+      - aggregated_field
+      - title
+      - field_body
+      - field_place
+      - field_summary
+      - field_tags
+      - field_source
+      - type
+      - title_source
+      - vid
+      - name_vocab
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
+  ignorecase:
+    fields:
+      - node_grants
+      - aggregated_field
+      - title
+      - field_body
+      - field_place
+      - field_summary
+      - field_tags
+      - field_source
+      - type
+      - title_source
+      - vid
+      - name_vocab
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
+  rendered_item: {  }
+  add_url: {  }
+  entity_status: {  }
   html_filter:
     fields:
       - node_grants
@@ -311,11 +284,6 @@ processor_settings:
       - field_source
       - type
       - title_source
-      - bundle
-      - filename_document
-      - filemime_document
-      - filename_image
-      - filemime_image
       - vid
       - name_vocab
     title: true
@@ -329,54 +297,10 @@ processor_settings:
     weights:
       preprocess_index: -15
       preprocess_query: -15
-  ignorecase:
-    fields:
-      - node_grants
-      - aggregated_field
-      - title
-      - field_body
-      - field_place
-      - field_summary
-      - field_tags
-      - field_source
-      - type
-      - title_source
-      - bundle
-      - filename_document
-      - filemime_document
-      - filename_image
-      - filemime_image
-      - vid
-      - name_vocab
-    weights:
-      preprocess_index: -20
-      preprocess_query: -20
-  rendered_item: {  }
-  transliteration:
-    fields:
-      - node_grants
-      - aggregated_field
-      - title
-      - field_body
-      - field_place
-      - field_summary
-      - field_tags
-      - field_source
-      - type
-      - title_source
-      - bundle
-      - filename_document
-      - filemime_document
-      - filename_image
-      - filemime_image
-      - vid
-      - name_vocab
-    weights:
-      preprocess_index: -20
-      preprocess_query: -20
+  aggregated_field: {  }
 tracker_settings:
   default: {  }
 options:
   index_directly: true
-  cron_limit: 500
+  cron_limit: 50
 server: database

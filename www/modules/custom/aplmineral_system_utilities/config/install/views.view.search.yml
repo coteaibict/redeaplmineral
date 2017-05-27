@@ -2,9 +2,15 @@ langcode: pt-br
 status: true
 dependencies:
   config:
+    - field.storage.node.field_date
+    - field.storage.node.field_date_start
+    - field.storage.node.field_summary
     - search_api.index.default_search
+    - taxonomy.vocabulary.tags
   module:
+    - datetime
     - search_api
+    - search_api_views_taxonomy
     - user
 id: search
 label: Busca
@@ -71,22 +77,17 @@ display:
           row_class: ''
           default_row_class: true
       row:
-        type: search_api
+        type: fields
         options:
-          view_modes:
-            'entity:node':
-              events: search_index
-              news: search_index
-            'entity:media':
-              file: search_index
-              image: search_index
-            'entity:taxonomy_term':
-              tags: search_index
+          default_field_elements: true
+          inline: {  }
+          separator: ''
+          hide_empty: true
       fields:
-        search_api_excerpt:
-          id: search_api_excerpt
-          table: search_api_index_default_search
-          field: search_api_excerpt
+        title:
+          id: title
+          table: search_api_datasource_default_search_entity_node
+          field: title
           relationship: none
           group_type: group
           admin_label: ''
@@ -131,18 +132,35 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          link_to_item: false
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: true
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
           multi_type: separator
-          multi_separator: ', '
-          plugin_id: search_api
-        search_api_relevance:
-          id: search_api_relevance
-          table: search_api_index_default_search
-          field: search_api_relevance
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api
+          fallback_options:
+            link_to_item: false
+            multi_separator: ', '
+          entity_type: node
+          plugin_id: search_api_field
+        field_date:
+          id: field_date
+          table: search_api_datasource_default_search_entity_node
+          field: field_date
           relationship: none
           group_type: group
           admin_label: ''
-          label: ''
+          label: Publicado
           exclude: false
           alter:
             alter_text: false
@@ -175,75 +193,174 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
-          hide_empty: false
+          hide_empty: true
           empty_zero: false
           hide_alter_empty: true
-          set_precision: false
-          precision: 0
-          decimal: .
-          separator: .
-          format_plural: false
-          format_plural_string: "1\x03@count"
-          prefix: ''
-          suffix: ''
-          plugin_id: numeric
-        aggregated_field:
-          id: aggregated_field
-          table: search_api_index_default_search
-          field: aggregated_field
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          link_to_item: false
+          click_sort_column: value
+          type: datetime_default
+          settings:
+            timezone_override: ''
+            format_type: short
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
           multi_type: separator
-          multi_separator: ', '
-          plugin_id: search_api
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api
+          fallback_options:
+            link_to_item: false
+            multi_separator: ', '
+          entity_type: node
+          plugin_id: search_api_field
+        field_date_start:
+          id: field_date_start
+          table: search_api_datasource_default_search_entity_node
+          field: field_date_start
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Data do evento:'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: true
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: datetime_default
+          settings:
+            timezone_override: ''
+            format_type: medium
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api
+          fallback_options:
+            link_to_item: false
+            multi_separator: ', '
+          entity_type: node
+          plugin_id: search_api_field
+        field_summary:
+          id: field_summary
+          table: search_api_datasource_default_search_entity_node
+          field: field_summary
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: basic_string
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api
+          fallback_options:
+            link_to_item: false
+            multi_separator: ', '
+          entity_type: node
+          plugin_id: search_api_field
       filters:
         aggregated_field:
           id: aggregated_field
@@ -286,160 +403,6 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           plugin_id: search_api_text
-        title:
-          id: title
-          table: search_api_index_default_search
-          field: title
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: '='
-          value:
-            min: ''
-            max: ''
-            value: ''
-          group: 1
-          exposed: true
-          expose:
-            operator_id: title_op
-            label: Título
-            description: ''
-            use_operator: false
-            operator: title_op
-            identifier: title
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          plugin_id: search_api_text
-        field_summary:
-          id: field_summary
-          table: search_api_index_default_search
-          field: field_summary
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: '='
-          value:
-            min: ''
-            max: ''
-            value: ''
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_summary_op
-            label: 'Descrição (resumo)'
-            description: ''
-            use_operator: false
-            operator: field_summary_op
-            identifier: summary
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          plugin_id: search_api_text
-        field_date:
-          id: field_date
-          table: search_api_index_default_search
-          field: field_date
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: '='
-          value:
-            min: ''
-            max: ''
-            value: ''
-            type: date
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_date_op
-            label: Data
-            description: null
-            use_operator: false
-            operator: field_date_op
-            identifier: field_date
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-          is_grouped: true
-          group_info:
-            label: 'Notícias desde'
-            description: ''
-            identifier: date
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items:
-              1:
-                title: Sempre
-                operator: '<='
-                value:
-                  type: offset
-                  value: '-1 minute'
-                  min: ''
-                  max: ''
-              2:
-                title: 'Último mês'
-                operator: '>='
-                value:
-                  type: offset
-                  value: '-1 month'
-                  min: ''
-                  max: ''
-              3:
-                title: 'Úlima semana'
-                operator: '>='
-                value:
-                  type: offset
-                  value: '-1 week'
-                  min: ''
-                  max: ''
-              4:
-                title: Ontem
-                operator: '>='
-                value:
-                  type: offset
-                  value: '-1 day'
-                  min: ''
-                  max: ''
-          plugin_id: search_api_date
         type:
           id: type
           table: search_api_index_default_search
@@ -480,10 +443,10 @@ display:
             group_items: {  }
           reduce_duplicates: false
           plugin_id: search_api_options
-        uid:
-          id: uid
+        field_tags:
+          id: field_tags
           table: search_api_index_default_search
-          field: uid
+          field: field_tags
           relationship: none
           group_type: group
           admin_label: ''
@@ -492,12 +455,12 @@ display:
           group: 1
           exposed: true
           expose:
-            operator_id: uid_op
-            label: Autor
+            operator_id: field_tags_op
+            label: Categoria
             description: ''
             use_operator: false
-            operator: uid_op
-            identifier: uid
+            operator: field_tags_op
+            identifier: field_tags
             required: false
             remember: false
             multiple: false
@@ -518,7 +481,13 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          plugin_id: search_api_user
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: tags
+          hierarchy: false
+          error_message: true
+          plugin_id: search_api_term
       sorts:
         search_api_relevance:
           id: search_api_relevance
@@ -602,14 +571,20 @@ display:
         operator: AND
         groups:
           1: OR
+      css_class: card-content
     cache_metadata:
       max-age: -1
       contexts:
+        - 'languages:language_content'
         - 'languages:language_interface'
         - url
         - url.query_args
+        - user
         - user.permissions
-      tags: {  }
+      tags:
+        - 'config:field.storage.node.field_date'
+        - 'config:field.storage.node.field_date_start'
+        - 'config:field.storage.node.field_summary'
   page_1:
     display_plugin: page
     id: page_1
@@ -624,8 +599,13 @@ display:
     cache_metadata:
       max-age: -1
       contexts:
+        - 'languages:language_content'
         - 'languages:language_interface'
         - url
         - url.query_args
+        - user
         - user.permissions
-      tags: {  }
+      tags:
+        - 'config:field.storage.node.field_date'
+        - 'config:field.storage.node.field_date_start'
+        - 'config:field.storage.node.field_summary'
