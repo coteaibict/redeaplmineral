@@ -1,6 +1,5 @@
 // partials/components/pages/node-news
 
-
 // list of news.
 .card-content
   margin-top: $margin-default
@@ -14,7 +13,6 @@
 
   .views-field-field-date
     @extend %card-news-metadata
-    text-align: right
 
   .view-filters
     @extend %card-news-filter
@@ -70,3 +68,7 @@
 
     .align-center
       @extend %card-news-aligned-image
+
+.view-teaser-news
+  .views-field-field-date
+    text-align: right
