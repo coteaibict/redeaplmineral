@@ -4,5 +4,19 @@
   .node__content
     @extend %card-news
 
-    > h2 a
-      @extend %card-news-title
+    > h2
+      margin-bottom: 0
+
+      a
+        @extend %card-news-title
+
+    .field--name-field-date-start
+      .field__label
+        display: none
+
+      .field__item
+        @extend %card-news-metadata
+
+    .field--name-field-summary
+      margin-top: $margin-default
+      margin-bottom: $margin-default
