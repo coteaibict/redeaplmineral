@@ -1,0 +1,44 @@
+// partials/structure/view-search
+
+.view-search
+  .view-filters
+    margin-top: $margin-default
+    margin-bottom: $margin-default
+
+    label
+      margin-bottom: $margin-default
+
+    input,
+    select
+      position: relative
+      width: $width-full
+      height: 40px
+      padding-left: $margin-default
+      padding-right: $margin-default
+      color: $color-text-darkest
+      background-color: $color-bg-lightest
+      border: 1px solid $color-border-midlight
+      box-sizing: border-box
+      border-radius: 5px
+
+      &:active,
+      &:focus,
+      &:hover,
+        outline: none
+
+    .form--inline
+      display: flex
+      margin-left: -10px
+      margin-right: -10px
+
+    .form-item,
+    .form-actions
+      padding-left: $margin-default
+      padding-right: $margin-default
+
+    .form-actions
+      display: flex
+      align-items: flex-end
+
+    #edit-reset
+      display: none
