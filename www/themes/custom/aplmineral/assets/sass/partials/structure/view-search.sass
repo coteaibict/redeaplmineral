@@ -28,13 +28,18 @@
 
     .form--inline
       display: flex
+      flex-direction: column
       margin-left: -10px
       margin-right: -10px
+
+      @include breakpoint($md-min)
+        flex-direction: row
 
     .form-item,
     .form-actions
       padding-left: $margin-default
       padding-right: $margin-default
+      margin-bottom: $margin-default
 
     .form-actions
       display: flex
