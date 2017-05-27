@@ -78,3 +78,13 @@
   @extend %container
   display: flex
   justify-content: flex-end
+
+  li
+    padding-right: $margin-default-half
+    margin-right: $margin-default-half
+    line-height: 1
+    border-right: 1px solid $color-border-main
+
+    &:last-child
+      border-right: none
+      padding-right: 0
