@@ -1,2 +1,5 @@
 bundle: aplmineral
+excluded:
+  - block.block.views_block__banner_banner_small_block
+  - block.block.views_block__banner_banner_top_block
 required: true
