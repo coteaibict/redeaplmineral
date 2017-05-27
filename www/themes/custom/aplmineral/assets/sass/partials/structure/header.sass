@@ -35,6 +35,9 @@
   @extend %header-menu-items
   text-transform: uppercase
 
+  a
+    @include font-size(10px)
+
   @include breakpoint($md-min)
     justify-content: flex-end
 
@@ -45,6 +48,9 @@
 .shortcuts-menu
   @extend %header-menu-items
   display: none
+
+  a
+    @include font-size(10px)
 
   span
     padding: 1px 3px
