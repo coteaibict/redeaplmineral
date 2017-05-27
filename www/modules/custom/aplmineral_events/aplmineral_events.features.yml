@@ -2,6 +2,9 @@ bundle: aplmineral
 excluded:
   - field.storage.node.field_tags
   - taxonomy.vocabulary.tags
+  - block.block.events_teaser
+  - block.block.highlight_events
+  - block.block.views_block__teaser_events_teaser_short
 required:
   - field.field.node.events.field_announcement
   - field.field.node.events.field_body
