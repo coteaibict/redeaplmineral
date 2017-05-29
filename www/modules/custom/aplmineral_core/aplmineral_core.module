@@ -22,3 +22,15 @@ function aplmineral_core_help($route_name, RouteMatchInterface $route_match) {
     default:
   }
 }
+
+/**
+ * Implement hook_form_FORM_ID_alter to contact form.
+ */
+
+function aplmineral_core_form_contact_message_feedback_form_alter (&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+
+  $form['name']['#attributes']['placeholder'] = t('Your name');
+  $form['mail']['#attributes']['placeholder'] = t('Seu e-mail');
+  $form['message']['widget'][0]['value']['#attributes']['placeholder'] = t('Message');
+  $form['subject']['widget'][0]['value']['#attributes']['placeholder'] = t('Subject');
+}
