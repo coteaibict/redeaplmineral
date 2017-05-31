@@ -14,6 +14,19 @@ var Drupal = Drupal || {};
       };
 
       $slideshow.slick(options);
+
+      var $image = $slideshow.find('.views-field-field-image img');
+      setElementsHeight();
+
+      $(window).on('resize', setElementsHeight);
+
+      function setElementsHeight() {
+        var height = $image.height();
+        if (height && height > 0) {
+          $('.slick-arrow').css({ 'top': (height / 2) });
+          $('.slick-dots').css({ 'top': (height - 20) });
+        }
+      }
     }
   }
 })(jQuery, Drupal);
