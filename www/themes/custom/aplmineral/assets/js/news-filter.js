@@ -1,5 +1,5 @@
 (function ($) {
-  var $context = $('.view-teaser-news')
+  var $context = $('.card-content')
   var $select = $context.find('#edit-items-per-page')
   var $options = $select.find('option')
   var $btnSubmit = $context.find('.view-filters input[type="submit"]')
