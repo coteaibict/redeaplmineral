@@ -59,18 +59,22 @@ Senha: aplapl
 ```
 
 ## Atualizando manualmente a aplicação em stage e produção #
-1- Acesse a pasta do projeto que contém o Drupal
+Ideal que sempre faça um backup do projeto antes de iniciar esse processo.
+
+1- Acesse a pasta do projeto que contém o Drupal.
 
 2- Execute `git pull origin stage` para o ambiente de dev/stage e `git pull origin master` para produção
 
 3- Atualize o banco de dados com `drush updb -y`.
 
-4- Atualize as dependências via composer: `composer update`.
+4- Reverta as features `drush fra -y`.
 
-5- Acesse a pasta do tema `themes/custom/aplmineral/`.
+5- Atualize as dependências via composer: `composer update`.
 
-6- Atualize o estilo do tema: `gulp styles`.
+6- Acesse a pasta do tema `themes/custom/aplmineral/`.
 
-7- Limpe o cache: `drush cr`
+7- Atualize o estilo do tema: `gulp styles`.
+
+8- Limpe o cache: `drush cr`
 
 Pronto!
